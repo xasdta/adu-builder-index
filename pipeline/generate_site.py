@@ -25,7 +25,7 @@ RESERVE_URL = (f"mailto:{CONTACT_EMAIL}?subject=Founding%20featured%20slot%20req
 STRIPE_LINK = None
 # Web3Forms access key (web3forms.com) — when set, contact buttons use the
 # on-site form at get-featured.html instead of mailto links.
-WEB3FORMS_KEY = None
+WEB3FORMS_KEY = "d253e17f-0e35-4f0a-a5c4-cfa9df78a199"
 FORM_URL = "get-featured.html"
 FEATURE_URL = STRIPE_LINK or (FORM_URL if WEB3FORMS_KEY else RESERVE_URL)
 if WEB3FORMS_KEY:
