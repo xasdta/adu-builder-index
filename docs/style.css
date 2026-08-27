@@ -137,6 +137,13 @@ td.mono { white-space: nowrap; font-size: 0.82rem; }
   text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
 }
 .fstat { color: var(--muted); }
+.fbanner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1rem; background: var(--accent-soft); border: 1px dashed var(--accent);
+  border-radius: 6px; padding: 1rem 1.3rem;
+}
+.fbanner p { margin: 0; max-width: 42rem; }
+.fbanner .button { flex-shrink: 0; }
 dl.lic { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1.2rem; max-width: 30rem; }
 dl.lic dt { font-family: "Spline Sans Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); align-self: center; }
 dl.lic dd { margin: 0; }

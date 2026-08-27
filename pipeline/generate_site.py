@@ -43,11 +43,21 @@ def featured_section(depth=0):
 <p>{esc(f.get('blurb', ''))}</p>
 {contact}
 </div>""")
-    for _ in range(FEATURED_SLOTS - len(cards)):
+    open_slots = FEATURED_SLOTS - len(cards)
+    if not cards:
+        return f"""<section id="featured">
+<div class="fbanner">
+  <div>
+    <p class="flabel">Featured builders · {open_slots} founding slots</p>
+    <p>Verified builders get top placement here — clearly labeled, never affecting the rankings below. Founding rate: <strong>$99/mo, locked for life</strong>.</p>
+  </div>
+  <a class="button" href="{pre}for-builders.html">Get featured →</a>
+</div>
+</section>"""
+    if open_slots > 0:
         cards.append(f"""<div class="fcard open">
-<p class="flabel">Founding slot open</p>
-<h3>Your company here</h3>
-<p>Top placement on this page, photos, and a direct contact button. Founding rate: <strong>$99/mo, locked for life</strong>. Rankings below are never affected.</p>
+<p class="flabel">{open_slots} founding slot{"s" if open_slots > 1 else ""} open</p>
+<p><strong>$99/mo, locked for life.</strong> Top placement, license-verified, rankings never affected.</p>
 <a class="button" href="{pre}for-builders.html">Get featured →</a>
 </div>""")
     return f"""<section id="featured">
@@ -89,7 +99,7 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None):
 <meta name="description" content="{esc(desc)}">
 {f'<link rel="canonical" href="{esc(canonical)}">' if canonical else ''}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Spline+Sans+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="{pre}style.css">
+<link rel="stylesheet" href="{pre}style.css?v={STATS['generated']}">
 {ld}
 </head>
 <body>
