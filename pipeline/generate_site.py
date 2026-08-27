@@ -15,6 +15,46 @@ STATS = DATA["stats"]
 BUILDERS = DATA["builders"]
 TODAY = time.strftime("%B %d, %Y")
 CLAIM_URL = "https://github.com/xasdta/adu-builder-index/issues/new?title=Claim%20my%20builder%20profile"
+RESERVE_URL = "https://github.com/xasdta/adu-builder-index/issues/new?title=Reserve%20a%20founding%20featured%20slot"
+# Set to a Stripe Payment Link to take $99/mo payments directly on the site.
+STRIPE_LINK = None
+FEATURE_URL = STRIPE_LINK or RESERVE_URL
+FEATURED_SLOTS = 3
+_featured_path = ROOT / "data" / "featured.json"
+FEATURED = (json.load(open(_featured_path))["builders"]
+            if _featured_path.exists() else [])
+BY_SLUG = {b["slug"]: b for b in BUILDERS}
+
+
+def featured_section(depth=0):
+    pre = "../" * depth
+    cards = []
+    for f in FEATURED[:FEATURED_SLOTS]:
+        b = BY_SLUG.get(f["slug"])
+        if not b:
+            continue
+        contact = ""
+        if f.get("website"):
+            contact = f'<a class="button" href="{esc(f["website"])}">Visit website</a>'
+        cards.append(f"""<div class="fcard">
+<p class="flabel">Featured · paid placement</p>
+<h3><a href="{pre}builders/{b['slug']}.html">{esc(b['name'])}</a></h3>
+<p class="fstat">{b['permits_completed']} completed ADU permits on record · {license_chip(b)}</p>
+<p>{esc(f.get('blurb', ''))}</p>
+{contact}
+</div>""")
+    for _ in range(FEATURED_SLOTS - len(cards)):
+        cards.append(f"""<div class="fcard open">
+<p class="flabel">Founding slot open</p>
+<h3>Your company here</h3>
+<p>Top placement on this page, photos, and a direct contact button. Founding rate: <strong>$99/mo, locked for life</strong>. Rankings below are never affected.</p>
+<a class="button" href="{pre}for-builders.html">Get featured →</a>
+</div>""")
+    return f"""<section id="featured">
+<h2>Featured builders</h2>
+<p class="fine">Paid placements, clearly labeled. Being featured never changes a builder's rank in the table below — <a href="{pre}methodology.html">see methodology</a>.</p>
+<div class="featured-grid">{''.join(cards)}</div>
+</section>"""
 
 
 def esc(s):
@@ -119,6 +159,7 @@ def build_index():
   {trend_chart()}
   <p class="fine">Permits issued per year mentioning an ADU/DADU, City of Seattle SDCI data. Seattle legalized attached and detached ADUs citywide in 2019; permits have roughly tripled since.</p>
 </section>
+{featured_section()}
 <section id="rankings">
   <h2>Builder rankings</h2>
   <p>Ranked by completed ADU permits where city records attribute a contractor. <a href="methodology.html">How this works and what it misses →</a></p>
@@ -187,7 +228,7 @@ def build_builder_pages():
   <tbody>{permit_rows}</tbody></table></div>
 </section>
 <section class="callout">
-  <p>Is this your company? <a href="{CLAIM_URL}">Claim this profile</a> to add photos, service areas, and corrections.</p>
+  <p>Is this your company? <a href="{CLAIM_URL}">Claim this profile</a> free to add photos, service areas, and corrections — or <a href="../for-builders.html">get featured at the top of the rankings page</a> ($99/mo founding rate).</p>
 </section>"""
         (SITE / "builders" / f"{b['slug']}.html").write_text(page(
             f"{b['name']} — ADU builder, Seattle | ADU Builder Index",
@@ -239,8 +280,14 @@ def build_for_builders():
   <h2>Free, always</h2>
   <p>Claiming your profile is free: correct your permit history (we verify submitted permit numbers against city records), add your service area, website, and contact details.</p>
   <h2>Featured listing — founding rate</h2>
-  <p>Featured builders appear at the top of city pages (clearly labeled), with photos, project galleries, and a direct contact button. Founding-builder rate: <strong>$99/month, locked for life</strong>, first 10 builders per city. One signed ADU project pays for roughly a decade of listing. Rankings are never for sale — featured placement is clearly separated from the permit-verified table.</p>
-  <p><a class="button" href="{CLAIM_URL}">Claim your profile →</a></p>
+  <p>Featured builders appear in the <a href="index.html#featured">Featured builders section at the top of the rankings page</a> — clearly labeled, with your blurb, license verification, and a direct link to your website. Founding-builder rate: <strong>$99/month, locked for life</strong>, first {FEATURED_SLOTS} builders in Seattle. One signed ADU project pays for roughly a decade of listing. Rankings are never for sale — featured placement is clearly separated from the permit-verified table.</p>
+  <h2>How to get featured</h2>
+  <ol>
+    <li><a href="{FEATURE_URL}">{"Subscribe here" if STRIPE_LINK else "Reserve your slot here"}</a> — tell us your company name and license number.</li>
+    <li>We verify your WA L&amp;I license is active and confirm your permit record.</li>
+    <li>Your featured card is live within one business day{"" if STRIPE_LINK else "; we invoice after verification, not before"}.</li>
+  </ol>
+  <p><a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a> <a class="button secondary" href="{CLAIM_URL}">Claim your free profile →</a></p>
 </section>"""
     (SITE / "for-builders.html").write_text(page(
         "For builders | ADU Builder Index",

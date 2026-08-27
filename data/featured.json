@@ -1,0 +1,4 @@
+{
+  "_schema": "Each entry: {slug (must match a builder page), blurb, website, phone?}. Order = display order. First FEATURED_SLOTS entries render; empty list renders open founding-slot cards.",
+  "builders": []
+}

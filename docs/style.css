@@ -121,6 +121,22 @@ td.mono { white-space: nowrap; font-size: 0.82rem; }
   display: inline-block; background: var(--accent); color: var(--surface);
   text-decoration: none; font-weight: 600; padding: 0.55rem 1.1rem; border-radius: 4px;
 }
+.button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin-top: 1rem; }
+.fcard {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+  padding: 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.5rem;
+}
+.fcard.open { border-style: dashed; background: transparent; }
+.fcard h3 { margin: 0; font-family: "Archivo", sans-serif; font-size: 1.1rem; }
+.fcard h3 a { text-decoration: none; color: var(--ink); }
+.fcard p { margin: 0; font-size: 0.9rem; }
+.fcard .button { align-self: flex-start; margin-top: auto; }
+.flabel {
+  font-family: "Spline Sans Mono", monospace; font-size: 0.62rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
+}
+.fstat { color: var(--muted); }
 dl.lic { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1.2rem; max-width: 30rem; }
 dl.lic dt { font-family: "Spline Sans Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); align-self: center; }
 dl.lic dd { margin: 0; }
