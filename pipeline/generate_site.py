@@ -23,7 +23,13 @@ RESERVE_URL = (f"mailto:{CONTACT_EMAIL}?subject=Founding%20featured%20slot%20req
                "Phone%3A%0AOne-line%20blurb%20for%20your%20featured%20card%3A%0A")
 # Set to a Stripe Payment Link to take $99/mo payments directly on the site.
 STRIPE_LINK = None
-FEATURE_URL = STRIPE_LINK or RESERVE_URL
+# Web3Forms access key (web3forms.com) — when set, contact buttons use the
+# on-site form at get-featured.html instead of mailto links.
+WEB3FORMS_KEY = None
+FORM_URL = "get-featured.html"
+FEATURE_URL = STRIPE_LINK or (FORM_URL if WEB3FORMS_KEY else RESERVE_URL)
+if WEB3FORMS_KEY:
+    CLAIM_URL = FORM_URL
 FEATURED_SLOTS = 3
 _featured_path = ROOT / "data" / "featured.json"
 FEATURED = (json.load(open(_featured_path))["builders"]
@@ -92,6 +98,14 @@ def license_chip(b):
     return f'<span class="chip chip-warn" title="WA L&amp;I reports status {esc(lic["status"])} for license {esc(lic["number"])}">license {esc(lic["status"].lower())}</span>'
 
 
+SITE_BASE = "https://xasdta.github.io/adu-builder-index"
+
+
+def rel(url, pre):
+    """Prefix site-relative URLs with the page's depth prefix."""
+    return url if url.startswith(("mailto:", "http", "#")) else pre + url
+
+
 def page(title, desc, body, depth=0, canonical=None, jsonld=None):
     pre = "../" * depth
     ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
@@ -121,7 +135,7 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None):
 </main>
 <footer>
   <p><strong>ADU Builder Index</strong> — permit-verified accessory dwelling unit builders. Currently covering Seattle, WA; more Washington cities coming.</p>
-  <p class="fine">Data sources: City of Seattle SDCI Building Permits (open data) and Washington State L&amp;I Contractor License registry, as published on {esc(STATS['generated'])}. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections: <a href="{CLAIM_URL}">contact us</a>.</p>
+  <p class="fine">Data sources: City of Seattle SDCI Building Permits (open data) and Washington State L&amp;I Contractor License registry, as published on {esc(STATS['generated'])}. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections: <a href="{rel(CLAIM_URL, pre)}">contact us</a>.</p>
 </footer>
 </body>
 </html>"""
@@ -243,7 +257,7 @@ def build_builder_pages():
   <tbody>{permit_rows}</tbody></table></div>
 </section>
 <section class="callout">
-  <p>Is this your company? <a href="{CLAIM_URL}">Claim this profile</a> free to add photos, service areas, and corrections — or <a href="../for-builders.html">get featured at the top of the rankings page</a> ($99/mo founding rate).</p>
+  <p>Is this your company? <a href="{rel(CLAIM_URL, '../')}">Claim this profile</a> free to add photos, service areas, and corrections — or <a href="../for-builders.html">get featured at the top of the rankings page</a> ($99/mo founding rate).</p>
 </section>"""
         (SITE / "builders" / f"{b['slug']}.html").write_text(page(
             f"{b['name']} — ADU builder, Seattle | ADU Builder Index",
@@ -310,6 +324,47 @@ def build_for_builders():
         body))
 
 
+def build_form_pages():
+    if not WEB3FORMS_KEY:
+        return
+    body = f"""
+<section class="hero small"><h1>Claim your profile or get featured</h1>
+<p class="dek">Free profile claims are verified against city permit records. Featured placement is <strong>$99/mo, locked for life</strong> for founding builders — we verify your license before any invoice.</p></section>
+<section>
+<form class="bform" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
+  <input type="hidden" name="subject" value="ADU Builder Index — builder request">
+  <input type="hidden" name="from_name" value="ADU Builder Index">
+  <input type="hidden" name="redirect" value="{SITE_BASE}/thanks.html">
+  <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+  <fieldset>
+    <legend>What do you need?</legend>
+    <label class="radio"><input type="radio" name="request_type" value="Get featured ($99/mo founding rate)" checked> Get featured — $99/mo founding rate</label>
+    <label class="radio"><input type="radio" name="request_type" value="Claim free profile"> Claim my free profile</label>
+  </fieldset>
+  <label>Company name <input type="text" name="company" required></label>
+  <label>WA contractor license # <input type="text" name="license_number" required></label>
+  <label>Your email <input type="email" name="email" required></label>
+  <label>Website <input type="url" name="website" placeholder="https://"></label>
+  <label>Phone <input type="tel" name="phone"></label>
+  <label>One-line blurb for your card, plus anything to correct on your profile <textarea name="message" rows="4"></textarea></label>
+  <button class="button" type="submit">Send request</button>
+  <p class="fine">We reply within one business day. Featured placement is invoiced only after license verification — never before.</p>
+</form>
+</section>"""
+    (SITE / "get-featured.html").write_text(page(
+        "Get featured or claim your profile | ADU Builder Index",
+        "Claim your free ADU builder profile or request a founding featured slot. Verified against Seattle permit records and the WA L&I registry.",
+        body))
+    tbody = """
+<section class="hero small"><h1>Request received</h1>
+<p class="dek">Thanks — we'll verify your license and permit record and reply within one business day.</p>
+<p><a href="index.html">← Back to the rankings</a></p></section>"""
+    (SITE / "thanks.html").write_text(page(
+        "Request received | ADU Builder Index",
+        "Your builder request was received.", tbody))
+
+
 def build_assets():
     (SITE / "robots.txt").write_text("User-agent: *\nAllow: /\n")
     urls = ["index.html", "methodology.html", "for-builders.html",
@@ -323,6 +378,7 @@ def main():
     build_builder_pages()
     build_methodology()
     build_for_builders()
+    build_form_pages()
     build_assets()
     n = len(list((SITE).rglob("*.html")))
     print(f"generated {n} pages in {SITE}")

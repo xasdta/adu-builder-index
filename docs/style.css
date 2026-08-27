@@ -144,6 +144,19 @@ td.mono { white-space: nowrap; font-size: 0.82rem; }
 }
 .fbanner p { margin: 0; max-width: 42rem; }
 .fbanner .button { flex-shrink: 0; }
+.bform { display: flex; flex-direction: column; gap: 1rem; max-width: 30rem; }
+.bform label { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 600; font-size: 0.92rem; }
+.bform input[type="text"], .bform input[type="email"], .bform input[type="url"],
+.bform input[type="tel"], .bform textarea {
+  font: inherit; font-weight: 400; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 4px; padding: 0.55rem 0.7rem;
+}
+.bform input:focus-visible, .bform textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; }
+.bform fieldset { border: 1px solid var(--line); border-radius: 4px; padding: 0.8rem 1rem; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.bform legend { font-family: "Spline Sans Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); padding: 0 0.4rem; }
+.bform .radio { flex-direction: row; align-items: center; gap: 0.5rem; font-weight: 400; }
+.bform .button { align-self: flex-start; border: none; cursor: pointer; font-size: 1rem; }
+.bform .hp { position: absolute; left: -9999px; }
 dl.lic { display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1.2rem; max-width: 30rem; }
 dl.lic dt { font-family: "Spline Sans Mono", monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); align-self: center; }
 dl.lic dd { margin: 0; }
