@@ -1,12 +1,4 @@
 {
  "_schema": "Each entry: {slug (must match builder page), website?, phone?, service_area?, claimed_date (YYYY-MM-DD)}. Add an entry only after verifying the claimant: license number matches L&I, email domain matches website (or equivalent proof).",
- "builders": [
-  {
-   "slug": "mykabin-llc",
-   "website": "https://mykabin.com",
-   "phone": "425-643-9124",
-   "service_area": "Greater Seattle & Eastside",
-   "claimed_date": "2026-08-26"
-  }
- ]
+ "builders": []
 }
