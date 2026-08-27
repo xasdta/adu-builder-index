@@ -34,6 +34,9 @@ FEATURED_SLOTS = 3
 _featured_path = ROOT / "data" / "featured.json"
 FEATURED = (json.load(open(_featured_path))["builders"]
             if _featured_path.exists() else [])
+_claims_path = ROOT / "data" / "claims.json"
+CLAIMS = {c["slug"]: c for c in (json.load(open(_claims_path))["builders"]
+                                 if _claims_path.exists() else [])}
 BY_SLUG = {b["slug"]: b for b in BUILDERS}
 
 
@@ -151,10 +154,16 @@ def trend_chart():
     return f'<div class="chart" role="img" aria-label="ADU permits issued in Seattle by year, 2014 to 2025">{bars}</div>'
 
 
+def claimed_chip(b):
+    if b["slug"] not in CLAIMS:
+        return ""
+    return ' <span class="chip chip-claimed" title="Profile claimed and verified by the company">claimed ✓</span>'
+
+
 def builder_row(rank, b):
     yrs = f"{b['first_year']}–{b['last_year']}" if b["first_year"] != b["last_year"] else b["first_year"]
     return (f'<tr><td class="num">{rank}</td>'
-            f'<td><a href="builders/{b["slug"]}.html">{esc(b["name"])}</a></td>'
+            f'<td><a href="builders/{b["slug"]}.html">{esc(b["name"])}</a>{claimed_chip(b)}</td>'
             f'<td class="num">{b["permits_completed"]}</td>'
             f'<td class="num">{b["permits_total"]}</td>'
             f'<td class="num">{esc(yrs)}</td>'
@@ -230,14 +239,36 @@ def build_builder_pages():
             f'<td>{esc(p["address"])}</td>'
             f'<td class="desc">{esc(p["description"])}</td></tr>'
             for p in b["permits"])
+        claim = CLAIMS.get(b["slug"])
         jsonld = {"@context": "https://schema.org", "@type": "GeneralContractor",
                   "name": b["name"],
-                  "areaServed": "Seattle, WA",
+                  "areaServed": (claim or {}).get("service_area") or "Seattle, WA",
                   "description": f"ADU builder with {b['permits_completed']} completed accessory dwelling unit permits on record in Seattle."}
+        contact_html = ""
+        if claim:
+            jsonld.update({k2: v for k2, v in
+                           [("url", claim.get("website")),
+                            ("telephone", claim.get("phone"))] if v})
+            rows_c = ""
+            if claim.get("website"):
+                rows_c += f'<dt>Website</dt><dd><a href="{esc(claim["website"])}">{esc(claim["website"].removeprefix("https://").removeprefix("http://").rstrip("/"))}</a></dd>'
+            if claim.get("phone"):
+                rows_c += f'<dt>Phone</dt><dd><a href="tel:{esc(claim["phone"])}">{esc(claim["phone"])}</a></dd>'
+            if claim.get("service_area"):
+                rows_c += f'<dt>Service area</dt><dd>{esc(claim["service_area"])}</dd>'
+            contact_html = f"""<section>
+  <h2>Contact</h2>
+  <dl class="lic">{rows_c}</dl>
+  <p class="fine">Profile claimed and verified by the company on {esc(claim.get("claimed_date", ""))}.</p>
+</section>"""
+        if claim:
+            callout = f'<p>Want top placement? <a href="../for-builders.html">Become a featured builder</a> — $99/mo founding rate, license-verified, rankings never affected.</p>'
+        else:
+            callout = f'<p>Is this your company? <a href="{rel(CLAIM_URL, "../")}">Claim this profile</a> free to add your website, contact details, and corrections — or <a href="../for-builders.html">get featured at the top of the rankings page</a> ($99/mo founding rate).</p>'
         body = f"""
 <section class="hero small">
   <p class="eyebrow"><a href="../index.html">← All builders</a></p>
-  <h1>{esc(b['name'])}</h1>
+  <h1>{esc(b['name'])}{claimed_chip(b)}</h1>
   <div class="stats">
     <div><b>{b['permits_completed']}</b><span>completed ADU permits</span></div>
     <div><b>{b['permits_total']}</b><span>total ADU permits</span></div>
@@ -245,6 +276,7 @@ def build_builder_pages():
     <div><b>{money(b['median_cost'])}</b><span>median est. project cost</span></div>
   </div>
 </section>
+{contact_html}
 <section>
   <h2>Washington state license</h2>
   {lic_html}
@@ -257,7 +289,7 @@ def build_builder_pages():
   <tbody>{permit_rows}</tbody></table></div>
 </section>
 <section class="callout">
-  <p>Is this your company? <a href="{rel(CLAIM_URL, '../')}">Claim this profile</a> free to add photos, service areas, and corrections — or <a href="../for-builders.html">get featured at the top of the rankings page</a> ($99/mo founding rate).</p>
+  {callout}
 </section>"""
         (SITE / "builders" / f"{b['slug']}.html").write_text(page(
             f"{b['name']} — ADU builder, Seattle | ADU Builder Index",

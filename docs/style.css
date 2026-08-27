@@ -110,6 +110,8 @@ td.mono { white-space: nowrap; font-size: 0.82rem; }
 .chip-ok { background: var(--ok-soft); color: var(--ok); }
 .chip-warn { background: var(--warn-soft); color: var(--warn); }
 .chip-na { background: var(--na-soft); color: var(--na); }
+.chip-claimed { background: var(--accent-soft); color: var(--accent); }
+h1 .chip { vertical-align: middle; margin-left: 0.5rem; }
 
 .callout {
   background: var(--accent-soft); border: 1px solid var(--line);
