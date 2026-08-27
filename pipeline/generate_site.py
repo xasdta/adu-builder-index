@@ -14,8 +14,13 @@ SITE = ROOT / "docs"
 STATS = DATA["stats"]
 BUILDERS = DATA["builders"]
 TODAY = time.strftime("%B %d, %Y")
-CLAIM_URL = "https://github.com/xasdta/adu-builder-index/issues/new?title=Claim%20my%20builder%20profile"
-RESERVE_URL = "https://github.com/xasdta/adu-builder-index/issues/new?title=Reserve%20a%20founding%20featured%20slot"
+CONTACT_EMAIL = "xasdta@gmail.com"
+CLAIM_URL = (f"mailto:{CONTACT_EMAIL}?subject=Claim%20my%20builder%20profile"
+             "&body=Company%20name%3A%0AWA%20license%20number%3A%0AWebsite%3A%0A"
+             "What%20should%20we%20add%20or%20correct%3F%0A")
+RESERVE_URL = (f"mailto:{CONTACT_EMAIL}?subject=Founding%20featured%20slot%20request"
+               "&body=Company%20name%3A%0AWA%20license%20number%3A%0AWebsite%3A%0A"
+               "Phone%3A%0AOne-line%20blurb%20for%20your%20featured%20card%3A%0A")
 # Set to a Stripe Payment Link to take $99/mo payments directly on the site.
 STRIPE_LINK = None
 FEATURE_URL = STRIPE_LINK or RESERVE_URL
