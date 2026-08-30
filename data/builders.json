@@ -2,7 +2,7 @@
  "stats": {
   "city": "Seattle",
   "total_permits": 12280,
-  "completed_permits": 6844,
+  "completed_permits": 6853,
   "attributed_permits": 697,
   "builders_listed": 513,
   "permits_by_year": {
@@ -21,10 +21,10 @@
    "2022": 963,
    "2023": 1031,
    "2024": 932,
-   "2025": 1036,
-   "2026": 345
+   "2025": 1035,
+   "2026": 348
   },
-  "generated": "2026-08-26"
+  "generated": "2026-08-30"
  },
  "builders": [
   {
@@ -13108,8 +13108,8 @@
    ]
   },
   {
-   "slug": "tess-jordan",
-   "name": "Tess Jordan",
+   "slug": "lindsey-werkhoven",
+   "name": "Lindsey Werkhoven",
    "permits_total": 2,
    "permits_completed": 0,
    "first_year": "2026",

@@ -1,7 +1,7 @@
 {
  "city": "Seattle",
  "source": "https://data.seattle.gov/resource/76t5-zqzr.json",
- "fetched_at": "2026-08-26",
+ "fetched_at": "2026-08-30",
  "permits": [
   {
    "permitnum": "3017526-EX",
@@ -86333,7 +86333,7 @@
    "estprojectcost": "98434.0000",
    "applieddate": "2020-05-13T00:00:00.000",
    "issueddate": "2020-07-31T00:00:00.000",
-   "statuscurrent": "Expired",
+   "statuscurrent": "Completed",
    "originaladdress1": "7933 10TH AVE SW",
    "originalzip": "98106",
    "latitude": "47.53094408",
@@ -92884,23 +92884,6 @@
    "longitude": "-122.29116061",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6782753-CN"
-   }
-  },
-  {
-   "permitnum": "6782759-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "New",
-   "description": "Establish use as townhouse and ADUs  construct duplex with ADUs  per plan.  Existing single family residence to remain.  Existing sheds to be removed.",
-   "housingcategory": "N/A",
-   "estprojectcost": "426119.0000",
-   "applieddate": "2020-10-19T00:00:00.000",
-   "statuscurrent": "Reviews In Process",
-   "originaladdress1": "9227 B 18TH AVE SW",
-   "latitude": "47.52021496",
-   "longitude": "-122.35836711",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6782759-CN"
    }
   },
   {
@@ -131200,7 +131183,7 @@
    "estprojectcost": "256916.0000",
    "applieddate": "2022-03-02T00:00:00.000",
    "issueddate": "2025-02-27T00:00:00.000",
-   "statuscurrent": "Issued",
+   "statuscurrent": "Expired",
    "originaladdress1": "4414 A S FRONTENAC ST",
    "originalzip": "98118",
    "latitude": "47.53997031",
@@ -161920,7 +161903,8 @@
    "housingunitsadded": "2.0",
    "estprojectcost": "776174.0000",
    "applieddate": "2022-12-28T00:00:00.000",
-   "statuscurrent": "Ready for Issuance",
+   "issueddate": "2026-08-27T00:00:00.000",
+   "statuscurrent": "Issued",
    "originaladdress1": "5610 BEACH DR SW",
    "originalzip": "98136",
    "latitude": "47.55167174",
@@ -183735,7 +183719,7 @@
    "permitclass": "Single Family/Duplex",
    "permitclassmapped": "Residential",
    "permittypedesc": "New",
-   "description": "Construct south one-family dwelling (Establish use as single-family residence with detached accessory dwelling unit (DADU)  per land use code.  Construct (2) one-family dwelling  per plan.  Review & process for (2) records under 6998400-CN).",
+   "description": "Roll Forward - Construct south one-family dwelling (Establish use as single-family residence with detached accessory dwelling unit (DADU)  per land use code.  Construct (2) one-family dwelling  per plan.  Review & process for (2) records under 6998400-CN).",
    "housingcategory": "N/A",
    "housingunitsadded": "2.0",
    "estprojectcost": "737042.0000",
@@ -184933,7 +184917,8 @@
    "estprojectcost": "300000.0000",
    "applieddate": "2024-01-24T00:00:00.000",
    "issueddate": "2024-03-28T00:00:00.000",
-   "statuscurrent": "Issued",
+   "completeddate": "2026-08-28T00:00:00.000",
+   "statuscurrent": "Completed",
    "originaladdress1": "6219 BROOKLYN AVE NE",
    "originalzip": "98115",
    "latitude": "47.67390872",
@@ -188209,7 +188194,8 @@
    "estprojectcost": "150293.0000",
    "applieddate": "2024-04-23T00:00:00.000",
    "issueddate": "2024-07-24T00:00:00.000",
-   "statuscurrent": "Expired",
+   "completeddate": "2026-08-28T00:00:00.000",
+   "statuscurrent": "Completed",
    "originaladdress1": "5310 8TH AVE NE",
    "originalzip": "98105",
    "latitude": "47.66746980",
@@ -200788,7 +200774,7 @@
    "applieddate": "2024-11-11T00:00:00.000",
    "issueddate": "2025-04-08T00:00:00.000",
    "completeddate": "2026-08-11T00:00:00.000",
-   "statuscurrent": "Inspections Completed",
+   "statuscurrent": "Completed",
    "originaladdress1": "12751 37TH AVE NE",
    "originalzip": "98125",
    "latitude": "47.72254598",
@@ -200885,7 +200871,7 @@
    "estprojectcost": "217378.0000",
    "applieddate": "2024-08-22T00:00:00.000",
    "issueddate": "2025-02-26T00:00:00.000",
-   "statuscurrent": "Issued",
+   "statuscurrent": "Expired",
    "originaladdress1": "4020 34TH AVE W",
    "originalzip": "98199",
    "latitude": "47.65660235",
@@ -203991,7 +203977,8 @@
    "estprojectcost": "173950.0000",
    "applieddate": "2024-08-16T00:00:00.000",
    "issueddate": "2025-02-28T00:00:00.000",
-   "statuscurrent": "Issued",
+   "completeddate": "2026-08-26T00:00:00.000",
+   "statuscurrent": "Completed",
    "originaladdress1": "724 N 89TH ST",
    "originalzip": "98103",
    "latitude": "47.69376179",
@@ -204131,7 +204118,7 @@
    "estprojectcost": "203740.0000",
    "applieddate": "2024-08-19T00:00:00.000",
    "issueddate": "2025-02-25T00:00:00.000",
-   "statuscurrent": "Issued",
+   "statuscurrent": "Expired",
    "originaladdress1": "516 N 102ND ST",
    "originalzip": "98133",
    "latitude": "47.70318087",
@@ -206116,7 +206103,8 @@
    "estprojectcost": "347900.0000",
    "applieddate": "2024-12-17T00:00:00.000",
    "issueddate": "2025-06-11T00:00:00.000",
-   "statuscurrent": "Issued",
+   "completeddate": "2026-08-28T00:00:00.000",
+   "statuscurrent": "Completed",
    "originaladdress1": "2314 S FOREST ST",
    "originalzip": "98144",
    "latitude": "47.57769567",
@@ -208427,7 +208415,7 @@
    "housingunitsadded": "2.0",
    "estprojectcost": "219040.0000",
    "applieddate": "2025-07-21T00:00:00.000",
-   "statuscurrent": "Corrections Required",
+   "statuscurrent": "Ready for Issuance",
    "originaladdress1": "333 NE 120TH ST",
    "originalzip": "98125",
    "latitude": "47.71563705",
@@ -211483,7 +211471,7 @@
    "estprojectcost": "493746.0000",
    "applieddate": "2025-04-23T00:00:00.000",
    "statuscurrent": "Reviews In Process",
-   "originaladdress1": "3335 S MORGAN ST",
+   "originaladdress1": "3335 A S MORGAN ST",
    "originalzip": "98118",
    "latitude": "47.54366757",
    "longitude": "-122.28880599",
@@ -211541,7 +211529,8 @@
    "estprojectcost": "173950.0000",
    "applieddate": "2025-06-11T00:00:00.000",
    "issueddate": "2025-06-11T00:00:00.000",
-   "statuscurrent": "Issued",
+   "completeddate": "2026-08-28T00:00:00.000",
+   "statuscurrent": "Completed",
    "originaladdress1": "2316 S FOREST ST",
    "originalzip": "98144",
    "latitude": "47.57768690",
@@ -220315,10 +220304,10 @@
    "estprojectcost": "493746.0000",
    "applieddate": "2025-04-23T00:00:00.000",
    "statuscurrent": "Application Completed",
-   "originaladdress1": "3335 A S MORGAN ST",
+   "originaladdress1": "3335 C S MORGAN ST",
    "originalzip": "98118",
-   "latitude": "47.54366757",
-   "longitude": "-122.28880599",
+   "latitude": "47.54361657",
+   "longitude": "-122.28881665",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7082216-CN"
    }
@@ -220725,26 +220714,6 @@
    "longitude": "-122.36909029",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7083068-CN"
-   }
-  },
-  {
-   "permitnum": "7083070-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "New",
-   "description": "Establish use as single-family dwelling with attached accessory dwelling unit  per land use code.  Construct as two-family dwelling  per plan.",
-   "housingcategory": "N/A",
-   "housingunitsadded": "2.0",
-   "estprojectcost": "569012.0000",
-   "applieddate": "2025-06-18T00:00:00.000",
-   "issueddate": "2025-09-29T00:00:00.000",
-   "statuscurrent": "Issued",
-   "originaladdress1": "2438 E VALLEY ST",
-   "originalzip": "98112",
-   "latitude": "47.62612529",
-   "longitude": "-122.29942691",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7083070-CN"
    }
   },
   {
@@ -221602,7 +221571,7 @@
    "housingunitsadded": "2.0",
    "estprojectcost": "414620.0000",
    "applieddate": "2025-08-11T00:00:00.000",
-   "statuscurrent": "Corrections Required",
+   "statuscurrent": "Reviews In Process",
    "originaladdress1": "9212 KELSEY LN SW",
    "originalzip": "98106",
    "latitude": "47.52066307",
@@ -224316,7 +224285,7 @@
    "applieddate": "2025-12-12T00:00:00.000",
    "issueddate": "2026-04-16T00:00:00.000",
    "statuscurrent": "Issued",
-   "contractorcompanyname": "Tess Jordan",
+   "contractorcompanyname": "Lindsey Werkhoven",
    "originaladdress1": "4012 36TH AVE SW",
    "originalzip": "98126",
    "latitude": "47.56802326",
@@ -225323,7 +225292,7 @@
    "housingcategory": "N/A",
    "estprojectcost": "211813.0000",
    "applieddate": "2025-07-23T00:00:00.000",
-   "statuscurrent": "Application Completed",
+   "statuscurrent": "Ready for Issuance",
    "originaladdress1": "335 NE 120TH ST",
    "originalzip": "98125",
    "latitude": "47.71552984",
@@ -226478,7 +226447,8 @@
    "estprojectcost": "1.0000",
    "applieddate": "2025-08-05T00:00:00.000",
    "issueddate": "2025-11-17T00:00:00.000",
-   "statuscurrent": "Issued",
+   "completeddate": "2026-08-26T00:00:00.000",
+   "statuscurrent": "Completed",
    "originaladdress1": "819 NE 100TH ST",
    "originalzip": "98125",
    "latitude": "47.70113846",
@@ -229683,7 +229653,7 @@
    "housingunitsadded": "2.0",
    "estprojectcost": "454361.0000",
    "applieddate": "2026-04-20T00:00:00.000",
-   "statuscurrent": "Reviews In Process",
+   "statuscurrent": "Corrections Required",
    "originaladdress1": "13757 A 1ST AVE NW",
    "originalzip": "98177",
    "latitude": "47.73021161",
@@ -231709,7 +231679,8 @@
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "1000.0000",
    "applieddate": "2025-12-04T00:00:00.000",
-   "statuscurrent": "Application Completed",
+   "issueddate": "2026-08-27T00:00:00.000",
+   "statuscurrent": "Issued",
    "originaladdress1": "331 NE 120TH ST",
    "originalzip": "98125",
    "latitude": "47.71567413",
@@ -231974,7 +231945,7 @@
    "applieddate": "2025-12-01T00:00:00.000",
    "issueddate": "2026-02-06T00:00:00.000",
    "completeddate": "2026-08-25T00:00:00.000",
-   "statuscurrent": "Inspections Completed",
+   "statuscurrent": "Completed",
    "originaladdress1": "8245 ASHWORTH AVE N",
    "originalzip": "98103",
    "latitude": "47.69001052",
@@ -232339,7 +232310,8 @@
    "housingunitsadded": "1.0",
    "estprojectcost": "490442.0000",
    "applieddate": "2026-02-09T00:00:00.000",
-   "statuscurrent": "Reviews In Process",
+   "issueddate": "2026-08-28T00:00:00.000",
+   "statuscurrent": "Issued",
    "originaladdress1": "2642 S MORGAN ST",
    "originalzip": "98108",
    "latitude": "47.54476103",
@@ -232917,9 +232889,10 @@
    "permittypedesc": "New",
    "description": "Allow new detached accessory dwelling unit to existing single family use per land use code. Construct new one family dwelling and remove existing detached garage  per plan.",
    "housingcategory": "N/A",
+   "housingunitsadded": "1.0",
    "estprojectcost": "165191.0000",
    "applieddate": "2026-01-16T00:00:00.000",
-   "statuscurrent": "Reviews In Process",
+   "statuscurrent": "Awaiting Information",
    "originaladdress1": "5029 45TH AVE S",
    "originalzip": "98118",
    "latitude": "47.55619498",
@@ -233539,7 +233512,7 @@
    "applieddate": "2026-04-21T00:00:00.000",
    "issueddate": "2026-04-21T00:00:00.000",
    "statuscurrent": "Issued",
-   "contractorcompanyname": "Tess Jordan",
+   "contractorcompanyname": "Lindsey Werkhoven",
    "originaladdress1": "4010 36TH AVE SW",
    "originalzip": "98126",
    "latitude": "47.56802945",
@@ -233597,7 +233570,7 @@
    "housingunitsadded": "0.0",
    "estprojectcost": "543004.0000",
    "applieddate": "2026-06-10T00:00:00.000",
-   "statuscurrent": "Reviews In Process",
+   "statuscurrent": "Corrections Required",
    "originaladdress1": "13726 41ST AVE NE",
    "originalzip": "98125",
    "latitude": "47.72905063",
@@ -234103,7 +234076,7 @@
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "158570.0000",
    "applieddate": "2026-07-20T00:00:00.000",
-   "statuscurrent": "Corrections Required",
+   "statuscurrent": "Reviews In Process",
    "originaladdress1": "11748 SAND POINT WAY NE",
    "latitude": "47.71504542",
    "longitude": "-122.28213803",
@@ -234354,7 +234327,7 @@
    "housingunitsadded": "1.0",
    "estprojectcost": "219636.0000",
    "applieddate": "2026-02-10T00:00:00.000",
-   "statuscurrent": "Application Completed",
+   "statuscurrent": "Ready for Issuance",
    "originaladdress1": "2646 S MORGAN ST",
    "originalzip": "98108",
    "latitude": "47.54485746",
@@ -234373,7 +234346,7 @@
    "housingunitsadded": "1.0",
    "estprojectcost": "219636.0000",
    "applieddate": "2026-02-10T00:00:00.000",
-   "statuscurrent": "Application Completed",
+   "statuscurrent": "Ready for Issuance",
    "originaladdress1": "2644 S MORGAN ST",
    "originalzip": "98108",
    "latitude": "47.54486552",
@@ -235134,7 +235107,7 @@
    "housingcategory": "N/A",
    "estprojectcost": "347642.0000",
    "applieddate": "2026-04-22T00:00:00.000",
-   "statuscurrent": "Corrections Submitted",
+   "statuscurrent": "Reviews In Process",
    "originaladdress1": "1738 B S PEARL ST",
    "originalzip": "98108",
    "latitude": "47.55722060",
@@ -235793,23 +235766,6 @@
    }
   },
   {
-   "permitnum": "7137867-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "Addition/Alteration",
-   "description": "New ADU on east side of existing single family residence.",
-   "housingcategory": "Single-Family Add/Alt",
-   "estprojectcost": "250000.0000",
-   "statuscurrent": "Scheduled",
-   "originaladdress1": "464 N 42ND ST",
-   "originalzip": "98103",
-   "latitude": "47.65792383",
-   "longitude": "-122.35258651",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7137867-CN"
-   }
-  },
-  {
    "permitnum": "7138031-CN",
    "permitclass": "Single Family/Duplex",
    "permitclassmapped": "Residential",
@@ -235903,7 +235859,7 @@
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "40000.0000",
    "applieddate": "2026-07-23T00:00:00.000",
-   "statuscurrent": "Reviews In Process",
+   "statuscurrent": "Corrections Required",
    "originaladdress1": "9032 3RD AVE NW",
    "originalzip": "98117",
    "latitude": "47.69533665",
@@ -235920,7 +235876,7 @@
    "description": "Construct 2 new Single Family and 1 DADU units. Existing SFR and AADU to remain.We believe the project is exempt from street improvements per 23.53.015.E.1  alley improvements per 23.53.030.E and pedestrian improvements per 23.53.006.D",
    "housingcategory": "N/A",
    "estprojectcost": "500000.0000",
-   "statuscurrent": "Scheduled",
+   "statuscurrent": "Scheduled and Submitted",
    "originaladdress1": "5655 31st AVE SW",
    "latitude": "47.55029318",
    "longitude": "-122.37262808",
@@ -236324,7 +236280,7 @@
    "description": "New AADU inside an existing single-family residence",
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "25000.0000",
-   "statuscurrent": "Scheduled",
+   "statuscurrent": "Withdrawn",
    "originaladdress1": "6302 MERIDIAN AVE N",
    "originalzip": "98103",
    "latitude": "47.67462846",
@@ -236592,24 +236548,6 @@
    }
   },
   {
-   "permitnum": "7143675-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "New",
-   "description": "Construction of two single family residences  attached accessory dwelling unit  and the demolition of existing house.",
-   "housingcategory": "N/A",
-   "housingunitsadded": "3.0",
-   "estprojectcost": "1246975.0000",
-   "statuscurrent": "Scheduled",
-   "originaladdress1": "10044 12TH AVE NW",
-   "originalzip": "98177",
-   "latitude": "47.70284407",
-   "longitude": "-122.37109702",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7143675-CN"
-   }
-  },
-  {
    "permitnum": "7143676-DM",
    "permitclass": "Single Family/Duplex",
    "permitclassmapped": "Residential",
@@ -236669,7 +236607,7 @@
    "housingcategory": "N/A",
    "housingunitsadded": "2.0",
    "estprojectcost": "600000.0000",
-   "statuscurrent": "Initiated",
+   "statuscurrent": "Additional Info Requested",
    "originaladdress1": "12021 23RD AVE NE",
    "originalzip": "98125",
    "latitude": "47.71637461",
@@ -237097,7 +237035,7 @@
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "242177.0000",
    "applieddate": "2026-07-08T00:00:00.000",
-   "statuscurrent": "Corrections Required",
+   "statuscurrent": "Reviews In Process",
    "originaladdress1": "8545 17TH AVE NW",
    "originalzip": "98117",
    "latitude": "47.69195398",
@@ -237561,23 +237499,6 @@
    "longitude": "-122.29879530",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7149590-DM"
-   }
-  },
-  {
-   "permitnum": "7149595-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "New",
-   "description": "NEW 1000 SF DADU ADDITION PER PLAN",
-   "housingcategory": "N/A",
-   "estprojectcost": "150000.0000",
-   "statuscurrent": "Scheduled and Submitted",
-   "originaladdress1": "2823 S OTHELLO ST",
-   "originalzip": "98108",
-   "latitude": "47.53648991",
-   "longitude": "-122.29576461",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7149595-CN"
    }
   },
   {
@@ -238244,7 +238165,7 @@
    "description": "Construct (1) ADU Duplex with existing SFR to remain.",
    "housingcategory": "N/A",
    "estprojectcost": "465000.0000",
-   "statuscurrent": "Additional Info Requested",
+   "statuscurrent": "Scheduled",
    "originaladdress1": "3206 WALNUT AVE SW",
    "originalzip": "98116",
    "latitude": "47.57532137",
@@ -238338,24 +238259,6 @@
    "longitude": "-122.37089392",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7154691-CN"
-   }
-  },
-  {
-   "permitnum": "7154736-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "New",
-   "description": "A PROPOSED 3 BED/2 BATH DADU TO REPLACE AN EXISTING GARAGE IN THE BACKYARD OF AN EXISTING SFR.",
-   "housingcategory": "N/A",
-   "housingunitsadded": "1.0",
-   "estprojectcost": "100000.0000",
-   "statuscurrent": "Scheduled and Submitted",
-   "originaladdress1": "4650 1ST AVE NE",
-   "originalzip": "98105",
-   "latitude": "47.66408772",
-   "longitude": "-122.32805767",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7154736-CN"
    }
   },
   {
@@ -238851,7 +238754,7 @@
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "85000.0000",
    "applieddate": "2026-08-25T00:00:00.000",
-   "statuscurrent": "Application Completed",
+   "statuscurrent": "Reviews In Process",
    "originaladdress1": "908 N 89TH ST",
    "originalzip": "98103",
    "latitude": "47.69364963",
@@ -238946,23 +238849,6 @@
    }
   },
   {
-   "permitnum": "7157520-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "Addition/Alteration",
-   "description": "Finished basement to be converted into accessory dwelling unit",
-   "housingcategory": "Single-Family Add/Alt",
-   "estprojectcost": "22456.2500",
-   "statuscurrent": "Scheduled and Submitted",
-   "originaladdress1": "7727 JONES AVE NW",
-   "originalzip": "98117",
-   "latitude": "47.68578353",
-   "longitude": "-122.38677536",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7157520-CN"
-   }
-  },
-  {
    "permitnum": "7157622-CN",
    "permitclass": "Single Family/Duplex",
    "permitclassmapped": "Residential",
@@ -239042,7 +238928,7 @@
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "185917.0000",
    "applieddate": "2026-08-12T00:00:00.000",
-   "statuscurrent": "Corrections Required",
+   "statuscurrent": "Corrections Submitted",
    "originaladdress1": "5509 22ND AVE S",
    "latitude": "47.55300404",
    "longitude": "-122.30539598",
@@ -239317,7 +239203,7 @@
    "housingunitsadded": "1.0",
    "estprojectcost": "185917.0000",
    "applieddate": "2026-08-19T00:00:00.000",
-   "statuscurrent": "Reviews In Process",
+   "statuscurrent": "Corrections Required",
    "originaladdress1": "4604 SW LANDER ST",
    "originalzip": "98116",
    "latitude": "47.57950847",
@@ -239580,6 +239466,123 @@
    "longitude": "-122.32056988",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7159802-CN"
+   }
+  },
+  {
+   "permitnum": "7159818-CN",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "New",
+   "description": "Construct addition to (e) garage to remain  converting it into a detached accessory dwelling unit with garage.",
+   "housingcategory": "N/A",
+   "estprojectcost": "282890.0000",
+   "statuscurrent": "Scheduled",
+   "originaladdress1": "718 W CROCKETT ST",
+   "latitude": "47.63792897",
+   "longitude": "-122.36742826",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7159818-CN"
+   }
+  },
+  {
+   "permitnum": "7159955-CN",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "New",
+   "description": "DEMOLISH EXISTING SFR  CONSTRUCTTWO NEW SFR'S AND ONE NEW ADU  WITH PARKING PER PLAN.",
+   "housingcategory": "N/A",
+   "estprojectcost": "400000.0000",
+   "statuscurrent": "Scheduled",
+   "originaladdress1": "233 31ST AVE E",
+   "originalzip": "98112",
+   "latitude": "47.62119040",
+   "longitude": "-122.29262713",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7159955-CN"
+   }
+  },
+  {
+   "permitnum": "7159956-DM",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "description": "DEMOLISH EXISTING SFR  CONSTRUCTTWO NEW SFR'S AND ONE NEW ADU  WITH PARKING PER PLAN.",
+   "housingcategory": "N/A",
+   "estprojectcost": "400000.0000",
+   "statuscurrent": "Scheduled",
+   "originaladdress1": "233 31ST AVE E",
+   "originalzip": "98112",
+   "latitude": "47.62119040",
+   "longitude": "-122.29262713",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7159956-DM"
+   }
+  },
+  {
+   "permitnum": "7160020-CN",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Addition/Alteration",
+   "description": "Conversion of existing detached garage to DADU",
+   "housingcategory": "Single-Family Add/Alt",
+   "estprojectcost": "36837.0000",
+   "statuscurrent": "Additional Info Requested",
+   "originaladdress1": "2122 SW TRENTON ST",
+   "originalzip": "98106",
+   "latitude": "47.52488500",
+   "longitude": "-122.36156745",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7160020-CN"
+   }
+  },
+  {
+   "permitnum": "7160106-CN",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Addition/Alteration",
+   "description": "Remodel existing basement to accommodate AADU. No change to building envelope proposed.",
+   "housingcategory": "Single-Family Add/Alt",
+   "housingunitsadded": "1.0",
+   "estprojectcost": "30000.0000",
+   "statuscurrent": "Scheduled",
+   "originaladdress1": "7329 14th AVE NW",
+   "latitude": "47.68232680",
+   "longitude": "-122.37390006",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7160106-CN"
+   }
+  },
+  {
+   "permitnum": "7160218-CN",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Addition/Alteration",
+   "description": "interior alteration to existing SFR + AADU + AADU",
+   "housingcategory": "Single-Family Add/Alt",
+   "estprojectcost": "65059.0000",
+   "statuscurrent": "Additional Info Requested",
+   "originaladdress1": "4818 SW FINDLAY ST",
+   "originalzip": "98136",
+   "latitude": "47.55236656",
+   "longitude": "-122.39475825",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7160218-CN"
+   }
+  },
+  {
+   "permitnum": "7160267-EX",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Street Improvement Exception",
+   "description": "Request alley improvement exception for proposed development that includes two principal dwelling units and two ADUs.  Existing home to be removed.",
+   "housingcategory": "N/A",
+   "estprojectcost": "750000.0000",
+   "statuscurrent": "Application Completed",
+   "originaladdress1": "5955 36TH AVE S",
+   "originalzip": "98118",
+   "latitude": "47.54821341",
+   "longitude": "-122.28815852",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7160267-EX"
    }
   }
  ]
