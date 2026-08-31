@@ -425,6 +425,7 @@ def build_city_page(city, slug_html, blurb):
               "dateModified": STATS["generated"]}
     body = f"""
 <section class="hero small">
+  <p class="crumb"><a href="index.html#cities">← All cities</a></p>
   <p class="eyebrow">{esc(city)}, Washington · updated {esc(TODAY)}</p>
   <h1>{esc(city)} ADU builders, ranked by permits</h1>
   <p class="dek">{blurb}</p>
@@ -521,6 +522,7 @@ def build_cost_report():
               "isBasedOn": "https://data.seattle.gov/resource/76t5-zqzr"}
     body = f"""
 <section class="hero small">
+  <p class="crumb"><a href="index.html">← Home</a></p>
   <p class="eyebrow">From {len(new):,} new-construction ADU permits · updated {esc(TODAY)}</p>
   <h1>What an ADU really costs in Seattle</h1>
   <p class="dek">Not estimates from contractors' marketing pages — these are the costs, permitting times, and construction times declared on actual Seattle building permits.</p>
