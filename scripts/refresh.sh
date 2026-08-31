@@ -8,6 +8,7 @@ mkdir -p logs
 {
   echo "=== refresh $(date '+%Y-%m-%d %H:%M') ==="
   python3 pipeline/fetch_seattle.py
+  python3 pipeline/fetch_bellevue.py
   python3 pipeline/build_rankings.py
   python3 pipeline/generate_site.py
   if [[ -n "$(git status --porcelain data docs)" ]]; then

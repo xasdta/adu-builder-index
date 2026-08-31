@@ -1,0 +1,3481 @@
+{
+ "city": "Bellevue",
+ "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit_Data_ADU/FeatureServer/0/query",
+ "fetched_at": "2026-08-30",
+ "permits": [
+  {
+   "permitnum": "24 106555 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "2412 170th Place SE \u2014 Voluntary repair to the existing foundation using 14 helical piles.",
+   "statuscurrent": "Canceled",
+   "applieddate": "2024-04-09T00:00:00.000",
+   "issueddate": null,
+   "completeddate": "2024-04-12T00:00:00.000",
+   "contractorcompanyname": "RAMJACK WEST KENNETH JAMES MARQUARDT",
+   "originaladdress1": "2412 170th Pl SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20106555%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 112359 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "3131 GARAGE TO ADU \u2014 convert an existing garage to ADU",
+   "statuscurrent": "Canceled",
+   "applieddate": "2024-05-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "3131 127th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20112359%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 106540 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "106 147th Avenue SE \u2014 Voluntary repair to the existing foundation using 11 helical piles.",
+   "statuscurrent": "Canceled",
+   "applieddate": "2024-04-09T00:00:00.000",
+   "issueddate": null,
+   "completeddate": "2024-04-12T00:00:00.000",
+   "contractorcompanyname": "RAMJACK WEST KENNETH JAMES MARQUARDT",
+   "originaladdress1": "106 147th Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20106540%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 102086 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Ayala Residence \u2014 Substantial addition to an existing SFR including covered decks.",
+   "statuscurrent": "Canceled",
+   "applieddate": "2024-01-30T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12410 NE 24th St",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20102086%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 100144 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "DominionHall \u2014 ADU addition to existing single family residence. Includes clearing & grading. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Canceled",
+   "applieddate": "2023-01-04T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16219 SE 8th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20100144%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 111824 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "ADU conversion \u2014 This permit is to designate part of our home as an ADU. Please note no new construction has been/will be done as the home already has 2 pre-existing separate living areas.",
+   "statuscurrent": "Canceled",
+   "applieddate": "2024-05-16T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4028 140th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20111824%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 111653 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Gowda - Bellevue \u2014 Remodel SFR",
+   "statuscurrent": "Canceled",
+   "applieddate": "2024-05-13T00:00:00.000",
+   "issueddate": null,
+   "completeddate": "2024-05-15T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "4914 131st Pl SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20111653%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 127982 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Kim's DADU \u2014 remove existing carport and add garage and DADU on top",
+   "statuscurrent": "Canceled",
+   "applieddate": "2023-12-11T00:00:00.000",
+   "issueddate": null,
+   "completeddate": "2024-02-02T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "4519 Lake Heights St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20127982%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "22 111856 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Strava Adult Family Home \u2014 Demo existing home to foundation and all of attached garage, build new Adult Family Home on existing foundation. Also construct attached garage and ADU addition. Includes right of way and storm connection. Does not include electrical or plumbing. **Includes Mechanical**",
+   "statuscurrent": "Completed",
+   "applieddate": "2022-05-19T00:00:00.000",
+   "issueddate": "2023-05-31T00:00:00.000",
+   "completeddate": "2025-02-06T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "11606 SE 47th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/22%20111856%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 105251 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "110 148th Ave Bldg 1 \u2014 New construction of condo unit. This application is vested to the 2018 code. Includes Mechanical, Electrical, and Plumbing",
+   "statuscurrent": "Completed",
+   "applieddate": "2024-03-15T00:00:00.000",
+   "issueddate": "2024-09-11T00:00:00.000",
+   "completeddate": "2025-08-13T00:00:00.000",
+   "contractorcompanyname": "TOLL BROS INC",
+   "originaladdress1": "14826 NE 2nd Ct  - Unit 1",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20105251%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 113556 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "4715 ADU Redmodel \u2014 To add partitions, bathrooms, Kitchen, bedroom in the existing finished basement and make it as an ADU unit.",
+   "statuscurrent": "Completed",
+   "applieddate": "2024-06-18T00:00:00.000",
+   "issueddate": "2024-08-07T00:00:00.000",
+   "completeddate": "2025-01-07T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "4715 139th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20113556%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 104709 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "13204 ADU \u2014 To add a small kitchen in a existing living space, add a shower in an existing bathroom. To make existing 400 living space to be an ADU. Does not include mechanical, electrical or plumbing.",
+   "statuscurrent": "Completed",
+   "applieddate": "2025-02-21T00:00:00.000",
+   "issueddate": "2025-03-17T00:00:00.000",
+   "completeddate": "2025-05-15T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "13204 SE 49th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20104709%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 117027 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Huang Residence \u2014 interior remodel and 1 story addition (approx. 848 sf) to convert (e) single family residence into 1 primary and 1 aadu. Includes clearing & grading. Does NOT include mechanical, electrical. Add on plumbing: Hosebib: 4, Ice Maker: 2, Bathroom Sink: 4, Clothes Washer: 1, Dishwasher: 2, Toilet: 3, Bar Sink: 1, Kitchen Sink: 2, Laundry Sink: 1, Shower, Tub, or Combo: 3",
+   "statuscurrent": "Completed",
+   "applieddate": "2024-07-12T00:00:00.000",
+   "issueddate": "2024-11-14T00:00:00.000",
+   "completeddate": "2025-09-18T00:00:00.000",
+   "contractorcompanyname": "WOODMARK HOMES LLC",
+   "originaladdress1": "4240 122nd Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20117027%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 102267 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Basement Reno **See comments for BU->BR conversion** \u2014 Creation of ADU in basement, creation of workout space in basement, and addition of window in dining room, and window in master bathroom. Does not include mechanical, electrical or plumbing.  22 131595 LX.  Deck is included on this scope of work.",
+   "statuscurrent": "Completed",
+   "applieddate": "2023-01-30T00:00:00.000",
+   "issueddate": "2023-04-17T00:00:00.000",
+   "completeddate": "2025-05-06T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "2404 127th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20102267%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 117365 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Yao Residence Renovation - ADU \u2014 Interior renovation to create an ADU w/two new bedrooms, one new living/kitchen space and a new bathroom.  Does not include plumbing, electrical or mechanical. ",
+   "statuscurrent": "Completed",
+   "applieddate": "2023-08-07T00:00:00.000",
+   "issueddate": "2024-01-22T00:00:00.000",
+   "completeddate": "2025-03-18T00:00:00.000",
+   "contractorcompanyname": "SKYFL LLC",
+   "originaladdress1": "9 Skagit Ky",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20117365%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 116688 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "16520 SE 56TH PL BELLEVUE INTERIOR REMODEL \u2014 INTERIOR REMODELING, CREATING NEW ADU IN THE EXISTING BASEMENT. Does not include electrical or plumbing. Includes mechanical.",
+   "statuscurrent": "Completed",
+   "applieddate": "2024-07-08T00:00:00.000",
+   "issueddate": "2024-09-20T00:00:00.000",
+   "completeddate": "2025-05-06T00:00:00.000",
+   "contractorcompanyname": "NW BUILDERS & RENOVATION MOSHE MENAHEM",
+   "originaladdress1": "16520 SE 56th Pl",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20116688%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 122289 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "ADU \u2014 This is for already completed work needing review and inspection.  Does not include electrical. **Add on plumbing and mechanical",
+   "statuscurrent": "Completed",
+   "applieddate": "2024-09-12T00:00:00.000",
+   "issueddate": "2024-11-20T00:00:00.000",
+   "completeddate": "2025-05-29T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "317 160th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20122289%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 105513 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Khandwal Residence Remodel \u2014 External Window at gym room in basement and nearby retaining wall and walkway, 104431\nEdit: Adult Family Home included as part of the scope of work. Retaining wall  and walkway no longer part of scope of work. ",
+   "statuscurrent": "Completed",
+   "applieddate": "2025-03-06T00:00:00.000",
+   "issueddate": "2025-05-19T00:00:00.000",
+   "completeddate": "2025-05-22T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "1405 106th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20105513%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 126085 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Chitphakdibodin ADU \u2014 Addition of attached ADU at back of existing attached garage, 733sf proposed. Includes clearing & grading inspection for drains. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Completed",
+   "applieddate": "2023-11-09T00:00:00.000",
+   "issueddate": "2024-07-01T00:00:00.000",
+   "completeddate": "2025-06-05T00:00:00.000",
+   "contractorcompanyname": "KEYSTONE REMODELING INC",
+   "originaladdress1": "1817 167th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20126085%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "22 116046 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "ADU \u2014 Attached in comment letter and project plan will be attached.  Does not include plumbing, mechanical or electrical.",
+   "statuscurrent": "Completed",
+   "applieddate": "2022-08-08T00:00:00.000",
+   "issueddate": "2022-10-27T00:00:00.000",
+   "completeddate": "2025-01-22T00:00:00.000",
+   "contractorcompanyname": "PERFECT HOME REMODELING INC",
+   "originaladdress1": "12617 SE 60th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/22%20116046%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "22 119295 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "DeLisi- Le addition & remodel \u2014 New 593 sf garage addition with deck above, minor interior remodel of existing spaces, replaced and new flatwork.  Includes clearing & grading.  Does not include plumbing, electrical or mechanical. \n\nThe proposal includes an AADU. ",
+   "statuscurrent": "Completed",
+   "applieddate": "2022-10-13T00:00:00.000",
+   "issueddate": "2023-05-11T00:00:00.000",
+   "completeddate": "2025-08-13T00:00:00.000",
+   "contractorcompanyname": "MacCoy Home Solutions LLC",
+   "originaladdress1": "17408 NE 14th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/22%20119295%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 117835 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Henneman Addition \u2014 Proposal of a second story addition with expansion of kitchen. Includes clearing & grading. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Completed",
+   "applieddate": "2023-08-16T00:00:00.000",
+   "issueddate": "2024-03-27T00:00:00.000",
+   "completeddate": "2025-06-13T00:00:00.000",
+   "contractorcompanyname": "BUILDER LAND LLC",
+   "originaladdress1": "5635 118th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20117835%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "22 114712 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Sung Residence \u2014 Demolish Existing Single Family Residence Approx. 1220 SF Construct New Two Story Wood Framed Single Family House over Daylight Basement Approx. 5846 SF Conditioned Space with Attached Two Car Garage Approx. 492 SF *Includes right-of-way, clearing & grading, and storm connection *Does not include mechanical, electrical, or plumbing",
+   "statuscurrent": "Completed",
+   "applieddate": "2022-07-14T00:00:00.000",
+   "issueddate": "2023-09-27T00:00:00.000",
+   "completeddate": "2025-08-05T00:00:00.000",
+   "contractorcompanyname": "AVALON PROJECT INC",
+   "originaladdress1": "3711 136th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/22%20114712%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "21 102115 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Sanjeev Ponderosa Pacific Inc \u2014 New two story single family residence with attached adu (lower level/ daylite basement)  on slightly sloping vacant lot with no existing trees.  Includes ROW, Storm Connection, Clear and Grade, electrical and plumbing. *Add on Mechanical",
+   "statuscurrent": "Completed",
+   "applieddate": "2021-01-29T00:00:00.000",
+   "issueddate": "2021-10-12T00:00:00.000",
+   "completeddate": "2024-01-02T00:00:00.000",
+   "contractorcompanyname": "A G C ELECTRIC INC",
+   "originaladdress1": "236 W Lake Sammamish Pkwy SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/21%20102115%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "22 110946 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "1324 Bellevue New House \u2014 Demo existing house, and build a new two story house with basement of total 5500 SF and two car garage. *Includes right-of-way, clearing & grading and storm connection **Add on plumbing. ** add mechanical, electrical**",
+   "statuscurrent": "Completed",
+   "applieddate": "2022-05-03T00:00:00.000",
+   "issueddate": "2022-09-07T00:00:00.000",
+   "completeddate": "2025-03-12T00:00:00.000",
+   "contractorcompanyname": "OMEGA ELECTRIC",
+   "originaladdress1": "1324 102nd Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/22%20110946%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 103734 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Sherwood Residence \u2014 Remodel the bonus room and garage into bedrooms, bathrooms, and a kitchen.",
+   "statuscurrent": "Completed",
+   "applieddate": "2025-02-11T00:00:00.000",
+   "issueddate": "2025-03-10T00:00:00.000",
+   "completeddate": "2025-08-19T00:00:00.000",
+   "contractorcompanyname": null,
+   "originaladdress1": "16239 NE 26th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20103734%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 110954 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "529 99th \u2014 Construction of new 5764 s.f. detached single family home with attached 554 s.f. garage and associated grading and utility work.  **Demo under 04 112768 BE.  Includes storm connection, right-of-way, clearing & grading.  **Add on plumbing, electrical and mechanical ",
+   "statuscurrent": "Completed",
+   "applieddate": "2023-06-06T00:00:00.000",
+   "issueddate": "2024-06-11T00:00:00.000",
+   "completeddate": "2025-07-31T00:00:00.000",
+   "contractorcompanyname": "PROVIDENT ELECTRIC INC",
+   "originaladdress1": "529 99th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20110954%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 115112 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Pitts SFR ADU Addition \u2014 Includes Clearing & Grading.  Does not include plumbing, electrical or mechanical. \n579 sq. ft. (82 MAIN FLR. + 497 UPR. FLR.) ADDITION FOR FUTURE CONVERSION TO AN ADU OVER/ADJACENT TO EXISTING GARAGE. \nREMODEL TO RELOCATE MAIN FLOOR POWDER ROOM, NEW UPPER FLOOR LAUNDRY ROOM, RELOCATE UPPER FLOOR BATH & REMODEL TO MASTER BATHROOM.\nPARTIAL DEMO OF EXISTING WOOD DECK FOR NEW 587 sq. ft. SAND SET PAVER PATIO. \n",
+   "statuscurrent": "Completed",
+   "applieddate": "2023-07-18T00:00:00.000",
+   "issueddate": "2023-09-29T00:00:00.000",
+   "completeddate": "2025-11-03T00:00:00.000",
+   "contractorcompanyname": "Home Good Construction LLC",
+   "originaladdress1": "16949 NE 19th Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20115112%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 102125 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Chang Fire & Addition \u2014 Fire Damage repairs. Replace all interior finishes & fixtures at all levels. 142 sqft addition with portions of residence at east & west ends to be rebuilt. Replace damaged trusses and convert basement to ADU. Includes clearing & grading inspection for drains. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-01-31T00:00:00.000",
+   "issueddate": "2024-05-23T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "Golden Coast Cnst/Rst/NW Inc",
+   "originaladdress1": "2347 128th Ave SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20102125%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 129550 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "BODELL COTTAGE \u2014 NEW BACKYARD COTTAGE - 393GSF. Includes clearing & grading. Does not include mechanical, electrical or plumbing.\n\nGuest Cottage Agreement Recording Number: 20250408000222",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-12-18T00:00:00.000",
+   "issueddate": "2025-09-03T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "HAAS DEVELOPMENT & CONST CO DAVID HASS DELAFIELD",
+   "originaladdress1": "1505 143rd Ave NE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20129550%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 124920 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "ADU  ADDITION \u2014 REAR ADU ADDITION TO (E) SFR",
+   "statuscurrent": "Incomplete",
+   "applieddate": "2025-10-16T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "835 165th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20124920%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 110755 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "1034 108th Ave SE \u2014 NEW CONSTRUCTION OF SINGLE FAMILY RESIDENCE WITH AN ATTACHED DWELLING UNIT AND ATTACHED GARAGES. REMOVAL OF EXISTING STRUCTURE. Does not include mechanical, electrical, and plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-05-05T00:00:00.000",
+   "issueddate": "2025-10-02T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1034 108th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20110755%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 105238 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Galle Remodel \u2014 Addition of a new ADu and Garage to existing 1970 era single family residence. Includes  clearing & grading.  Does not include plumbing, electrical or mechanical. ",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-03-15T00:00:00.000",
+   "issueddate": "2024-05-05T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "TENNYSON HOMES CONSTRCTN INC",
+   "originaladdress1": "2234 109th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20105238%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 120048 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "AADU conversion \u2014 Convert existing garage to AADU, 24104916bu. Does not include Mechanical, Electrical, or Plumbing",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-08-29T00:00:00.000",
+   "issueddate": "2024-12-11T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "HAIYUAN CONSTRUCTION LLC",
+   "originaladdress1": "3711 130th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20120048%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "22 104898 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Raval Residence Addition \u2014 Addition to the existing residential structure.  Adding living space and garage. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2022-04-05T00:00:00.000",
+   "issueddate": "2023-12-01T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4100 140th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/22%20104898%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 117073 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "PANDITH RESIDENCE \u2014 BUILD 2 STORY SINGLE-FAMILY 5 BEDROOMS RESIDENCE WITH ATTACHED ADU AND 2CAR ATTACHED GARAGE. EXISTING HOUSE SHALL BE DEMOLISHED. Includes mechanical, electrical, and plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-07-15T00:00:00.000",
+   "issueddate": "2024-10-31T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "ALL WAYS AIR CONTROL INC",
+   "originaladdress1": "3808 142nd Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20117073%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 113318 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "2229 remodel \u2014 Basement upgrade to an ADU: 1. Add 2nd kitchen 2. Add two bedrooms 3. Add extra bathroom **Does not include mechanical, electrical or plumbing**",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-06-13T00:00:00.000",
+   "issueddate": "2024-12-26T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "2229 137th Pl SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20113318%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 125716 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "16015 NEW RESIDENCE \u2014 DEMOLISH EXISTING SINGLE FAMILY RESIDENCE AND CONSTRUCT A NEW SINGLE FAMILY RESIDENCE WITH ATTACHED GARAGE. Does not include Mechanical, Electrical, or Plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-10-25T00:00:00.000",
+   "issueddate": "2025-02-10T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "HYPERION CONSTRUCTION LLC",
+   "originaladdress1": "16015 SE 7th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20125716%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 116279 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Remodel kitchen-ADU \u2014 Remodel kitchen in basement",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-07-07T00:00:00.000",
+   "issueddate": "2025-09-08T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "13219 SE 52nd Pl",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20116279%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 100232 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport View, Lot 07 \u2014 Construct a new 4,192 sq ft single-family residence. (21 115323 GE). Plat Address: 6250 120th Ave SE. Does NOT include mechanical, electrical, nor plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-01-07T00:00:00.000",
+   "issueddate": "2025-09-09T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "CONNER HOMES AT NWPRT VW LLC",
+   "originaladdress1": "12072 SE 63rd Ct  - Lot 7",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20100232%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 125530 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Nguyen & Ma Residence Addition \u2014 Add entry vestibules (161SF) and ADU (667SF) over garage (667SF). Includes clearing & grading. Does NOT include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-10-22T00:00:00.000",
+   "issueddate": "2025-09-09T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "R&M BUILDERS LLC",
+   "originaladdress1": "919 129th Pl NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20125530%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 126660 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport View, Lot 13 \u2014 Construct a new 4,246 sq ft residence. Includes storm connection, right-of-way, clearing & grading.  Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-11-14T00:00:00.000",
+   "issueddate": "2025-09-30T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "CONNER HOMES AT NWPRT VW LLC",
+   "originaladdress1": "6250 120th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20126660%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 113190 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Yoga studio addition \u2014 Project is to add small yoga studio additional structure (not living space) of approximately 300 sq. ft. Structure is detached from primary residence. Work include new foundation, standard 2x6 framing and standard rafter roof with metal panels. Does not meet the definition of a dwelling unit, cannot be used for sleeping. Includes clearing & grading. Does not include mechanical, electrical, or plumbing (25 119795 BN).",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-06-11T00:00:00.000",
+   "issueddate": "2025-07-22T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "TRIPLE Z LLC",
+   "originaladdress1": "13716 NE 28th St",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20113190%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 124062 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Scott Residence ADU Addition \u2014 Construct new garage and second story addition to existing single family home, 23 117078 DC. Includes clearing & grading.  Does not include plumbing, electrical or mechanical. ",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-10-24T00:00:00.000",
+   "issueddate": "2023-12-10T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "BUILDING ENVELOPE SERVICES LLC",
+   "originaladdress1": "16409 SE 35th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20124062%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 102440 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Schumacher Custom Home \u2014 SCOPE OF WORK INCLUDES DEMOLITION OF THE EXISTING 1954 RESIDENCE AND CARPORT, REMOVING THE EXISTING SEPTIC TANK AND ABANDONING THE DRAINFIELD.  THE NEW SEPTIC WILL BE CONNECTED TO PUBLIC SEWER WITH AN EXISTING STUB ON THE PROPERTY.  THE EXISTING SITE HAS A STEEP SLOPE AREA.  THE NEW SINGLE FAMILY RESIDENCE , 2 CAR GARAGE, AND ADU WILL BE BUILT OUTSIDE OF THE 50 FOOT BUFFER OF THE STEEP SLOPE., 24-112071 C-DC. Does NOT include Mechanical, Electrical, and Plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-01-30T00:00:00.000",
+   "issueddate": "2025-09-17T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "ARMADA DESIGN & BUILD INC",
+   "originaladdress1": "3048 164th Pl NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20102440%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 123991 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "NEERUDU RESIDENCE \u2014 Demolish existing SFR and construct new SFR *Does not include Mechanical, Electrical and Plumbing *",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-10-23T00:00:00.000",
+   "issueddate": "2024-09-03T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "BONTERRA CONSTRUCTION LLC",
+   "originaladdress1": "16025 NE 6th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20123991%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 121640 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "SOLEIMAN BASEMENT CONVERSION \u2014 CONVERT 832.22 SF OF UN FINISHED BASEMENT INTO LIVING SPACE.  Does not include plumbing, electrical or mechanical",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-09-21T00:00:00.000",
+   "issueddate": "2024-09-03T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "LOPEZ BROS CONSTRUCTION JOSE FEDERICO PELAYO LOPEZ",
+   "originaladdress1": "37 129th Ave SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20121640%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 118130 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "16636 SE 26th Pl \u2014 Remove 1 existing SFR and build 1 SFR with an ADU. Includes Mechanical, Electrical, and Plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-07-23T00:00:00.000",
+   "issueddate": "2025-11-12T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "GARNER ELECTRIC WASHINGTON LLC",
+   "originaladdress1": "16636 SE 26th Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20118130%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 107278 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "4515 150TH AVE SE \u2014 Demo of existing residence and NEW CONSTRUCTION OF SINGLE FAMILY RESIDENCE WITH ATTACHED GARAGE AND ACCESSORY DWELLING UNIT WITH ATTACHED GARAGE. Includes mechanical, electrical and plumbing. ",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-04-23T00:00:00.000",
+   "issueddate": "2024-12-23T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "Performance Electric Inc",
+   "originaladdress1": "4515 150th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20107278%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 125374 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Kaur Addition \u2014 Enclose an existing covered patio into an exercise room, move the laundry room to the lower floor, add ADU to existing storage, turn existing laundry into a spice kitchen, add a mudroom off the garage, add an elevator, replace masonry fireplace with new gas inserts, raise an existing deck to the dining floor level, remodel the kitchen and all bathrooms. Includes clearing & grading inspections. Does not include mechanical, electrical or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-10-18T00:00:00.000",
+   "issueddate": "2025-05-14T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "LOCHWOOD-LOZIER CUSTM HOMES CO JON D LOZIER",
+   "originaladdress1": "2009 Killarney Way",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20125374%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 123567 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Gehrke Residence \u2014 Interior remodeling of the existing finished basement, which includes reconfiguring the current bathroom and laundry, as well as adding a new kitchenette to the family room to better accommodate family needs. This will not be an ADU. Does not include Mechanical, Electrical, or Plumbing. ",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-10-09T00:00:00.000",
+   "issueddate": "2025-02-05T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "EVEREST DESIGN & BUILD LLC",
+   "originaladdress1": "510 146th Ave NE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20123567%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 121698 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Wang Residence remodel \u2014 Kitchen, bathroom remodel",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-09-22T00:00:00.000",
+   "issueddate": "2024-01-29T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "17234 SE 40th Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20121698%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 126215 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Graham Residence 2 \u2014 Includes clearing & grading.  Does not include plumbing, electrical or mechanical. \nDemo masonry FP, New foyer addition, replace entry porch, replace stairs, new 2 story addition to rear for new kitchen and ADU below. Remodel 3 bathrooms, closet and new laundry at ex bedroom, new partially covered deck with stairs to grade.",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-11-13T00:00:00.000",
+   "issueddate": "2023-12-20T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "WEREMODEL.COM LLC",
+   "originaladdress1": "12927 SE 5th Pl",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20126215%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 112992 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "809 166TH AVE NE \u2014 New construction of single family residence with attached garage and attached accessory dwelling unit with attached garage. Does not include mechanical, electrical or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-06-06T00:00:00.000",
+   "issueddate": "2025-01-06T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "BLACKWOOD BUILDERS LLC",
+   "originaladdress1": "809 166th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20112992%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 123863 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Sandeep Residence \u2014 2 Story single family residence (10,429 sf) with attached basement (2588 sf) 1 car garage (371 sf) and 3 car garage (927 sf) and ADU (844 sf). Does not include mechanical, electrical, or plumbing (25 114936 BN)",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-10-19T00:00:00.000",
+   "issueddate": "2024-10-04T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "POLARIS CONSTRUCTION LLC",
+   "originaladdress1": "13479 NE 30th St",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20123863%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 109702 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Shiu SFR ADU Addition \u2014 GARAGE CONVERSION TO LIVING AREA AND ADDITION FOR AN ACCESSORY DWELLING UNIT IN AN EXISTING SINGLE FAMILY RESIDENCE. \nADU is 266 Sq. Ft. (14x19). Includes clearing & grading inspection for drains. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-04-24T00:00:00.000",
+   "issueddate": "2025-08-20T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "632 165th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20109702%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 107337 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "New Single Family and ADU \u2014 Demolition of existing residence and construction of new single family home and ADU. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-04-24T00:00:00.000",
+   "issueddate": "2024-10-10T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "INSIGNIA CONSTRUCTION LLC",
+   "originaladdress1": "4120 161st Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20107337%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 118051 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "2nd Bedroom \u2014 Subdivide the living space to make a 2nd bedroom. Adding a 28 inch side door to allow access to the basement area through garage. Does not include mechanical, electrical or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-07-22T00:00:00.000",
+   "issueddate": "2025-08-18T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "6234 121st Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20118051%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 116318 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "15014 SE 22ND ST \u2014 Demo of existing residence and construction of a new SINGLE FAMILY RESIDENCE WITH ATTACHED GARAGE AND ATTACHED ACCESSORY DWELLING UNIT WITH ATTACHED GARAGE. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-06-28T00:00:00.000",
+   "issueddate": "2025-02-26T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "BLACKWOOD BUILDERS LLC",
+   "originaladdress1": "15014 SE 22nd St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20116318%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 114202 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Wade ADU Addition \u2014 add a 629 sf ADU addition to existing SFR.  Includes clearing & grading inspection for drains only.  Does not include plumbing, mechanical or electrical.",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-06-28T00:00:00.000",
+   "issueddate": "2023-10-09T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1326 165th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20114202%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 115295 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "15640 NE 1st Pl, Bellevue \u2014 Remove 1 existing SFR and build 1 SFR and ADU. Includes mechanical, electrical, and plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-06-25T00:00:00.000",
+   "issueddate": "2025-11-07T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "GARNER ELECTRIC WASHINGTON LLC",
+   "originaladdress1": "15640 NE 1st Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20115295%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 103735 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Cheng Residence \u2014 Demolish the existing house and build new house.  Includes storm connection, right-of-way, clearing & grading.  Does not include plumbing, electrical or mechanical. ",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-03-02T00:00:00.000",
+   "issueddate": "2024-04-01T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "FIVE STAR GLOBAL BUILDERS INC",
+   "originaladdress1": "3118 103rd Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20103735%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 127498 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Sher Garage and Home Office \u2014 Does NOT include Mechanical, Electrical and Plumbing. Includes Clearing and Grading. The scope of work for the proposed development will include demolishing the existing guesthouse and carport for the construction of a new detached garage structure that will also include an adjacent home office space. The proposed garage will contain 1742 square feet of interior parking and storage space, and the attached home office and storage space will contain an additional footprint of 948 square feet. This new structure will comprise the full footprint of the existing guesthouse  as well as portions of the front deck and yard area.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-12-02T00:00:00.000",
+   "issueddate": "2025-09-10T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1660 W Lake Sammamish Pkwy NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20127498%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 123321 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "16654 NE 12TH ST \u2014 NEW CONSTRUCTION OF SINGLE FAMILY RESIDENCE WITH ATTACHED GARAGE AND ATTACHED ACCESSORY DWELLING UNIT WITH ATTACHED GARAGE. Does not include mechanical, electrical or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-10-03T00:00:00.000",
+   "issueddate": "2025-01-30T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "BLACKWOOD BUILDERS LLC",
+   "originaladdress1": "16654 NE 12th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20123321%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 111606 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Gowda - Bellevue \u2014 Remodel of SFR & new ADU. Includes C&G. Does not include Mechanical, Electrical, or Plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-05-13T00:00:00.000",
+   "issueddate": "2024-10-29T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "SK DESIGNS LLC",
+   "originaladdress1": "4914 131st Pl SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20111606%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 115236 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "De Souza ADU \u2014 CONSTRUCT NEW INTERIOR NON STRUCUTRAL ADU (533 SF) ON THE BASEMENT FLOOR OF THE EXISTING RESDIENCE. NEW ADU TO HAVE NEW KITCHEN, NEW LIVING ROOM, NEW BATHROOM AND NEW BEDROOM.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-06-24T00:00:00.000",
+   "issueddate": "2025-08-27T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "SABER CONSTRUCTION INC",
+   "originaladdress1": "4023 162nd Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20115236%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 115105 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "11087 ADU \u2014 Remodel to create Accessory Dwelling Unit on lower floor: add kitchen, replace exterior door with a swing door, convert storage room to laundry/utility, create wall with door to separate the two dwellings. Remodel in main dwelling unit to add windows, and remove a bedroom to convert that area to a living room.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-06-23T00:00:00.000",
+   "issueddate": "2025-08-07T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "SEATTLE BLUE SKY CONST INC",
+   "originaladdress1": "11087 SE 62nd Pl  - Lot 10",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20115105%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 108798 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Bharat ADU \u2014 Permitting converted basement as ADU  **23 105205 EA. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-04-26T00:00:00.000",
+   "issueddate": "2025-04-17T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "SAIGHAR LLC",
+   "originaladdress1": "3045 Bellevue Way NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20108798%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 119777 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "BHARAT RESIDENCE \u2014 Demo PROPOSED CONSTRUCTION OF 2 STOREY SINGLE FAMILY RESIDENCE WITH AN ACCESSARY DWELLING UNIT (ADU), A THREE CAR GARAGE, AND A BASEMENT FOR MR. BHARAT SINDIRI. Includes mechanical, electrical, and plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-08-23T00:00:00.000",
+   "issueddate": "2025-04-15T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "626 W Lake Sammamish Pkwy NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20119777%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 103100 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Chin ADU \u2014 Construction of a 711 SF ADU attached to the existing primary residence and 341 SF detached garage with appurtenant site improvements. Detached Accessory Structure Agreement, Recording number 20250210000201. Does NOT include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-02-05T00:00:00.000",
+   "issueddate": "2025-04-18T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "VASA CONSTRUCTION LLC",
+   "originaladdress1": "4618 121st Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20103100%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 113891 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "822 165TH AVE NE \u2014 Demo existing home. New construction of a single family residence with attached garage and attached accessory dwelling unit with attached garage. Does NOT include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-06-25T00:00:00.000",
+   "issueddate": "2025-01-24T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "BLACKWOOD BUILDERS LLC",
+   "originaladdress1": "822 165th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20113891%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 109197 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Jun residence \u2014 Remodel and two-story addition. Includes clearing & grading, mechanical, and plumbing. Does not include electrical.",
+   "statuscurrent": "Issued",
+   "applieddate": "2025-04-15T00:00:00.000",
+   "issueddate": "2025-10-02T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "SNOWFLAME HTG & AIR CDTING LLC",
+   "originaladdress1": "2117 167th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20109197%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 120177 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "KAVA SFR+AADU \u2014 DEMO EXISTING SFR. BUILD NEW 2-ST SFR W/4-CAR TANDEM GARAGE O/DAYLITE BSMT AADU W/1 CAR GAR WITH SITE IMPROVEMENTS. Does not include Mechanical, Electrical and Plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2024-09-03T00:00:00.000",
+   "issueddate": "2025-05-15T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "ELITE HOMES NW LLC",
+   "originaladdress1": "4608 148th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20120177%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 124427 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "12106 Bellevue \u2014 INTERIOR REMODEL AND 1777 SF UPPER FLOOR ADDITION TO EXISTING 1 STORY SFR. WORKS INCLUDE A NEW 287 SF REAR UPPER DECK ADDITION. ESTABLISH 1180 SQ-FT ON MAIN FLOOR AS AN ADU, PER PLAN. Includes clearing & grading inspection for drains. Does not include mechanical, electrical, or plumbing.",
+   "statuscurrent": "Issued",
+   "applieddate": "2023-11-01T00:00:00.000",
+   "issueddate": "2024-05-02T00:00:00.000",
+   "completeddate": null,
+   "contractorcompanyname": "Y&S Construction LLC",
+   "originaladdress1": "12106 SE 43rd St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20124427%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127301 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0705 \u2014 Demo existing home, shed, & build new single family home. To include work in ROW for haul route, materials drop-off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-11-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "2551 155th Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127301%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 118753 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Lot - 1 Bellevue Residence \u2014 Construct a new 2 story house w basement, 3 car garage and AADU",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-08-04T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4089 140th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20118753%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 126955 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "14823 House Addition \u2014 Add a 401 sf master suite on top of garage in existing house and add a 1,020 sf two-story ADU to the back of the garage.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-11-13T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14823 NE 14th St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20126955%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 121227 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Convert existing garage to living area \u2014 Applicant description: We are remodeling DADU from 1999. Converting DADU garage into living area. \n\n**24 127323 EA**\n\nStaff description: Convert detached garage/storage building to a dwelling unit. \n\nThe first story is a conversion of unconditioned to conditioned space, including adding a kitchen, bathroom and an interior stair to access the upper story. \n\nThe upper story was originally constructed as conditioned storage space, however at some point was remodeled without permits to convert it to habitable space including a sleeping room and bathroom. All of this work is included in this permit. Modifications may be required if it is found to not be code-compliant.\n\nThere is an existing 1-hour rated wall along one side of this new dwelling, that must be maintained, as it is less than 4 feet from the other dwelling.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-09-11T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "OPTIMA CONSTRUCTION DANIELA ANA POTRA",
+   "originaladdress1": "6739 123rd Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20121227%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 119994 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "935 168th Ave NE \u2014 Construction of a single family residence with a ADU.  **Demo done under 25-120035 BE.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-08-19T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "SEA HOME BUILDERS LLC",
+   "originaladdress1": "935 168th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20119994%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 119926 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "NGUYEN'S ADU \u2014 Removed the existing garage and rebuilt & enlarged the garage on the main floor. Added upper floor plan as an AADU.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-08-18T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12727 SE 63rd St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20119926%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 121100 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0683 \u2014 Demo existing home, sheds, & build new single family home. To include work in ROW for haul route, materials drop off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-09-09T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "2534 155th Pl SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20121100%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 109148 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "REDDY House & ADU (complete new design coming in, route to FIRE) \u2014 NEW SINGLE FAMILY RESIDENCE AND ACCESSORY DWELLING UNIT",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-04-15T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1411 112th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20109148%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127038 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Surrey 109th \u2014 Demolilsh one home. Build a new home with an ADU.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-11-14T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "142 109th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127038%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 125240 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0695 \u2014 Demo existing home, shed, & build new single family home. To include work in ROW for haul route, materials drop off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-10-22T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "14017 SE 38th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20125240%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 100314 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Doan/Luong Residence \u2014 Construct a new 7,085 square foot single family residence w/ attached ADU",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-01-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "10214 SE 13th Pl",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20100314%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 121079 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "426 160th Ave SE \u2014 Construct new single-family residence with attached accessory dwelling unit totally 4,008 sf; and attached garage",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-09-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "426 160th Ave SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20121079%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 121059 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Van Dijk ADU Addition \u2014 Residential addition over existing garage.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-09-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "6706 123rd Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20121059%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 105217 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Sravanthi&Charles residence \u2014 Demo existing building and build new single family home",
+   "statuscurrent": "Pending",
+   "applieddate": "2024-03-14T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "2455 161st Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20105217%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 105200 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Satnam Johal \u2014 3-STORY SINGLE-FAMILY RESIDENCE W/ADU \n AND ATTACHED 2 - CAR GARAGE & 1 - CAR GARAGE on a vacant lot.",
+   "statuscurrent": "Pending",
+   "applieddate": "2024-03-14T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "5960 173rd Ln SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20105200%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 125000 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "137th Ave \u2014 Demolish existing house complete. Partial demo of existing barn structure, foundation to remain. New SFR with AADU plus remodeled accessory structure",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-10-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4604 137th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20125000%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 102540 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "BELLEVUE \u2014 ADDITION TO EXISTING SFR\r\n726 SF ADU\r\n700 SF SECOND STORY ADDITION",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-01-31T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "NW QUALITY REMODEL & DECK LLC",
+   "originaladdress1": "1603 121st Ave SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20102540%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 126616 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "NWC 1st Street Homes ADUs \u2014 Demolish existing house.  Construct one new stand alone home with two ADUs in separate structure. Parking for each unit provided in attached garages. Construct associated site improvements and landscaping.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-11-06T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "NW CRAFT HOMES LLC",
+   "originaladdress1": "15228 SE 1st St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20126616%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 124900 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "16237 2nd \u2014 Tear down of existing structure and construction of new SFR with AADU.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-10-16T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EXCEPTIONAL NW HOMES LLC",
+   "originaladdress1": "16237 NE 2nd St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20124900%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 120341 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "11605 RESIDENCE REMODEL & ADDITION \u2014 DEMOLISH A PORTION OF EXISTING,  ADD FOUNDATION AND  STRUCTURE ATTACHED TO THE EXISTING HOUSE PER PLAN",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-08-25T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "11605 SE 64th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20120341%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 126029 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0688 \u2014 Demolish existing Single-Family Residence, shed, retaining walls, concrete patios & asphalt driveway. To build New Construction Single-Family Residence. To include work in the ROW for haul route, materials drop-off, Utilities connection & replacement, & driveway work.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-10-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "3910 146th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20126029%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 105180 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "NGUYEN NEW RESIDENCE AND AADU \u2014 DEMOLISH EXISTING STRUCTURE FOR NEW SINGLE FAMILY WITH ATTACHED ACCESSORY DWELLING UNIT",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-03-03T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "3781 147th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20105180%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 116878 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Appelbaum Residence \u2014 Tear down existing house, build new construction SFR with attached ADU.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-07-17T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MAWER BROTHERS LLC",
+   "originaladdress1": "9830 Lake Washington Blvd NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20116878%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 114039 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "1408 House \u2014 Proposed to build a 2 story house with daylight basement and AADU in the daylight basement",
+   "statuscurrent": "Pending",
+   "applieddate": "2023-06-26T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1408 109th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20114039%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 101368 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Kit Singh addition \u2014 moving an existing addition over to new application, per city request?  adding a garage, ADU and master bedroom to existing structure",
+   "statuscurrent": "Pending",
+   "applieddate": "2024-01-16T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "11704 NE 30th Pl",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20101368%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 111360 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Surrey Downs Residence + ADU \u2014 Construct a 2-storey SFR + ADU",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-05-15T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "204 108th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20111360%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 100183 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "ZHANG ADU \u2014 Adding an attached ADU to the rear of property., 1525174",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-01-06T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "2236 137th Pl SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20100183%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 123160 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Woodridge Belle 12202 \u2014 Existing one-story house with basement being expanded with additions on both existing levels, plus adding a new second story. Addition of attached, two-story dwelling unit to create two-family dwelling. Two new attached carports also being added.",
+   "statuscurrent": "Pending",
+   "applieddate": "2024-10-01T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12202 SE 25th St",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20123160%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 117970 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport Hills Residence \u2014 New SFR- install new exterior walls, roof, interior partitions, interior finishes, ceiling, lighting, power, data",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-07-21T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "6208 120th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20117970%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127285 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0704 \u2014 Demo existing home, shed, & build new single family home. To include work in ROW for haul route, materials drop-off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-11-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "2519 155th Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127285%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 121411 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport View, Lot 14 \u2014 CONSTRUCT A NEW 4,098 SQ FT RESIDENCE WITH ATTACHED 839 SQ FT DWELLING UNIT",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-09-15T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "6250 120th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20121411%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 120658 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0682 \u2014 Demo existing home, shed, & build new single family home. To include work in ROW for haul route, materials drop-off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-08-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "142 160th Ave SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20120658%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 115008 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport View, Lot 08 \u2014 Construct a new 4,563 sq ft residence with 846 sq ft ADU.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-06-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "6250 120th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20115008%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "23 123578 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Qi Residence \u2014 Demolish the existing structures and construct a 2-story single family building with a partially underground floor, an attached garage, and an attached ADU.",
+   "statuscurrent": "Pending",
+   "applieddate": "2023-10-12T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "10940 NE 26th Pl",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/23%20123578%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 118159 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0678 \u2014 Demo existing home & build new single family home. To include work in ROW for haul route, materials drop-off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-07-24T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "16725 NE 21st St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20118159%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 120435 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "ADDITION TO A (E) SFR \u2014 1289 SQ ADDITION",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-08-26T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "835 165th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20120435%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 124399 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Serduk Residence \u2014 NEW 3507 SF SINGLE FAMILY RESIDENCE WITH 651 SF ATTACHED THREE-CAR GARAGE AND 492 SF ADU",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-10-07T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14214 SE 14th St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20124399%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 115267 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Basement ADU \u2014 Remodel basement to create Accessory Dwelling Unit",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-06-25T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16035 SE 16th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20115267%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 124627 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "16404 Bellevue New house \u2014 Demo existing house and build a new two-story house with ADU over the garage of total building areas around 5000sf with two car garage.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-10-10T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16404 SE 12th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20124627%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "24 103483 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Addition of bathroom and kitchenette \u2014 We plan on adding a kitchenette in our family room (located in the basement) and also adding a bathroom to the space adjacent to it effectively turning that space into an ADU. The scope of the work is limited to electrical and plumbing, and no structural changes are planned.  Does not include plumbing, electrical or mechanical. ",
+   "statuscurrent": "Ready to Issue",
+   "applieddate": "2024-02-12T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16605 SE 25th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20103483%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 119767 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "TESTING MESSAGE DISPLAY \u2014 testing messaging on customer invoice PDF",
+   "statuscurrent": "Screened Out",
+   "applieddate": "2025-08-13T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "450 110th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20119767%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127479 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Single-Family Residence Remodel \u2014 Interior remodel of the existing single-family residence to create an attached ADU within the existing building. Scope includes layout modifications and installation of a new kitchenette and bathroom.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-11-25T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "15931 SE 1st St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127479%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127577 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "9517 LLC NEW RESIDENCE PROJECT \u2014 1. to build a joint-use driveway; 2. to remove the existing driveway; 3, to build a primary and an attached accessory dwelling units;, 25-126700 GA",
+   "statuscurrent": "Open",
+   "applieddate": "2025-11-26T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "9527 Lake Washington Blvd NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127577%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127677 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "NW 21st \u2014 Demolish home. Build new home including ADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-01T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "10261 NE 21st Pl",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127677%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127660 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "13717 SOMERSET BLVD SE \u2014 NEW CONSTRUCTION OF (1) THREE-STORY SINGLE FAMILY RESIDENCE AND (1) ATTACHED ADU, ONE-STORY BELOW GRADE, TWO-STORY ABOVE GRADE. SINGLE FAMILY RESIDENCE FEATURES 5 BEDROOMS, 6 BATHROOMS, AND A TWO-CAR GARAGE. ATTACHED ADU INCLUDES 1 LIVING & SLEEPING SPACE AND 1 BATHROOM.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-01T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "13717 Somerset Blvd SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127660%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127621 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Ephrem AADU \u2014 CONVERSION OF EXISTING 1,181 SF DAYLIGHT BASEMENT LEVEL OF EXISTING SINGLE FAMILY HOME TO A 2 BEDROOM AND 1 HOME OFFICE AADU.  BASEMENT LEVEL WAS FULLY BUILT OUT AS PART OF THE ORIGINAL 89-8691-BR BUILDING PERMIT.  AN UNPERMITTED KITCHEN WAS ADDED WHICH IS NOW PART OF THE PERMITTED AADU SUBMISSION, 89-8691-BR",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-01T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "2630 168th Ave SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127621%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 127611 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Hartline DADU Garage Conversion \u2014 CONVERT EXISTING GARAGE AND ADD AN ADDITIONAL 400 SF FOR PROPOSED DADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-01T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16810 SE Newport Way",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20127611%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 129268 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0696 \u2014 Demolish existing Single-Family Residence, shed, concrete patios, walkways, retaining walls, driveway & deck. To build New Construction Single-Family Residence, including work in ROW for haul route, materials drop-off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "1702 99th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20129268%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 129549 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Stehlik Remodel \u2014 Entry addition and front porch to add 114 sq. ft. living space. Interior remodel of main floor kitchen area, removing a drop ceiling and replacing some walls with posts and beams.",
+   "statuscurrent": "Screening",
+   "applieddate": "2025-12-11T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "3918 171st Pl NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20129549%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 129822 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Richmond ADU approval \u2014 Receive ADU approval for an existing basement dwelling unit that was built either during initial construction (1962) or during a 1970s remodel (King County jurisdiction at the time).  I would like to remove agreement 20101214000683 which states that the basement is not to be used as an ADU or the plumbing can be pulled.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-17T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1012 W Lake Sammamish Pkwy SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20129822%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 129816 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "DBH 2810 \u2014 Construct a new single family residence and demolition of existing building.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-17T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "DESIGN BUILT HOMES LLC",
+   "originaladdress1": "2810 109th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20129816%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 130095 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Liu-Das at 15312 SE 27th St \u2014 Demolish existing home and construct a new single-family residence.",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-23T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "JAYMARC CUSTOM HOMES LLC",
+   "originaladdress1": "15312 SE 27th St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20130095%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 130082 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Nguyen Residence \u2014 CLEAR AND GRADE EXISTING UNENCUMBERED LOT AREA AND REMOVE EXISTING TREES PER APPROVED PLANS. PROVIDE NEW RESIDENTIAL WATER, SEWER, AND STORM WATER UTILITIES PER APPROVED DRAWINGS AND BUILDING PERMIT. CONSTRUCT NEW PRIMARY TWO-STORY SINGLE-FAMILY RESIDENCE WITH ATTACHED GARAGE AND NEW SECONDARY ATTACHED SECOND FLOOR ADU PER APPROVED DRAWINGS AND BUILDING PERMIT",
+   "statuscurrent": "Open",
+   "applieddate": "2025-12-23T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "3724 116th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20130082%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 130297 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SFH 15419 CB Custom Homes \u2014 two stories single family home with ADU",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-12-30T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "PENROSE CONSTRUCTION LLC",
+   "originaladdress1": "15419 SE 8th St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20130297%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 130349 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Chen - Addition (161) \u2014 Propose to construct an addition above the garage and on the west half of the house.",
+   "statuscurrent": "Screening",
+   "applieddate": "2025-12-31T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "161 165th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20130349%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 130348 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "NW 30th \u2014 Demolish home and garage. Build new home with ADU.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-12-31T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "9803 NE 30th St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20130348%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "25 130344 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Joyce SE 42nd ST \u2014 2 Story single family residence with attached 3 car garage and a studio. Spoke with City of Bellevue Permit team and was told that funds for permit 25-115396-BS can be transferred to this new application. This new building permit is to go under the new F.A.R. codes.",
+   "statuscurrent": "Pending",
+   "applieddate": "2025-12-31T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12032 SE 42nd St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20130344%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 100028 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Deets Homes #5 \u2014 Demolish and rebuild 4046 sq.ft. SFR in SR-4 Zone with ADU and associated improvements (incl. elec, mech, and plumbing).",
+   "statuscurrent": "Pending",
+   "applieddate": "2026-01-02T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14221 SE 10th Pl",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20100028%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 100828 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "12649 House \u2014 proposed to demo the existing house and build a new 2 story SFR and attached ADU",
+   "statuscurrent": "Pending",
+   "applieddate": "2026-01-14T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12649 NE 2nd St",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20100828%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 100939 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "14522 SE 14th ST \u2014 Construct new single-family residence with attached accessory dwelling unit totally 4,008 sf; and attached garage",
+   "statuscurrent": "Open",
+   "applieddate": "2026-01-15T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "14522 SE 14th St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20100939%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101082 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport View, Lot 15 \u2014 CONSTRUCT A NEW 5,368 SQ FT SINGLE FAMILY RESIDENCE WITH AN INTERNAL 857 SF ATTACHED ACCESSORY DWELLING UNIT (LOWER LEVEL).",
+   "statuscurrent": "Open",
+   "applieddate": "2026-01-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12051 SE 63rd Ct  - Lot 15",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101082%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101326 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0717 \u2014 Demo existing home and build new single family home. To include work in ROW for haul route, materials drop off, Utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-01-26T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "217 111th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101326%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101589 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Majestic homes LLC \u2014 Demolish old home and build new structure",
+   "statuscurrent": "Open",
+   "applieddate": "2026-01-29T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1752 162nd Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101589%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101635 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Bellshire Enatai Residence \u2014 The project proposes demolition of existing structure and construction of new 2-story residence with ADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-01-30T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "BELLSHIRE HOMES INC",
+   "originaladdress1": "10425 SE 20th St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101635%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101670 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0720 \u2014 DEMO EXISTING HOME, SHED AND BUILD NEW SINGLE FAMILY HOME. TO INCLUDE WORK IN ROW FOR HAUL ROUTE, MATERIALS DROP-OFF, UTILITIES CONNECTION AND REPLACEMENT, AND DRIVEWAY WORK.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-02T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "3757 138th Pl SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101670%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101769 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport View, Lot 05 \u2014 Construct a new 5,171 sq ft single-family residence with an internal 849 sf attached accessory dwelling unit (lower level).",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-03T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12060 SE 63rd Ct  - Lot 5",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101769%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101859 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "424 155th AVE SE \u2014 New construction of a two-story single-family residence (4,963SF) with attached garage and ADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-04T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "424 155th Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101859%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101845 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "16620 SE 16th Street \u2014 CONSTRUCT NEW DETACHED SINGLE-FAMILY RESIDENCE With ATTACHED GARAGE AND ATTACHED ACCESSORY DWELLING UNIT.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-04T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "16620 SE 16th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101845%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 101897 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Jasbir Rehal Residence \u2014 2 STORY SINGLE FAMILY RESIDENCE W ATTACHED 2  CAR GARAGE.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-05T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14238 Eastgate Dr",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101897%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 103797 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 0733 \u2014 DEMO EXISTING HOME, SHED AND BUILD NEW SINGLE FAMILY HOME. TO INCLUDE WORK IN ROW FOR HAUL ROUTE, MATERIALS DROP-OFF, UTILITIES CONNECTION AND REPLACEMENT, AND DRIVEWAY WORK.",
+   "statuscurrent": "Pending",
+   "applieddate": "2026-02-13T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "418 160th Ave SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20103797%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 103941 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "908 168TH AVE NE \u2014 Build 1 New SFR (Demo of existing building will be under separate permit)",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-17T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "SEA HOME BUILDERS LLC",
+   "originaladdress1": "908 168th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20103941%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 103875 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Richard Chen Residence \u2014 2 STORY SINGLE-FAMILY RESIDENCE (3 544 SF) WITH ADU (877 SF) & ATTACHED 3-CAR GARAGE (679 S.F.).",
+   "statuscurrent": "Pending",
+   "applieddate": "2026-02-17T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4638 148th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20103875%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104005 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Newport View, Lot 06 \u2014 Construct a new 4,567 sf single-family residence with an internal 903 sf attached accessory dwelling unit (lower level).",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-18T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "12066 SE 63rd Ct  - Lot 6",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104005%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104197 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "4225 145th Ave SE \u2014 New construction of a two-story single-family residence (4,254 SF) with an ADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-23T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "4225 145th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104197%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104277 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "EG 41st Cosacchi \u2014 Demolish home. Build new SFR with an ADU - both in the same structure.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-24T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "14433 SE 41st St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104277%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104361 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "25 Bel West 1209 DADU 1 \u2014 Remodel an existing two-story DADU. Level 1 includes  a new interior staircase, powder room, living space, dining,  and kitchen. Level 2 includes a laundry, 2 bedrooms, and 2  bathrooms., 26 103777 BE",
+   "statuscurrent": "Pending",
+   "applieddate": "2026-02-25T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1209 96th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104361%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104549 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "452BE \u2014 New construction of single-family residential home with ADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-02-27T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "452 155th Pl SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104549%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104607 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "EG 146th \u2014 Demolish 1 home. Build a new home with an ADU in the same structure.",
+   "statuscurrent": "Pending",
+   "applieddate": "2026-03-02T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "3729 146th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104607%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104698 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Garage DADU \u2014 I am reworking the existing garage to add a wall separating the front from the back, and to include a kitchenette and bathroom in the back portion, fully insulated and heated.  The rear portion has 2 exit doors already including entrance door and french doors to rear.  The remaining garage has the 2 large garage doors and a side door.  There is an existing loft in the rear that I plan to use as storage., 16 12405, 23 102461",
+   "statuscurrent": "Open",
+   "applieddate": "2026-03-03T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "11651 SE 58th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104698%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104643 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "17000 Bellevue addition \u2014 construct total 1034 sf two level addtion to the existing single family house. Estsbliish an 1085 sq ft aadu in the lower level",
+   "statuscurrent": "Screening",
+   "applieddate": "2026-03-03T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "17000 NE 34th Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104643%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 104812 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Aspect 24 by 36 studio shed \u2014 new construction of 2bed,2bath of 860sqf (DADU) with decks and retaining wall design",
+   "statuscurrent": "Open",
+   "applieddate": "2026-03-05T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "2236 137th Pl SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104812%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 105739 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Zwaagstra Cottage \u2014 Build a cottage on property for daughter's family to live in",
+   "statuscurrent": "Open",
+   "applieddate": "2026-03-06T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "CONSTRUCT LARS TORBEA HILDAHL",
+   "originaladdress1": "10223 SE 13th Pl",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20105739%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 106759 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Bretton 12th \u2014 Demolish 1 home. Build 1 home and an ADU in the same building.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-03-27T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "17612 NE 12th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20106759%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 106888 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "3429 Residence Addition \u2014 MAIN FLOOR ADDITION (LIVING AND BEDROOMS) AND BASEMENT GARAGE EXPANSION, INCLUDING A PARTIAL BASEMENT CONVERSION TO A LEGAL AADU",
+   "statuscurrent": "Screening",
+   "applieddate": "2026-03-31T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "3429 167th Ave SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20106888%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 106962 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Cheung Residence \u2014 Build a new single family home with an ADU at basement level",
+   "statuscurrent": "Open",
+   "applieddate": "2026-04-01T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "9828 NE 29th St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20106962%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 106951 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Hartline Duplex Garage Conversion \u2014 Convert existing garage into duplex, 25 127611 BR",
+   "statuscurrent": "Open",
+   "applieddate": "2026-04-01T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16810 SE Newport Way",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20106951%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 108214 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "137th Ave DADU \u2014 Remodel of existing barn into DADU. Remodel was originally part of BS 25-125000 as accessory structure, but scope was removed and changed to DADU., 25 125000, APP 1783419",
+   "statuscurrent": "Open",
+   "applieddate": "2026-04-06T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4604 137th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20108214%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 108341 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "NE 10th St ADU \u2014 PROPOSED AN ATTACHED ACCESSORY DWELLING UNIT",
+   "statuscurrent": "Screening",
+   "applieddate": "2026-04-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "SPLINE QINGSHUN JU",
+   "originaladdress1": "13019 NE 10th St",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20108341%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 108402 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "112 110TH PL SE - SFR #1 \u2014 New SFR with Attached Garage (1 of 4).",
+   "statuscurrent": "Pending",
+   "applieddate": "2026-04-09T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "112 110th Pl SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20108402%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 108878 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Project 2539 \u2014 To redraw and modify provided design to make our own, Site plan, Energy forms, city comments and miscellaneous time for coordination and consultation for project at 15533 SE 9th St, Bellvue wa 98007.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-04-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "SAIGHAR LLC",
+   "originaladdress1": "15533 SE 9th St",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20108878%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 109076 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "EG149th Anil \u2014 Demo existing home. Build New Home with ADU in same structure.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-04-22T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "4037 149th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20109076%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 109897 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "449 155th Ave SE \u2014 Build 1 SFR. The demo of the existing house will be under a separate BE permit.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-04-24T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "SEA HOME BUILDERS LLC",
+   "originaladdress1": "449 155th Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20109897%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 110209 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Ritter DADU project \u2014 Construct a new 2 level DADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-04-30T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "CAREY HOMES LLC",
+   "originaladdress1": "1519 106th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20110209%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 110339 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "W Chen SFR \u2014 To demolish an existing single family structure, and to construct a new single family house and associated structures, with an attached ADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-05-04T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "LOCHWOOD-LOZIER CUSTM HOMES CO JON D LOZIER",
+   "originaladdress1": "16541 NE 27th Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20110339%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 110540 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "504 129TH AVE SE \u2014 Build 1 SFR with ADU. Demolition of existing building to be under separate permit.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-05-07T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "SEA HOME BUILDERS LLC",
+   "originaladdress1": "504 129th Ave SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20110540%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 111210 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Manisha \u2014 Tear down existing home and build new SFR with ADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-05-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "CONTEMPORARY CLASSIC HOMES LLC",
+   "originaladdress1": "16227 NE 3rd Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20111210%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 111202 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Spirit 166th \u2014 Demolish 1 home. Build one home with ADU in same building.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-05-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "2520 166th Ave SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20111202%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 112466 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Sukhjinder Mangat Residence \u2014 2 STORY SINGLE FAMILY RESIDENCE WITH ADU & ATTACHED 3 CAR GARAGE",
+   "statuscurrent": "Open",
+   "applieddate": "2026-06-03T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16301 NE 18th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20112466%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 113855 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Rohde \u2014 demolition of current residence, subsequent construction of new single family residence including ADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-06-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "315 164th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20113855%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 114168 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Warnick Residence \u2014 New single-family residence with attached ADU, attached garage, grading, drainage, utilities, and associated site improvements.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-06-15T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "2537 103rd Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20114168%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 114336 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "16620BE \u2014 Construct a new detached single-family residence with attached garage and attached accessory dwelling unit",
+   "statuscurrent": "Open",
+   "applieddate": "2026-06-17T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "16620 SE 16th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20114336%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 114420 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "1633 Bellevue SFR \u2014 Construction of a new SFR with ADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-06-18T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "LNL BUILDS LLC",
+   "originaladdress1": "1633 169th Ave NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20114420%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 114625 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Makaan Homes 3 LLC \u2014 Demolish existing single family residence.  Construct a new single family residence with one ADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-06-23T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "GK Inder Construction LLC",
+   "originaladdress1": "5227 116th Pl SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20114625%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 115268 MH",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Middle Housing New",
+   "description": "14243 Middle Housing \u2014 Demolition of existing single family residence and proposed new construction a middle housing development containing two SFR's with a AADU in each structure (four total units).",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-07T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14243 SE 40th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20115268%20MH/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 115242 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Casa Somaiya DADU \u2014 Construction of New Detached Dwelling unit",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-07T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "408 W Lake Sammamish Pkwy SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20115242%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 115359 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Kimmich DADU Conversion and Remodel \u2014 Conversion of existing mother-in-law unit to DADU. All work within existing building footprint. No added square footage. Exterior work includes repair of existing floor overhang structural support beams within building footprint. Interior work includes replacement of fixtures, appliances, finishes, and several windows and doors. Movement of one interior bathroom wall. One parking space provided for DADU. Shoreline Exemption applied for at same time as this application. Existing structure built prior to 2001 Bellevue Annexation of property., 1818998",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-08T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "NEIL KELLY COMPANY",
+   "originaladdress1": "1442 W Lake Sammamish Pkwy SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20115359%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 116645 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Baker Bellevue Residence \u2014 CONSTRUCT NEW TWO STORY ADDITION TO EXISTING SINGLE FAMILY RESIDENCE. AT LEVEL ONE A NEW ATTACHED GARAGE AND ADU. AT LEVEL TWO AN ADDITION FOR THE SINGLE FAMILY RESIDENCE.",
+   "statuscurrent": "Incomplete",
+   "applieddate": "2026-07-10T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "3835 120th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20116645%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117020 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEA 764 \u2014 Construction of NSFR. Demo existing home, shed and build new single-family home. To include work in row for haul route, materials drop-off, utilities connection and replacement, and driveway work.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "MN CUSTOM HOMES LLC",
+   "originaladdress1": "2527 155th Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117020%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117236 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "REDDY HOUSE & AADU 2026 \u2014 DEMO EXIST SFR, DETACHED GARAGE AND SHED. BUILD NEW SFR & AADU WITH SITE IMPROVEMENTS., 25_109148_BS",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-22T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1411 112th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117236%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117307 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "14243 Middle Housing \u2014 Proposed construction of a new SFR with an AADU middle housing - one of two structures proposed on lot., 14243 Middle Housing",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-23T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14243 SE 40th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117307%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117306 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "14243 Middle Housing Unit A \u2014 Proposed construction of a new SFR with an AADU middle housing - one of two structures proposed on lot., 14243 Middle Housing",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-23T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14243 SE 40th St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117306%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117401 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "Balarajan AADU \u2014 Conversion of the existing daylight unit into an Attached Accessory Dwelling Unit (AADU). Remodel of the daylight basement level to include converting the existing laundry room into a kitchen open to the existing living room and dining room. Remodeling the existing storage and mechanical closet into a smaller mechanical room (which has fresh air intake). Adding 2 new windows at each side of the existing fireplace and replacing the back door with a window at the new kitchen area. No work is proposed at the exterior or on site. No trees are proposed to be removed. No site paving or any other work aside for siding work on the building.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-27T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "14469 NE 12th Pl",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117401%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117492 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Grace's Bellevue  New House \u2014 Demo existing building and build a new house of 2 storis of around 3900sf with a 1200sf ADU and a two-car garage.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4616 149th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117492%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117646 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "1830BE \u2014 Demo an existing 1670 sf SFR and construct a new detached 4525 sf single family residence with attached ADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-30T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "1830 153rd Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117646%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 117642 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "1071BE \u2014 Demolishing Current Single Family Home of 1360 Sqft. Construct New 2 Story Single Family Residence of 4065 Sqft. with Attached Garage, Covered Porch, Covered Patio, & New Attached Dwelling Unit.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-07-30T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "1071 158th Pl SE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117642%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 118751 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Emerald City Const-16510 \u2014 Construct new SFR and AADU and all associated site improvements.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-08-20T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16510 NE 25th Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20118751%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 120398 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Kobets 4 Development House C \u2014 Demolition of the existing SFR. Construction a new SFR part of Middle Housing Project with (4) houses on the lot., 26 120345 GD",
+   "statuscurrent": "Open",
+   "applieddate": "2026-08-25T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "KOBETS COMMERCIAL INVSTS LLC",
+   "originaladdress1": "10434 NE 17th St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120398%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 120397 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Kobets 4 Development House D \u2014 Demolition of the existing SFR. Construction a new SFR part of Middle Housing Project with (4) houses on the lot.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-08-25T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "KOBETS COMMERCIAL INVSTS LLC",
+   "originaladdress1": "10434 NE 17th St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120397%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 120510 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "4601 DADU \u2014 DEMOLISH EXISITNG SHED AND PROPOSE A NEW DADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-08-27T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4601 140th Ave NE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120510%20BS/BELLEVUE"
+   }
+  }
+ ]
+}

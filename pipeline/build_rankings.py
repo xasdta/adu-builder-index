@@ -70,7 +70,15 @@ def pick_license(records):
 
 
 def main():
-    permits = json.load(open(DATA / "seattle_permits.json"))["permits"]
+    permits = []
+    for fname in ("seattle_permits.json", "bellevue_permits.json"):
+        f = DATA / fname
+        if not f.exists():
+            continue
+        blob = json.load(open(f))
+        for p in blob["permits"]:
+            p["city"] = blob["city"]
+        permits.extend(blob["permits"])
 
     by_builder = defaultdict(list)
     for p in permits:
@@ -95,6 +103,12 @@ def main():
     builders = []
     for key, plist in merged.items():
         completed = [p for p in plist if p.get("statuscurrent") == "Completed"]
+        cities = {}
+        for p in plist:
+            c = cities.setdefault(p["city"], {"total": 0, "completed": 0})
+            c["total"] += 1
+            if p.get("statuscurrent") == "Completed":
+                c["completed"] += 1
         years = sorted({(p.get("issueddate") or p.get("applieddate") or "")[:4]
                         for p in plist if p.get("issueddate") or p.get("applieddate")})
         costs = sorted(float(p["estprojectcost"]) for p in plist
@@ -105,6 +119,7 @@ def main():
             "name": display[key],
             "permits_total": len(plist),
             "permits_completed": len(completed),
+            "cities": cities,
             "first_year": years[0] if years else None,
             "last_year": years[-1] if years else None,
             "median_cost": costs[len(costs) // 2] if costs else None,
@@ -119,6 +134,8 @@ def main():
             },
             "permits": sorted([{
                 "permitnum": p.get("permitnum"),
+                "city": p["city"],
+                "adu_sqft": p.get("adu_sqft"),
                 "description": (p.get("description") or "")[:400],
                 "status": p.get("statuscurrent"),
                 "issued": (p.get("issueddate") or "")[:10],
@@ -134,13 +151,24 @@ def main():
                   reverse=True)
 
     year_counts = defaultdict(int)
+    by_city = {}
     for p in permits:
         y = (p.get("issueddate") or "")[:4]
         if y and y >= "2010":
             year_counts[y] += 1
+        c = by_city.setdefault(p["city"], {"total": 0, "completed": 0,
+                                           "permits_by_year": defaultdict(int)})
+        c["total"] += 1
+        if p.get("statuscurrent") == "Completed":
+            c["completed"] += 1
+        if y and y >= "2010":
+            c["permits_by_year"][y] += 1
+    for c in by_city.values():
+        c["permits_by_year"] = dict(sorted(c["permits_by_year"].items()))
 
     stats = {
-        "city": "Seattle",
+        "cities": sorted(by_city),
+        "by_city": by_city,
         "total_permits": len(permits),
         "completed_permits": sum(1 for p in permits
                                  if p.get("statuscurrent") == "Completed"),

@@ -143,21 +143,22 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
 {body}
 </main>
 <footer>
-  <p><strong>ADU Builder Index</strong> — permit-verified accessory dwelling unit builders. Currently covering Seattle, WA; more Washington cities coming.</p>
-  <p class="fine">Data sources: City of Seattle SDCI Building Permits (open data) and Washington State L&amp;I Contractor License registry, as published on {esc(STATS['generated'])}. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections: <a href="{rel(CLAIM_URL, pre)}">contact us</a>.</p>
+  <p><strong>ADU Builder Index</strong> — permit-verified accessory dwelling unit builders. Currently covering Seattle and Bellevue, WA; more Washington cities coming.</p>
+  <p class="fine">Data sources: City of Seattle SDCI Building Permits, City of Bellevue Open Data (both open data), and the Washington State L&amp;I Contractor License registry, as published on {esc(STATS['generated'])}. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections: <a href="{rel(CLAIM_URL, pre)}">contact us</a>.</p>
 </footer>
 </body>
 </html>"""
 
 
-def trend_chart():
-    years = {y: n for y, n in STATS["permits_by_year"].items() if "2014" <= y <= "2025"}
+def trend_chart(city="Seattle"):
+    src = STATS["by_city"][city]["permits_by_year"]
+    years = {y: n for y, n in src.items() if "2014" <= y <= "2025"}
     mx = max(years.values())
     bars = "".join(
         f'<div class="bar" style="height:{round(100*n/mx)}%" title="{y}: {n} permits">'
         f'<span class="bar-n">{n}</span><span class="bar-y">{y[2:]}</span></div>'
         for y, n in years.items())
-    return f'<div class="chart" role="img" aria-label="ADU permits issued in Seattle by year, 2014 to 2025">{bars}</div>'
+    return f'<div class="chart" role="img" aria-label="ADU permits issued by year, 2014 to 2025">{bars}</div>'
 
 
 def claimed_chip(b):
@@ -173,6 +174,7 @@ def builder_row(rank, b):
             f'<td class="num">{b["permits_completed"]}</td>'
             f'<td class="num">{b["permits_total"]}</td>'
             f'<td class="num">{esc(yrs)}</td>'
+            f'<td>{esc(" · ".join(sorted(b["cities"])))}</td>'
             f'<td class="num">{money(b["median_cost"])}</td>'
             f'<td>{license_chip(b)}</td></tr>')
 
@@ -188,9 +190,9 @@ def build_index():
               "isBasedOn": ["https://data.seattle.gov/resource/76t5-zqzr", "https://data.wa.gov/resource/m8qx-ubtq"]}
     body = f"""
 <section class="hero">
-  <p class="eyebrow">Seattle, Washington · updated {esc(TODAY)}</p>
+  <p class="eyebrow">Seattle &amp; Bellevue, Washington · updated {esc(TODAY)}</p>
   <h1>ADU builders, ranked by permits actually pulled</h1>
-  <p class="dek">Every builder here is ranked by <strong>completed accessory-dwelling-unit permits</strong> in Seattle's official building records — not reviews, not ads. License status is cross-checked against the Washington L&amp;I contractor registry.</p>
+  <p class="dek">Every builder here is ranked by <strong>completed accessory-dwelling-unit permits</strong> official city building records — Seattle and Bellevue, more Washington cities coming. Not reviews, not ads. License status is cross-checked against the Washington L&amp;I contractor registry.</p>
   <div class="stats">
     <div><b>{STATS['total_permits']:,}</b><span>ADU permits tracked</span></div>
     <div><b>{STATS['completed_permits']:,}</b><span>completed builds</span></div>
@@ -200,15 +202,15 @@ def build_index():
 </section>
 <section>
   <h2>Seattle's ADU boom, in permits</h2>
-  {trend_chart()}
+  {trend_chart("Seattle")}
   <p class="fine">Permits issued per year mentioning an ADU/DADU, City of Seattle SDCI data. Seattle legalized attached and detached ADUs citywide in 2019; permits have roughly tripled since.</p>
 </section>
 {featured_section()}
 <section id="rankings">
   <h2>Builder rankings</h2>
-  <p>Ranked by completed ADU permits where city records attribute a contractor. <a href="methodology.html">How this works and what it misses →</a></p>
+  <p>Ranked by completed ADU permits where city records attribute a contractor, across all covered cities. Bellevue has its own page: <a href="bellevue-adu-builders.html">Bellevue ADU builders →</a> · <a href="methodology.html">How this works and what it misses →</a></p>
   <div class="tablebox"><table>
-  <thead><tr><th>#</th><th>Builder</th><th>Completed</th><th>All permits</th><th>Years</th><th>Median est. cost</th><th>WA license</th></tr></thead>
+  <thead><tr><th>#</th><th>Builder</th><th>Completed</th><th>All permits</th><th>Years</th><th>Cities</th><th>Median est. cost</th><th>WA license</th></tr></thead>
   <tbody>{rows}</tbody></table></div>
   <p><a href="builders/index.html">All {STATS['builders_listed']} indexed builders →</a></p>
 </section>
@@ -248,8 +250,8 @@ def build_builder_pages():
         claim = CLAIMS.get(b["slug"])
         jsonld = {"@context": "https://schema.org", "@type": "GeneralContractor",
                   "name": b["name"],
-                  "areaServed": (claim or {}).get("service_area") or "Seattle, WA",
-                  "description": f"ADU builder with {b['permits_completed']} completed accessory dwelling unit permits on record in Seattle."}
+                  "areaServed": (claim or {}).get("service_area") or (", ".join(sorted(b["cities"])) + ", WA"),
+                  "description": f"ADU builder with {b['permits_completed']} completed accessory dwelling unit permits on record."}
         contact_html = ""
         if claim:
             jsonld.update({k2: v for k2, v in
@@ -289,9 +291,9 @@ def build_builder_pages():
 </section>
 <section>
   <h2>Permit record</h2>
-  <p class="fine">Every ADU-related permit in Seattle city records naming this contractor. Links go to the city's official permit portal.</p>
+  <p class="fine">Every ADU-related permit in covered city records naming this contractor. Links go to each city's official permit portal.</p>
   <div class="tablebox"><table>
-  <thead><tr><th>Permit</th><th>Issued</th><th>Status</th><th>Est. cost</th><th>Address</th><th>Description</th></tr></thead>
+  <thead><tr><th>Permit</th><th>City</th><th>Issued</th><th>Status</th><th>Est. cost</th><th>Address</th><th>Description</th></tr></thead>
   <tbody>{permit_rows}</tbody></table></div>
 </section>
 <section class="callout">
@@ -299,7 +301,7 @@ def build_builder_pages():
 </section>"""
         (SITE / "builders" / f"{b['slug']}.html").write_text(page(
             f"{b['name']} — ADU builder, Seattle | ADU Builder Index",
-            f"{b['name']}: {b['permits_completed']} completed ADU permits in Seattle city records, {esc(b['first_year'])}–{esc(b['last_year'])}. Permit history and WA license status.",
+            f"{b['name']}: {b['permits_completed']} completed ADU permits in city records, {esc(b['first_year'])}–{esc(b['last_year'])}. Permit history and WA license status.",
             body, depth=1, jsonld=jsonld, path=f"builders/{b['slug']}.html"))
 
     # A–Z list
@@ -360,6 +362,52 @@ def build_for_builders():
         "For builders | ADU Builder Index",
         "Claim your ADU builder profile, correct your permit record, and reach homeowners comparing verified track records in Seattle.",
         body, path="for-builders.html"))
+
+
+def build_city_page(city, slug_html, blurb):
+    cb = STATS["by_city"][city]
+    local = [b for b in BUILDERS if city in b["cities"]]
+    local.sort(key=lambda b: (b["cities"][city]["completed"],
+                              b["cities"][city]["total"]), reverse=True)
+    rows = ""
+    for i, b in enumerate(local, 1):
+        yrs = f"{b['first_year']}–{b['last_year']}" if b["first_year"] != b["last_year"] else b["first_year"]
+        rows += (f'<tr><td class="num">{i}</td>'
+                 f'<td><a href="builders/{b["slug"]}.html">{esc(b["name"])}</a>{claimed_chip(b)}</td>'
+                 f'<td class="num">{b["cities"][city]["completed"]}</td>'
+                 f'<td class="num">{b["cities"][city]["total"]}</td>'
+                 f'<td class="num">{esc(yrs)}</td>'
+                 f'<td>{license_chip(b)}</td></tr>')
+    attributed = sum(b["cities"][city]["total"] for b in local)
+    jsonld = {"@context": "https://schema.org", "@type": "Dataset",
+              "name": f"{city} ADU Builder Rankings",
+              "description": f"Accessory dwelling unit builders in {city}, WA ranked by permits in city records, license-verified.",
+              "dateModified": STATS["generated"]}
+    body = f"""
+<section class="hero small">
+  <p class="eyebrow">{esc(city)}, Washington · updated {esc(TODAY)}</p>
+  <h1>{esc(city)} ADU builders, ranked by permits</h1>
+  <p class="dek">{blurb}</p>
+  <div class="stats">
+    <div><b>{cb['total']:,}</b><span>ADU permits tracked</span></div>
+    <div><b>{cb['completed']:,}</b><span>completed</span></div>
+    <div><b>{len(local)}</b><span>builders with {esc(city)} ADU permits</span></div>
+    <div><b>{attributed}</b><span>attributed permits</span></div>
+  </div>
+</section>
+{featured_section()}
+<section id="rankings">
+  <h2>Rankings — {esc(city)}</h2>
+  <p>Ranked by completed ADU permits attributed in {esc(city)} city records. <a href="methodology.html">Methodology →</a></p>
+  <div class="tablebox"><table>
+  <thead><tr><th>#</th><th>Builder</th><th>Completed in {esc(city)}</th><th>{esc(city)} permits</th><th>Years active</th><th>WA license</th></tr></thead>
+  <tbody>{rows}</tbody></table></div>
+  <p><a href="index.html#rankings">All-cities rankings →</a></p>
+</section>"""
+    (SITE / slug_html).write_text(page(
+        f"{city} ADU builders ranked by permits | ADU Builder Index",
+        f"ADU and DADU builders in {city}, WA ranked by building permits from city records, with state license verification.",
+        body, jsonld=jsonld, path=slug_html))
 
 
 def build_cost_report():
@@ -508,7 +556,7 @@ def build_assets():
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
     paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
-             "seattle-adu-costs.html",
+             "seattle-adu-costs.html", "bellevue-adu-builders.html",
              "builders/index.html"] + [f"builders/{b['slug']}.html" for b in BUILDERS]
     urls = "\n".join(
         f"<url><loc>{SITE_BASE}/{p}</loc><lastmod>{STATS['generated']}</lastmod></url>"
@@ -529,6 +577,8 @@ def main():
     build_methodology()
     build_for_builders()
     build_cost_report()
+    build_city_page("Bellevue", "bellevue-adu-builders.html",
+                    "Bellevue flags ADU permits explicitly in its open data — with contractor attribution Seattle stopped publishing. Every builder below appears on an actual Bellevue ADU permit.")
     build_form_pages()
     build_assets()
     n = len(list((SITE).rglob("*.html")))
