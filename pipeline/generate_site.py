@@ -21,15 +21,15 @@ CLAIM_URL = (f"mailto:{CONTACT_EMAIL}?subject=Claim%20my%20builder%20profile"
 RESERVE_URL = (f"mailto:{CONTACT_EMAIL}?subject=Founding%20featured%20slot%20request"
                "&body=Company%20name%3A%0AWA%20license%20number%3A%0AWebsite%3A%0A"
                "Phone%3A%0AOne-line%20blurb%20for%20your%20featured%20card%3A%0A")
-# Stripe Payment Link for the $99/mo featured subscription. Shown as the
-# payment step AFTER license verification — never as the primary CTA, so
-# nobody pays before we verify them.
+# Stripe Payment Link for the $99/mo featured subscription. Self-serve: it is
+# the primary featured CTA. License verification happens after payment, with a
+# full refund if it fails — the guarantee on for-builders.html says so.
 STRIPE_LINK = "https://buy.stripe.com/eVq9ASh2Saml6q8a5s0Ny00"
 # Web3Forms access key (web3forms.com) — when set, contact buttons use the
 # on-site form at get-featured.html instead of mailto links.
 WEB3FORMS_KEY = "d253e17f-0e35-4f0a-a5c4-cfa9df78a199"
 FORM_URL = "get-featured.html"
-FEATURE_URL = FORM_URL if WEB3FORMS_KEY else RESERVE_URL
+FEATURE_URL = STRIPE_LINK or (FORM_URL if WEB3FORMS_KEY else RESERVE_URL)
 if WEB3FORMS_KEY:
     CLAIM_URL = FORM_URL
 FEATURED_SLOTS = 3
@@ -83,14 +83,14 @@ def featured_section(city=None, depth=0):
     <p class="flabel">Featured builders · {scope}</p>
     <p>Verified builders get top placement here — clearly labeled, never affecting the rankings below. Founding rate: <strong>$99/mo, locked for life</strong>.</p>
   </div>
-  <a class="button" href="{pre}for-builders.html">Get featured →</a>
+  <a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a>
 </div>
 </section>"""
     if open_slots > 0:
         cards.append(f"""<div class="fcard open">
 <p class="flabel">{open_slots} founding slot{"s" if open_slots > 1 else ""} open {label}</p>
 <p><strong>$99/mo, locked for life.</strong> Top placement, license-verified, rankings never affected.</p>
-<a class="button" href="{pre}for-builders.html">Get featured →</a>
+<a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a>
 </div>""")
     return f"""<section id="featured">
 <h2>Featured builders{"" if not city else f" — {esc(city)}"}</h2>
@@ -310,9 +310,10 @@ def build_builder_pages():
   <p class="fine">Profile claimed and verified by the company on {esc(claim.get("claimed_date", ""))}.</p>
 </section>"""
         if claim:
-            callout = f'<p>Want top placement? <a href="../for-builders.html">Become a featured builder</a> — $99/mo founding rate, license-verified, rankings never affected.</p>'
+            callout = f'<p>Want top placement? <a href="{FEATURE_URL}">Become a featured builder</a> — $99/mo founding rate, rankings never affected. <a href="../for-builders.html">How it works →</a></p>'
         else:
-            callout = f'<p>Is this your company? <a href="{rel(CLAIM_URL, "../")}">Claim this profile</a> free to add your website, contact details, and corrections — or <a href="../for-builders.html">get featured at the top of the rankings page</a> ($99/mo founding rate).</p>'
+            callout = (f'<p>Is this your company? <a href="{rel(CLAIM_URL, "../")}">Claim this profile</a> free to add your website, contact details, and corrections.</p>'
+                       f'<p>Or <a href="{rel(FEATURE_URL, "../")}">get featured — $99/mo</a>, top placement above the rankings homeowners land on. <a href="../for-builders.html">How it works →</a></p>')
         body = f"""
 <section class="hero small">
   <p class="eyebrow"><a href="../index.html">← All builders</a></p>
@@ -392,10 +393,11 @@ def build_for_builders():
   <p>Featured builders appear in the <a href="index.html#featured">Featured builders section at the top of the rankings page</a> — clearly labeled, with your blurb, license verification, and a direct link to your website. Founding-builder rate: <strong>$99/month, locked for life</strong>, first {FEATURED_SLOTS} builders in Seattle. One signed ADU project pays for roughly a decade of listing. Rankings are never for sale — featured placement is clearly separated from the permit-verified table.</p>
   <h2>How to get featured</h2>
   <ol>
-    <li><a href="{FEATURE_URL}">Request your slot</a> — tell us your company name and license number.</li>
-    <li>We verify your WA L&amp;I license is active and confirm your permit record — before any payment.</li>
-    <li>Once verified, subscribe securely{f' via <a href="{STRIPE_LINK}">Stripe</a>' if STRIPE_LINK else ""} and your featured card is live within one business day.</li>
+    <li><a href="{FEATURE_URL}">Subscribe</a> — $99/mo, checkout takes a minute. Enter your business name exactly as licensed.</li>
+    <li>Reply to your Stripe receipt with your website and a one-line blurb for your card.</li>
+    <li>We confirm your WA L&amp;I license is active and your card goes live, usually same day.</li>
   </ol>
+  <p class="fine"><strong>Our guarantee:</strong> if your license doesn't verify as active, we cancel the subscription and refund you in full — you are never charged for a listing we can't stand behind. Cancel anytime; the founding rate stays yours as long as you keep the subscription.</p>
   <p><a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a> <a class="button secondary" href="{CLAIM_URL}">Claim your free profile →</a></p>
 </section>"""
     (SITE / "for-builders.html").write_text(page(
@@ -582,7 +584,7 @@ def build_form_pages():
         return
     body = f"""
 <section class="hero small"><h1>Claim your profile or get featured</h1>
-<p class="dek">Free profile claims are verified against city permit records. Featured placement is <strong>$99/mo, locked for life</strong> for founding builders — we verify your license before any invoice.</p></section>
+<p class="dek">Claiming your profile is free — we verify it against city permit records and add your details. Want top placement instead? <a href="{STRIPE_LINK}">Get featured for $99/mo</a>, locked for life for founding builders.</p></section>
 <section>
 <form class="bform" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
@@ -592,8 +594,8 @@ def build_form_pages():
   <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
   <fieldset>
     <legend>What do you need?</legend>
-    <label class="radio"><input type="radio" name="request_type" value="Get featured ($99/mo founding rate)" checked> Get featured — $99/mo founding rate</label>
-    <label class="radio"><input type="radio" name="request_type" value="Claim free profile"> Claim my free profile</label>
+    <label class="radio"><input type="radio" name="request_type" value="Claim free profile" checked> Claim my free profile</label>
+    <label class="radio"><input type="radio" name="request_type" value="Question about featured placement"> I have a question about featured placement</label>
   </fieldset>
   <label>Company name <input type="text" name="company" required></label>
   <label>WA contractor license # <input type="text" name="license_number" required></label>
@@ -602,13 +604,36 @@ def build_form_pages():
   <label>Phone <input type="tel" name="phone"></label>
   <label>One-line blurb for your card, plus anything to correct on your profile <textarea name="message" rows="4"></textarea></label>
   <button class="button" type="submit">Send request</button>
-  <p class="fine">We reply within one business day. Featured placement is invoiced only after license verification — never before.</p>
+  <p class="fine">Ready to be featured now? <a href="{STRIPE_LINK}">Subscribe directly →</a> — no need to wait for a reply.</p>
+  <p class="fine">We reply within one business day. Claiming is free and always will be.</p>
 </form>
 </section>"""
     (SITE / "get-featured.html").write_text(page(
         "Get featured or claim your profile | ADU Builder Index",
         "Claim your free ADU builder profile or request a founding featured slot. Verified against Seattle permit records and the WA L&I registry.",
         body, path="get-featured.html"))
+    fbody = f"""
+<section class="hero small">
+  <h1>You're in — welcome aboard</h1>
+  <p class="dek">Your founding featured slot is reserved at $99/mo, locked for life.</p>
+</section>
+<section>
+  <h2>One quick thing</h2>
+  <p><strong>Reply to your Stripe receipt email</strong> with:</p>
+  <ul>
+    <li>Your website URL</li>
+    <li>A one-line blurb for your card (e.g. "Detached ADUs across the Eastside since 2015")</li>
+    <li>Your WA contractor license number, if the business name on your card differs from it</li>
+  </ul>
+  <p>We confirm your license is active and your featured card goes live — usually the same day, always within one business day.</p>
+  <p class="fine">If your license doesn't verify as active, we cancel and refund you in full. Cancel anytime from the link in your receipt; the founding rate stays yours as long as you keep the subscription.</p>
+  <p><a href="index.html">← Back to the rankings</a></p>
+</section>"""
+    (SITE / "featured-thanks.html").write_text(page(
+        "Welcome — you're a featured builder | ADU Builder Index",
+        "Next steps after subscribing to a founding featured slot on ADU Builder Index.",
+        fbody, path="featured-thanks.html"))
+
     tbody = """
 <section class="hero small"><h1>Request received</h1>
 <p class="dek">Thanks — we'll verify your license and permit record and reply within one business day.</p>
@@ -622,7 +647,7 @@ def build_assets():
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
     paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
-             "seattle-adu-costs.html", *[c["page"] for c in CITIES],
+             "seattle-adu-costs.html", "featured-thanks.html", *[c["page"] for c in CITIES],
              "builders/index.html"] + [f"builders/{b['slug']}.html" for b in BUILDERS]
     urls = "\n".join(
         f"<url><loc>{SITE_BASE}/{p}</loc><lastmod>{STATS['generated']}</lastmod></url>"
