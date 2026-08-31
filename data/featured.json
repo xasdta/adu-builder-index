@@ -1,4 +1,4 @@
 {
-  "_schema": "Each entry: {slug (must match a builder page), blurb, website, phone?}. Order = display order. First FEATURED_SLOTS entries render; empty list renders open founding-slot cards.",
-  "builders": []
+ "_schema": "Each entry: {slug (must match a builder page), city (must be a covered city, e.g. Seattle or Bellevue), blurb, website?, phone?}. Slots are per-city: FEATURED_SLOTS per city page. A builder appears on the city page(s) they paid for. Order within a city = display order.",
+ "builders": []
 }

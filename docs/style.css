@@ -139,6 +139,20 @@ h1 .chip { vertical-align: middle; margin-left: 0.5rem; }
   text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
 }
 .fstat { color: var(--muted); }
+.citygrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin-top: 1.2rem; }
+.citycard {
+  display: flex; flex-direction: column; gap: 0.45rem; text-decoration: none;
+  color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 6px; padding: 1.2rem 1.3rem;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.citycard:hover { border-color: var(--accent); transform: translateY(-2px); }
+.citycard h3 { margin: 0; font-family: "Archivo", sans-serif; font-size: 1.3rem; font-weight: 700; }
+.citycard p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+.citycard .citystats { font-size: 0.88rem; }
+.citycard .citystats b { font-family: "Spline Sans Mono", monospace; color: var(--ink); font-variant-numeric: tabular-nums; }
+.citylink { margin-top: auto; padding-top: 0.4rem; color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+@media (prefers-reduced-motion: reduce) { .citycard { transition: none; } .citycard:hover { transform: none; } }
 .fbanner {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
   gap: 1rem; background: var(--accent-soft); border: 1px dashed var(--accent);

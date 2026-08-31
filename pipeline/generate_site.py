@@ -40,31 +40,47 @@ _claims_path = ROOT / "data" / "claims.json"
 CLAIMS = {c["slug"]: c for c in (json.load(open(_claims_path))["builders"]
                                  if _claims_path.exists() else [])}
 BY_SLUG = {b["slug"]: b for b in BUILDERS}
+# Covered cities: slug page + homepage card blurb. Add a city here after its
+# fetch_<city>.py lands and build_rankings picks it up.
+CITIES = [
+    {"name": "Seattle", "page": "seattle-adu-builders.html",
+     "blurb": "The largest ADU market in Washington — citywide legalization in 2019 sent permits soaring."},
+    {"name": "Bellevue", "page": "bellevue-adu-builders.html",
+     "blurb": "Bellevue flags ADU permits explicitly and still publishes contractor names, so attribution here is current."},
+]
+CITY_PAGE = {c["name"]: c["page"] for c in CITIES}
 
 
-def featured_section(depth=0):
+def featured_section(city=None, depth=0):
+    """Featured cards. With a city, shows that city's slots; without, shows
+    every featured builder across cities (homepage hub)."""
     pre = "../" * depth
+    entries = [f for f in FEATURED if not city or f.get("city") == city]
     cards = []
-    for f in FEATURED[:FEATURED_SLOTS]:
+    for f in entries[:FEATURED_SLOTS if city else None]:
         b = BY_SLUG.get(f["slug"])
         if not b:
             continue
         contact = ""
         if f.get("website"):
             contact = f'<a class="button" href="{esc(f["website"])}">Visit website</a>'
+        where = "" if city else f' · {esc(f.get("city", ""))}'
         cards.append(f"""<div class="fcard">
-<p class="flabel">Featured · paid placement</p>
+<p class="flabel">Featured · paid placement{where}</p>
 <h3><a href="{pre}builders/{b['slug']}.html">{esc(b['name'])}</a></h3>
 <p class="fstat">{b['permits_completed']} completed ADU permits on record · {license_chip(b)}</p>
 <p>{esc(f.get('blurb', ''))}</p>
 {contact}
 </div>""")
-    open_slots = FEATURED_SLOTS - len(cards)
+
+    label = f"in {esc(city)}" if city else "across all cities"
+    open_slots = (FEATURED_SLOTS - len(cards)) if city else 0
     if not cards:
+        scope = f"{FEATURED_SLOTS} founding slots {label}" if city else "Founding slots open in every city"
         return f"""<section id="featured">
 <div class="fbanner">
   <div>
-    <p class="flabel">Featured builders · {open_slots} founding slots</p>
+    <p class="flabel">Featured builders · {scope}</p>
     <p>Verified builders get top placement here — clearly labeled, never affecting the rankings below. Founding rate: <strong>$99/mo, locked for life</strong>.</p>
   </div>
   <a class="button" href="{pre}for-builders.html">Get featured →</a>
@@ -72,13 +88,13 @@ def featured_section(depth=0):
 </section>"""
     if open_slots > 0:
         cards.append(f"""<div class="fcard open">
-<p class="flabel">{open_slots} founding slot{"s" if open_slots > 1 else ""} open</p>
+<p class="flabel">{open_slots} founding slot{"s" if open_slots > 1 else ""} open {label}</p>
 <p><strong>$99/mo, locked for life.</strong> Top placement, license-verified, rankings never affected.</p>
 <a class="button" href="{pre}for-builders.html">Get featured →</a>
 </div>""")
     return f"""<section id="featured">
-<h2>Featured builders</h2>
-<p class="fine">Paid placements, clearly labeled. Being featured never changes a builder's rank in the table below — <a href="{pre}methodology.html">see methodology</a>.</p>
+<h2>Featured builders{"" if not city else f" — {esc(city)}"}</h2>
+<p class="fine">Paid placements, clearly labeled. Being featured never changes a builder's rank in the tables below — <a href="{pre}methodology.html">see methodology</a>.</p>
 <div class="featured-grid">{''.join(cards)}</div>
 </section>"""
 
@@ -133,7 +149,8 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
 <header class="top">
   <a class="brand" href="{pre}index.html">ADU Builder Index</a>
   <nav>
-    <a href="{pre}index.html#rankings">Rankings</a>
+    <a href="{pre}index.html#cities">Cities</a>
+    <a href="{pre}index.html#rankings">All builders</a>
     <a href="{pre}seattle-adu-costs.html">Cost report</a>
     <a href="{pre}methodology.html">Methodology</a>
     <a href="{pre}for-builders.html" class="cta">For builders</a>
@@ -161,6 +178,21 @@ def trend_chart(city="Seattle"):
     return f'<div class="chart" role="img" aria-label="ADU permits issued by year, 2014 to 2025">{bars}</div>'
 
 
+def city_cards(depth=0):
+    pre = "../" * depth
+    cards = ""
+    for c in CITIES:
+        cb = STATS["by_city"][c["name"]]
+        n_builders = sum(1 for b in BUILDERS if c["name"] in b["cities"])
+        cards += f"""<a class="citycard" href="{pre}{c['page']}">
+<h3>{esc(c['name'])}</h3>
+<p class="citystats"><b>{cb['total']:,}</b> ADU permits · <b>{n_builders}</b> builders indexed</p>
+<p>{esc(c['blurb'])}</p>
+<span class="citylink">View {esc(c['name'])} rankings →</span>
+</a>"""
+    return f'<div class="citygrid">{cards}</div>'
+
+
 def claimed_chip(b):
     if b["slug"] not in CLAIMS:
         return ""
@@ -182,17 +214,21 @@ def builder_row(rank, b):
 def build_index():
     ranked = [b for b in BUILDERS if b["permits_completed"] >= 1][:50]
     rows = "".join(builder_row(i + 1, b) for i, b in enumerate(ranked))
-    active_n = sum(1 for b in BUILDERS if b.get("license") and b["license"]["status"] == "ACTIVE")
+    active_n = sum(1 for b in BUILDERS
+                   if b.get("license") and b["license"]["status"] == "ACTIVE")
+    city_list = " and ".join(c["name"] for c in CITIES)
     jsonld = {"@context": "https://schema.org", "@type": "Dataset",
-              "name": "Seattle ADU Builder Rankings",
-              "description": "Accessory dwelling unit builders in Seattle ranked by completed building permits, from City of Seattle open permit data joined with WA L&I contractor licenses.",
+              "name": "Washington ADU Builder Rankings",
+              "description": f"Accessory dwelling unit builders in {city_list}, WA ranked by completed building permits, from city open permit data joined with WA L&I contractor licenses.",
               "dateModified": STATS["generated"],
-              "isBasedOn": ["https://data.seattle.gov/resource/76t5-zqzr", "https://data.wa.gov/resource/m8qx-ubtq"]}
+              "isBasedOn": ["https://data.seattle.gov/resource/76t5-zqzr",
+                            "https://data.bellevuewa.gov/",
+                            "https://data.wa.gov/resource/m8qx-ubtq"]}
     body = f"""
 <section class="hero">
-  <p class="eyebrow">Seattle &amp; Bellevue, Washington · updated {esc(TODAY)}</p>
+  <p class="eyebrow">{esc(city_list)}, Washington · updated {esc(TODAY)}</p>
   <h1>ADU builders, ranked by permits actually pulled</h1>
-  <p class="dek">Every builder here is ranked by <strong>completed accessory-dwelling-unit permits</strong> official city building records — Seattle and Bellevue, more Washington cities coming. Not reviews, not ads. License status is cross-checked against the Washington L&amp;I contractor registry.</p>
+  <p class="dek">Every builder here is ranked by <strong>completed accessory-dwelling-unit permits</strong> in official city building records — not reviews, not ads. License status is cross-checked against the Washington L&amp;I contractor registry.</p>
   <div class="stats">
     <div><b>{STATS['total_permits']:,}</b><span>ADU permits tracked</span></div>
     <div><b>{STATS['completed_permits']:,}</b><span>completed builds</span></div>
@@ -200,27 +236,31 @@ def build_index():
     <div><b>{active_n}</b><span>active state licenses verified</span></div>
   </div>
 </section>
-<section>
-  <h2>Seattle's ADU boom, in permits</h2>
-  {trend_chart("Seattle")}
-  <p class="fine">Permits issued per year mentioning an ADU/DADU, City of Seattle SDCI data. Seattle legalized attached and detached ADUs citywide in 2019; permits have roughly tripled since.</p>
+<section id="cities">
+  <h2>Browse by city</h2>
+  <p>Each city page ranks builders by their permit record in that city.</p>
+  {city_cards()}
 </section>
 {featured_section()}
 <section id="rankings">
-  <h2>Builder rankings</h2>
-  <p>Ranked by completed ADU permits where city records attribute a contractor, across all covered cities. Bellevue has its own page: <a href="bellevue-adu-builders.html">Bellevue ADU builders →</a> · <a href="methodology.html">How this works and what it misses →</a></p>
+  <h2>All builders, every city</h2>
+  <p>Ranked by completed ADU permits where city records attribute a contractor. <a href="methodology.html">How this works and what it misses →</a></p>
   <div class="tablebox"><table>
   <thead><tr><th>#</th><th>Builder</th><th>Completed</th><th>All permits</th><th>Years</th><th>Cities</th><th>Median est. cost</th><th>WA license</th></tr></thead>
   <tbody>{rows}</tbody></table></div>
   <p><a href="builders/index.html">All {STATS['builders_listed']} indexed builders →</a></p>
+</section>
+<section>
+  <h2>What an ADU costs</h2>
+  <p>We computed real costs and timelines from thousands of permits: median detached-ADU cost, permitting time, and construction time. <a href="seattle-adu-costs.html">Read the Seattle ADU cost report →</a></p>
 </section>
 <section class="callout">
   <h2>Are you an ADU builder?</h2>
   <p>Claim your profile, correct your permit history, and get found by homeowners comparing verified track records. <a href="for-builders.html">Learn more →</a></p>
 </section>"""
     (SITE / "index.html").write_text(page(
-        "ADU Builder Index — Seattle ADU builders ranked by permits",
-        "Seattle ADU and DADU builders ranked by completed building permits from official city records, with Washington contractor license verification.",
+        f"ADU Builder Index — {city_list} ADU builders ranked by permits",
+        f"ADU and DADU builders in {city_list}, WA ranked by completed building permits from official city records, with state contractor license verification.",
         body, jsonld=jsonld, path=""))
 
 
@@ -395,14 +435,18 @@ def build_city_page(city, slug_html, blurb):
     <div><b>{attributed}</b><span>attributed permits</span></div>
   </div>
 </section>
-{featured_section()}
+<section>
+  <h2>{esc(city)} ADU permits by year</h2>
+  {trend_chart(city)}
+</section>
+{featured_section(city)}
 <section id="rankings">
   <h2>Rankings — {esc(city)}</h2>
   <p>Ranked by completed ADU permits attributed in {esc(city)} city records. <a href="methodology.html">Methodology →</a></p>
   <div class="tablebox"><table>
   <thead><tr><th>#</th><th>Builder</th><th>Completed in {esc(city)}</th><th>{esc(city)} permits</th><th>Years active</th><th>WA license</th></tr></thead>
   <tbody>{rows}</tbody></table></div>
-  <p><a href="index.html#rankings">All-cities rankings →</a></p>
+  <p><a href="index.html#cities">← All cities</a> · <a href="index.html#rankings">All-cities rankings →</a></p>
 </section>"""
     (SITE / slug_html).write_text(page(
         f"{city} ADU builders ranked by permits | ADU Builder Index",
@@ -556,7 +600,7 @@ def build_assets():
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
     paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
-             "seattle-adu-costs.html", "bellevue-adu-builders.html",
+             "seattle-adu-costs.html", *[c["page"] for c in CITIES],
              "builders/index.html"] + [f"builders/{b['slug']}.html" for b in BUILDERS]
     urls = "\n".join(
         f"<url><loc>{SITE_BASE}/{p}</loc><lastmod>{STATS['generated']}</lastmod></url>"
@@ -577,8 +621,8 @@ def main():
     build_methodology()
     build_for_builders()
     build_cost_report()
-    build_city_page("Bellevue", "bellevue-adu-builders.html",
-                    "Bellevue flags ADU permits explicitly in its open data — with contractor attribution Seattle stopped publishing. Every builder below appears on an actual Bellevue ADU permit.")
+    for c in CITIES:
+        build_city_page(c["name"], c["page"], c["blurb"])
     build_form_pages()
     build_assets()
     n = len(list((SITE).rglob("*.html")))
