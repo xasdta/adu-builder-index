@@ -101,7 +101,7 @@ def license_chip(b):
     return f'<span class="chip chip-warn" title="WA L&amp;I reports status {esc(lic["status"])} for license {esc(lic["number"])}">license {esc(lic["status"].lower())}</span>'
 
 
-SITE_BASE = "https://xasdta.github.io/adu-builder-index"
+SITE_BASE = "https://adu-builder-index.vercel.app"
 
 
 def rel(url, pre):
@@ -109,7 +109,9 @@ def rel(url, pre):
     return url if url.startswith(("mailto:", "http", "#")) else pre + url
 
 
-def page(title, desc, body, depth=0, canonical=None, jsonld=None):
+def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
+    if canonical is None and path is not None:
+        canonical = f"{SITE_BASE}/{path}".rstrip("/") if path else SITE_BASE + "/"
     pre = "../" * depth
     ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
     return f"""<!doctype html>
@@ -213,7 +215,7 @@ def build_index():
     (SITE / "index.html").write_text(page(
         "ADU Builder Index — Seattle ADU builders ranked by permits",
         "Seattle ADU and DADU builders ranked by completed building permits from official city records, with Washington contractor license verification.",
-        body, jsonld=jsonld))
+        body, jsonld=jsonld, path=""))
 
 
 def build_builder_pages():
@@ -294,7 +296,7 @@ def build_builder_pages():
         (SITE / "builders" / f"{b['slug']}.html").write_text(page(
             f"{b['name']} — ADU builder, Seattle | ADU Builder Index",
             f"{b['name']}: {b['permits_completed']} completed ADU permits in Seattle city records, {esc(b['first_year'])}–{esc(b['last_year'])}. Permit history and WA license status.",
-            body, depth=1, jsonld=jsonld))
+            body, depth=1, jsonld=jsonld, path=f"builders/{b['slug']}.html"))
 
     # A–Z list
     items = "".join(
@@ -308,7 +310,7 @@ def build_builder_pages():
     (SITE / "builders" / "index.html").write_text(page(
         "All ADU builders in Seattle | ADU Builder Index",
         "Alphabetical list of every contractor attributed on ADU permits in Seattle open data.",
-        body, depth=1))
+        body, depth=1, path="builders/index.html"))
 
 
 def build_methodology():
@@ -330,7 +332,7 @@ def build_methodology():
     (SITE / "methodology.html").write_text(page(
         "Methodology | ADU Builder Index",
         "How ADU Builder Index ranks builders: Seattle open permit data, WA L&I license verification, and the limits of both.",
-        body))
+        body, path="methodology.html"))
 
 
 def build_for_builders():
@@ -353,7 +355,7 @@ def build_for_builders():
     (SITE / "for-builders.html").write_text(page(
         "For builders | ADU Builder Index",
         "Claim your ADU builder profile, correct your permit record, and reach homeowners comparing verified track records in Seattle.",
-        body))
+        body, path="for-builders.html"))
 
 
 def build_form_pages():
@@ -387,14 +389,14 @@ def build_form_pages():
     (SITE / "get-featured.html").write_text(page(
         "Get featured or claim your profile | ADU Builder Index",
         "Claim your free ADU builder profile or request a founding featured slot. Verified against Seattle permit records and the WA L&I registry.",
-        body))
+        body, path="get-featured.html"))
     tbody = """
 <section class="hero small"><h1>Request received</h1>
 <p class="dek">Thanks — we'll verify your license and permit record and reply within one business day.</p>
 <p><a href="index.html">← Back to the rankings</a></p></section>"""
     (SITE / "thanks.html").write_text(page(
         "Request received | ADU Builder Index",
-        "Your builder request was received.", tbody))
+        "Your builder request was received.", tbody, path="thanks.html"))
 
 
 def build_assets():
