@@ -5,3 +5,4 @@ logs/
 outreach/
 stripe_backup_code.txt
 .secrets
+.env
