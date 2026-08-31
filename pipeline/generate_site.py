@@ -124,6 +124,7 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
 {f'<link rel="canonical" href="{esc(canonical)}">' if canonical else ''}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Spline+Sans+Mono:wght@400;600&display=swap">
 <link rel="stylesheet" href="{pre}style.css?v={STATS['generated']}">
+<script defer src="/_vercel/insights/script.js"></script>
 {ld}
 </head>
 <body>
