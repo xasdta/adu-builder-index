@@ -25,6 +25,12 @@ RESERVE_URL = (f"mailto:{CONTACT_EMAIL}?subject=Founding%20featured%20slot%20req
 # the primary featured CTA. License verification happens after payment, with a
 # full refund if it fails — the guarantee on for-builders.html says so.
 STRIPE_LINK = "https://buy.stripe.com/eVq9ASh2Saml6q8a5s0Ny00"
+# Stripe pauses payment links on new accounts until it finishes verifying the
+# business; a paused link renders "Something went wrong" instead of checkout.
+# Flip to True once the link opens a real checkout page in a browser.
+STRIPE_LINK_ACTIVE = False
+if not STRIPE_LINK_ACTIVE:
+    STRIPE_LINK = None
 # Web3Forms access key (web3forms.com) — when set, contact buttons use the
 # on-site form at get-featured.html instead of mailto links.
 WEB3FORMS_KEY = "d253e17f-0e35-4f0a-a5c4-cfa9df78a199"
@@ -393,11 +399,13 @@ def build_for_builders():
   <p>Featured builders appear in the <a href="index.html#featured">Featured builders section at the top of the rankings page</a> — clearly labeled, with your blurb, license verification, and a direct link to your website. Founding-builder rate: <strong>$99/month, locked for life</strong>, first {FEATURED_SLOTS} builders in Seattle. One signed ADU project pays for roughly a decade of listing. Rankings are never for sale — featured placement is clearly separated from the permit-verified table.</p>
   <h2>How to get featured</h2>
   <ol>
-    <li><a href="{FEATURE_URL}">Subscribe</a> — $99/mo, checkout takes a minute. Enter your business name exactly as licensed.</li>
+{"""    <li><a href="%s">Subscribe</a> — $99/mo, checkout takes a minute. Enter your business name exactly as licensed.</li>
     <li>Reply to your Stripe receipt with your website and a one-line blurb for your card.</li>
-    <li>We confirm your WA L&amp;I license is active and your card goes live, usually same day.</li>
+    <li>We confirm your WA L&amp;I license is active and your card goes live, usually same day.</li>""" % STRIPE_LINK if STRIPE_LINK else """    <li><a href="%s">Request your slot</a> — company name, license number, and a one-line blurb.</li>
+    <li>We confirm your WA L&amp;I license is active and reply the same or next business day.</li>
+    <li>You subscribe at $99/mo and your featured card goes live.</li>""" % FEATURE_URL}
   </ol>
-  <p class="fine"><strong>Our guarantee:</strong> if your license doesn't verify as active, we cancel the subscription and refund you in full — you are never charged for a listing we can't stand behind. Cancel anytime; the founding rate stays yours as long as you keep the subscription.</p>
+  <p class="fine"><strong>Our guarantee:</strong> {"if your license doesn&#39;t verify as active, we cancel the subscription and refund you in full — you are never charged for a listing we can&#39;t stand behind" if STRIPE_LINK else "we confirm your license before you are charged a cent"}. Cancel anytime; the founding rate stays yours as long as you keep the subscription.</p>
   <p><a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a> <a class="button secondary" href="{CLAIM_URL}">Claim your free profile →</a></p>
 </section>"""
     (SITE / "for-builders.html").write_text(page(
@@ -584,7 +592,7 @@ def build_form_pages():
         return
     body = f"""
 <section class="hero small"><h1>Claim your profile or get featured</h1>
-<p class="dek">Claiming your profile is free — we verify it against city permit records and add your details. Want top placement instead? <a href="{STRIPE_LINK}">Get featured for $99/mo</a>, locked for life for founding builders.</p></section>
+<p class="dek">Claiming your profile is free — we verify it against city permit records and add your details. Want top placement instead? Featured slots are <strong>$99/mo, locked for life</strong> for founding builders — pick that option below.</p></section>
 <section>
 <form class="bform" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
@@ -594,8 +602,8 @@ def build_form_pages():
   <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
   <fieldset>
     <legend>What do you need?</legend>
-    <label class="radio"><input type="radio" name="request_type" value="Claim free profile" checked> Claim my free profile</label>
-    <label class="radio"><input type="radio" name="request_type" value="Question about featured placement"> I have a question about featured placement</label>
+    <label class="radio"><input type="radio" name="request_type" value="Get featured ($99/mo founding rate)" checked> Get featured — $99/mo founding rate</label>
+    <label class="radio"><input type="radio" name="request_type" value="Claim free profile"> Claim my free profile</label>
   </fieldset>
   <label>Company name <input type="text" name="company" required></label>
   <label>WA contractor license # <input type="text" name="license_number" required></label>
@@ -604,7 +612,7 @@ def build_form_pages():
   <label>Phone <input type="tel" name="phone"></label>
   <label>One-line blurb for your card, plus anything to correct on your profile <textarea name="message" rows="4"></textarea></label>
   <button class="button" type="submit">Send request</button>
-  <p class="fine">Ready to be featured now? <a href="{STRIPE_LINK}">Subscribe directly →</a> — no need to wait for a reply.</p>
+  {f'<p class="fine">Ready now? <a href="{STRIPE_LINK}">Subscribe directly →</a></p>' if STRIPE_LINK else ""}
   <p class="fine">We reply within one business day. Claiming is free and always will be.</p>
 </form>
 </section>"""
