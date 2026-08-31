@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://adubuilderindex.com/sitemap.xml

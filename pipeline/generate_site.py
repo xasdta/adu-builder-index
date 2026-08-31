@@ -101,7 +101,7 @@ def license_chip(b):
     return f'<span class="chip chip-warn" title="WA L&amp;I reports status {esc(lic["status"])} for license {esc(lic["number"])}">license {esc(lic["status"].lower())}</span>'
 
 
-SITE_BASE = "https://adu-builder-index.vercel.app"
+SITE_BASE = "https://adubuilderindex.com"
 
 
 def rel(url, pre):
@@ -401,10 +401,20 @@ def build_form_pages():
 
 
 def build_assets():
-    (SITE / "robots.txt").write_text("User-agent: *\nAllow: /\n")
-    urls = ["index.html", "methodology.html", "for-builders.html",
-            "builders/index.html"] + [f"builders/{b['slug']}.html" for b in BUILDERS]
-    (SITE / "sitemap.txt").write_text("\n".join(urls))
+    (SITE / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
+    paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
+             "builders/index.html"] + [f"builders/{b['slug']}.html" for b in BUILDERS]
+    urls = "\n".join(
+        f"<url><loc>{SITE_BASE}/{p}</loc><lastmod>{STATS['generated']}</lastmod></url>"
+        for p in paths)
+    (SITE / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{urls}\n</urlset>\n")
+    old = SITE / "sitemap.txt"
+    if old.exists():
+        old.unlink()
 
 
 def main():
