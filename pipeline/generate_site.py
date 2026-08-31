@@ -466,12 +466,27 @@ def build_cost_report():
            and p.get("permittypedesc") == "New"]
     # Pure detached-ADU builds: mention DADU/detached, and are not bundled
     # house+ADU projects (those permits carry the whole house's cost).
-    BUNDLE = _re.compile(r"\bSFR\b|SINGLE.FAMILY|TOWNHOUSE|ROWHOUSE|LIVE.WORK",
-                         _re.IGNORECASE)
-    DET = _re.compile(r"\bDADU\b|DETACHED", _re.IGNORECASE)
-    dadu = [p for p in new
-            if DET.search(p.get("description") or "")
-            and not BUNDLE.search(p.get("description") or "")]
+    # A standalone DADU permit covers the cottage only. Exclude permits that
+    # also build a NEW primary dwelling — their cost covers the whole house.
+    DET = _re.compile(r"\bDADU\b|DETACHED\s+(ACCESSORY|ADU)", _re.IGNORECASE)
+    NEWHOUSE = _re.compile(
+        r"(CONSTRUCT|BUILD|ESTABLISH)[^.]{0,60}\b(NEW\s+)?"
+        r"(SFR|SINGLE[- ]FAMILY|TOWNHOUSE|ROWHOUSE|DUPLEX|TRIPLEX|FOURPLEX|LIVE.WORK)"
+        r"|\b(NEW\s+(SFR|SINGLE[- ]FAMILY))", _re.IGNORECASE)
+    EXISTING = _re.compile(
+        r"ACCESSORY TO (AN? )?EXISTING|TO EXISTING (SFR|SINGLE|HOUSE|RESIDENCE)",
+        _re.IGNORECASE)
+
+    def _standalone(p):
+        desc = p.get("description") or ""
+        if not DET.search(desc):
+            return False
+        if EXISTING.search(desc):
+            return True
+        return not NEWHOUSE.search(desc)
+
+    dadu = [p for p in new if _standalone(p)]
+    MIN_N = 10  # never publish a median from a thinner sample than this
 
     def _year(p, f):
         return (p.get(f) or "")[:4]
@@ -488,13 +503,18 @@ def build_cost_report():
         y = _year(p, "issueddate")
         if c > 20000 and y >= "2019":
             by_year.setdefault(y, []).append(c)
-    rows = ""
+    rows, thin = "", []
     for y in sorted(by_year):
         v = sorted(by_year[y])
+        if len(v) < MIN_N:
+            thin.append(f"{y} ({len(v)})")
+            continue
         q = _st.quantiles(v, n=4)
         rows += (f'<tr><td class="num">{y}</td><td class="num">{len(v)}</td>'
                  f'<td class="num">{money(_st.median(v))}</td>'
                  f'<td class="num">{money(q[0])} – {money(q[2])}</td></tr>')
+    thin_note = (f" Years with fewer than {MIN_N} permits are omitted rather than "
+                 f"published as a median ({', '.join(thin)})." if thin else "")
 
     recent = [c for y, vs in by_year.items() if y >= "2023" for c in vs]
     med_cost = _st.median(recent)
@@ -517,25 +537,25 @@ def build_cost_report():
 
     jsonld = {"@context": "https://schema.org", "@type": "Dataset",
               "name": "Seattle ADU Cost Report",
-              "description": f"Cost, permitting-time, and construction-time statistics for accessory dwelling units in Seattle, computed from {len(new):,} new-construction ADU building permits.",
+              "description": f"Cost, permitting-time, and construction-time statistics for accessory dwelling units in Seattle, computed from {len(dadu):,} standalone detached-ADU building permits.",
               "dateModified": STATS["generated"],
               "isBasedOn": "https://data.seattle.gov/resource/76t5-zqzr"}
     body = f"""
 <section class="hero small">
   <p class="crumb"><a href="index.html">← Home</a></p>
-  <p class="eyebrow">From {len(new):,} new-construction ADU permits · updated {esc(TODAY)}</p>
+  <p class="eyebrow">From {len(dadu):,} standalone detached-ADU permits · updated {esc(TODAY)}</p>
   <h1>What an ADU really costs in Seattle</h1>
   <p class="dek">Not estimates from contractors' marketing pages — these are the costs, permitting times, and construction times declared on actual Seattle building permits.</p>
   <div class="stats">
-    <div><b>{money(med_cost)}</b><span>median detached ADU, 2023–2026 permits</span></div>
-    <div><b>{med_perm:.0f} days</b><span>median permitting time (application → issue)</span></div>
-    <div><b>{med_con:.0f} days</b><span>median construction time (issue → completion)</span></div>
+    <div><b>{money(med_cost)}</b><span>median detached ADU ({len(recent)} permits, 2023–2026)</span></div>
+    <div><b>{med_perm:.0f} days</b><span>median permitting time ({len(perm_days):,} permits)</span></div>
+    <div><b>{med_con:.0f} days</b><span>median construction time ({len(con_days):,} permits)</span></div>
     <div><b>~{(med_perm + med_con) / 30:.0f} months</b><span>typical application-to-done timeline</span></div>
   </div>
 </section>
 <section>
   <h2>Detached ADU (backyard cottage) costs by year</h2>
-  <p>Estimated project cost as declared on standalone DADU new-construction permits — bundled house-plus-ADU projects are excluded so the numbers reflect the ADU alone.</p>
+  <p>Estimated project cost as declared on standalone DADU permits — projects that also build a new primary house are excluded, so these numbers reflect the cottage alone.{thin_note}</p>
   <div class="tablebox"><table>
   <thead><tr><th>Year issued</th><th>Permits</th><th>Median cost</th><th>Middle 50% range</th></tr></thead>
   <tbody>{rows}</tbody></table></div>
@@ -553,7 +573,7 @@ def build_cost_report():
 </section>"""
     (SITE / "seattle-adu-costs.html").write_text(page(
         "Seattle ADU Cost Report — real permit data | ADU Builder Index",
-        f"Median detached ADU cost in Seattle is {money(med_cost)} per 2023-2026 building permits. Real permitting times, construction times, and costs from {len(new):,} city permits.",
+        f"Median detached ADU cost in Seattle is {money(med_cost)} across {len(recent)} standalone DADU permits (2023-2026). Real permitting and construction times from Seattle city permit records.",
         body, jsonld=jsonld, path="seattle-adu-costs.html"))
 
 
