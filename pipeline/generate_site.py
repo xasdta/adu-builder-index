@@ -24,11 +24,12 @@ RESERVE_URL = (f"mailto:{CONTACT_EMAIL}?subject=Founding%20featured%20slot%20req
 # Stripe Payment Link for the $99/mo featured subscription. Self-serve: it is
 # the primary featured CTA. License verification happens after payment, with a
 # full refund if it fails — the guarantee on for-builders.html says so.
-STRIPE_LINK = "https://buy.stripe.com/eVq9ASh2Saml6q8a5s0Ny00"
-# Stripe pauses payment links on new accounts until it finishes verifying the
-# business; a paused link renders "Something went wrong" instead of checkout.
-# Flip to True once the link opens a real checkout page in a browser.
-STRIPE_LINK_ACTIVE = False
+STRIPE_LINK = "https://buy.stripe.com/28E28qcMCgKp8yg4L80Ny01"
+# Stripe pauses payment links created before account verification completes; a
+# paused link renders "Something went wrong" instead of checkout (the first
+# link, eVq9ASh2..., is stuck that way — this one was created after and is
+# Active). Verify in a real browser before flipping this to True.
+STRIPE_LINK_ACTIVE = True
 if not STRIPE_LINK_ACTIVE:
     STRIPE_LINK = None
 # Web3Forms access key (web3forms.com) — when set, contact buttons use the
