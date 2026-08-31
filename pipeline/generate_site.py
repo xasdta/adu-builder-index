@@ -134,6 +134,7 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
   <a class="brand" href="{pre}index.html">ADU Builder Index</a>
   <nav>
     <a href="{pre}index.html#rankings">Rankings</a>
+    <a href="{pre}seattle-adu-costs.html">Cost report</a>
     <a href="{pre}methodology.html">Methodology</a>
     <a href="{pre}for-builders.html" class="cta">For builders</a>
   </nav>
@@ -361,6 +362,107 @@ def build_for_builders():
         body, path="for-builders.html"))
 
 
+def build_cost_report():
+    import re as _re
+    import statistics as _st
+    from datetime import date as _date
+
+    permits = json.load(open(ROOT / "data" / "seattle_permits.json"))["permits"]
+    new = [p for p in permits
+           if p.get("permitclassmapped") == "Residential"
+           and p.get("permittypedesc") == "New"]
+    # Pure detached-ADU builds: mention DADU/detached, and are not bundled
+    # house+ADU projects (those permits carry the whole house's cost).
+    BUNDLE = _re.compile(r"\bSFR\b|SINGLE.FAMILY|TOWNHOUSE|ROWHOUSE|LIVE.WORK",
+                         _re.IGNORECASE)
+    DET = _re.compile(r"\bDADU\b|DETACHED", _re.IGNORECASE)
+    dadu = [p for p in new
+            if DET.search(p.get("description") or "")
+            and not BUNDLE.search(p.get("description") or "")]
+
+    def _year(p, f):
+        return (p.get(f) or "")[:4]
+
+    def _days(a, b):
+        try:
+            return (_date.fromisoformat(b[:10]) - _date.fromisoformat(a[:10])).days
+        except (ValueError, TypeError):
+            return None
+
+    by_year = {}
+    for p in dadu:
+        c = float(p.get("estprojectcost") or 0)
+        y = _year(p, "issueddate")
+        if c > 20000 and y >= "2019":
+            by_year.setdefault(y, []).append(c)
+    rows = ""
+    for y in sorted(by_year):
+        v = sorted(by_year[y])
+        q = _st.quantiles(v, n=4)
+        rows += (f'<tr><td class="num">{y}</td><td class="num">{len(v)}</td>'
+                 f'<td class="num">{money(_st.median(v))}</td>'
+                 f'<td class="num">{money(q[0])} – {money(q[2])}</td></tr>')
+
+    recent = [c for y, vs in by_year.items() if y >= "2023" for c in vs]
+    med_cost = _st.median(recent)
+    perm_days = [d for d in (_days(p.get("applieddate"), p.get("issueddate"))
+                             for p in new if _year(p, "issueddate") >= "2023")
+                 if d is not None and 0 <= d < 2000]
+    con_days = [d for d in (_days(p.get("issueddate"), p.get("completeddate"))
+                            for p in new if _year(p, "completeddate") >= "2023")
+                if d is not None and 30 <= d < 2000]
+    med_perm, med_con = _st.median(perm_days), _st.median(con_days)
+
+    zip_counts = {}
+    for p in new:
+        z = p.get("originalzip")
+        if z and _year(p, "issueddate") >= "2023":
+            zip_counts[z] = zip_counts.get(z, 0) + 1
+    zip_rows = "".join(
+        f'<tr><td class="num">{esc(z)}</td><td class="num">{n}</td></tr>'
+        for z, n in sorted(zip_counts.items(), key=lambda x: -x[1])[:10])
+
+    jsonld = {"@context": "https://schema.org", "@type": "Dataset",
+              "name": "Seattle ADU Cost Report",
+              "description": f"Cost, permitting-time, and construction-time statistics for accessory dwelling units in Seattle, computed from {len(new):,} new-construction ADU building permits.",
+              "dateModified": STATS["generated"],
+              "isBasedOn": "https://data.seattle.gov/resource/76t5-zqzr"}
+    body = f"""
+<section class="hero small">
+  <p class="eyebrow">From {len(new):,} new-construction ADU permits · updated {esc(TODAY)}</p>
+  <h1>What an ADU really costs in Seattle</h1>
+  <p class="dek">Not estimates from contractors' marketing pages — these are the costs, permitting times, and construction times declared on actual Seattle building permits.</p>
+  <div class="stats">
+    <div><b>{money(med_cost)}</b><span>median detached ADU, 2023–2026 permits</span></div>
+    <div><b>{med_perm:.0f} days</b><span>median permitting time (application → issue)</span></div>
+    <div><b>{med_con:.0f} days</b><span>median construction time (issue → completion)</span></div>
+    <div><b>~{(med_perm + med_con) / 30:.0f} months</b><span>typical application-to-done timeline</span></div>
+  </div>
+</section>
+<section>
+  <h2>Detached ADU (backyard cottage) costs by year</h2>
+  <p>Estimated project cost as declared on standalone DADU new-construction permits — bundled house-plus-ADU projects are excluded so the numbers reflect the ADU alone.</p>
+  <div class="tablebox"><table>
+  <thead><tr><th>Year issued</th><th>Permits</th><th>Median cost</th><th>Middle 50% range</th></tr></thead>
+  <tbody>{rows}</tbody></table></div>
+  <p class="fine">Permit-declared estimates typically run below final all-in cost (site work, finishes, and overruns land later) — treat these as a floor, not a quote. Attached-ADU permits are excluded from cost stats because most are filed with the main house's full construction cost.</p>
+</section>
+<section>
+  <h2>Where Seattle is building ADUs</h2>
+  <p>New-construction ADU permits by ZIP code since 2023.</p>
+  <div class="tablebox"><table>
+  <thead><tr><th>ZIP</th><th>Permits since 2023</th></tr></thead>
+  <tbody>{zip_rows}</tbody></table></div>
+</section>
+<section class="callout">
+  <p>Comparing builders? The <a href="index.html#rankings">rankings</a> show who has actually completed ADU permits in city records, with license verification.</p>
+</section>"""
+    (SITE / "seattle-adu-costs.html").write_text(page(
+        "Seattle ADU Cost Report — real permit data | ADU Builder Index",
+        f"Median detached ADU cost in Seattle is {money(med_cost)} per 2023-2026 building permits. Real permitting times, construction times, and costs from {len(new):,} city permits.",
+        body, jsonld=jsonld, path="seattle-adu-costs.html"))
+
+
 def build_form_pages():
     if not WEB3FORMS_KEY:
         return
@@ -406,6 +508,7 @@ def build_assets():
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
     paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
+             "seattle-adu-costs.html",
              "builders/index.html"] + [f"builders/{b['slug']}.html" for b in BUILDERS]
     urls = "\n".join(
         f"<url><loc>{SITE_BASE}/{p}</loc><lastmod>{STATS['generated']}</lastmod></url>"
@@ -425,6 +528,7 @@ def main():
     build_builder_pages()
     build_methodology()
     build_for_builders()
+    build_cost_report()
     build_form_pages()
     build_assets()
     n = len(list((SITE).rglob("*.html")))
