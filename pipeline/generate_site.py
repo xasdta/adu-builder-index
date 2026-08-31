@@ -21,13 +21,15 @@ CLAIM_URL = (f"mailto:{CONTACT_EMAIL}?subject=Claim%20my%20builder%20profile"
 RESERVE_URL = (f"mailto:{CONTACT_EMAIL}?subject=Founding%20featured%20slot%20request"
                "&body=Company%20name%3A%0AWA%20license%20number%3A%0AWebsite%3A%0A"
                "Phone%3A%0AOne-line%20blurb%20for%20your%20featured%20card%3A%0A")
-# Set to a Stripe Payment Link to take $99/mo payments directly on the site.
-STRIPE_LINK = None
+# Stripe Payment Link for the $99/mo featured subscription. Shown as the
+# payment step AFTER license verification — never as the primary CTA, so
+# nobody pays before we verify them.
+STRIPE_LINK = "https://buy.stripe.com/eVq9ASh2Saml6q8a5s0Ny00"
 # Web3Forms access key (web3forms.com) — when set, contact buttons use the
 # on-site form at get-featured.html instead of mailto links.
 WEB3FORMS_KEY = "d253e17f-0e35-4f0a-a5c4-cfa9df78a199"
 FORM_URL = "get-featured.html"
-FEATURE_URL = STRIPE_LINK or (FORM_URL if WEB3FORMS_KEY else RESERVE_URL)
+FEATURE_URL = FORM_URL if WEB3FORMS_KEY else RESERVE_URL
 if WEB3FORMS_KEY:
     CLAIM_URL = FORM_URL
 FEATURED_SLOTS = 3
@@ -347,9 +349,9 @@ def build_for_builders():
   <p>Featured builders appear in the <a href="index.html#featured">Featured builders section at the top of the rankings page</a> — clearly labeled, with your blurb, license verification, and a direct link to your website. Founding-builder rate: <strong>$99/month, locked for life</strong>, first {FEATURED_SLOTS} builders in Seattle. One signed ADU project pays for roughly a decade of listing. Rankings are never for sale — featured placement is clearly separated from the permit-verified table.</p>
   <h2>How to get featured</h2>
   <ol>
-    <li><a href="{FEATURE_URL}">{"Subscribe here" if STRIPE_LINK else "Reserve your slot here"}</a> — tell us your company name and license number.</li>
-    <li>We verify your WA L&amp;I license is active and confirm your permit record.</li>
-    <li>Your featured card is live within one business day{"" if STRIPE_LINK else "; we invoice after verification, not before"}.</li>
+    <li><a href="{FEATURE_URL}">Request your slot</a> — tell us your company name and license number.</li>
+    <li>We verify your WA L&amp;I license is active and confirm your permit record — before any payment.</li>
+    <li>Once verified, subscribe securely{f' via <a href="{STRIPE_LINK}">Stripe</a>' if STRIPE_LINK else ""} and your featured card is live within one business day.</li>
   </ol>
   <p><a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a> <a class="button secondary" href="{CLAIM_URL}">Claim your free profile →</a></p>
 </section>"""
