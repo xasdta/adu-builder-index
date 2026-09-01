@@ -601,11 +601,7 @@ def build_form_pages():
 <section class="hero small"><h1>Claim your profile or get featured</h1>
 <p class="dek">Claiming your profile is free — we verify it against city permit records and add your details. Want top placement instead? Featured slots are <strong>$99/mo, locked for life</strong> for founding builders — pick that option below.</p></section>
 <section>
-<form class="bform" action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="{WEB3FORMS_KEY}">
-  <input type="hidden" name="subject" value="ADU Builder Index — builder request">
-  <input type="hidden" name="from_name" value="ADU Builder Index">
-  <input type="hidden" name="redirect" value="{SITE_BASE}/thanks.html">
+<form class="bform" action="/api/claim" method="POST">
   <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
   <fieldset>
     <legend>What do you need?</legend>
@@ -649,6 +645,26 @@ def build_form_pages():
         "Next steps after subscribing to a founding featured slot on ADU Builder Index.",
         fbody, path="featured-thanks.html"))
 
+    ebody = """
+<section class="hero small">
+  <h1>We couldn't verify that license</h1>
+  <p class="dek">We looked up the contractor license number you entered in the Washington L&amp;I registry and couldn't find an active license under it.</p>
+</section>
+<section>
+  <h2>What to check</h2>
+  <ul>
+    <li>The number as printed on your L&amp;I registration — you can confirm it at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a></li>
+    <li>Whether the license has lapsed or is suspended</li>
+    <li>Whether it's registered under a different legal business name</li>
+  </ul>
+  <p><a class="button" href="get-featured.html">← Try again</a></p>
+  <p class="fine">If you believe this is our mistake, email us and we'll sort it out by hand.</p>
+</section>"""
+    (SITE / "claim-error.html").write_text(page(
+        "Couldn't verify that license | ADU Builder Index",
+        "We could not find an active Washington contractor license for the number submitted.",
+        ebody, path="claim-error.html"))
+
     tbody = """
 <section class="hero small"><h1>Request received</h1>
 <p class="dek">Thanks — we'll verify your license and permit record and reply within one business day.</p>
@@ -662,7 +678,7 @@ def build_assets():
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
     paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
-             "seattle-adu-costs.html", "featured-thanks.html", *[c["page"] for c in CITIES],
+             "seattle-adu-costs.html", "featured-thanks.html", "claim-error.html", *[c["page"] for c in CITIES],
              "builders/index.html"] + [f"builders/{b['slug']}.html" for b in BUILDERS]
     urls = "\n".join(
         f"<url><loc>{SITE_BASE}/{p}</loc><lastmod>{STATS['generated']}</lastmod></url>"

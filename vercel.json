@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "python3 pipeline/generate_site.py",
+  "outputDirectory": "docs",
+  "functions": { "api/*.mjs": { "maxDuration": 20 } }
+}
