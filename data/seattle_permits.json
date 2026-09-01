@@ -1,7 +1,7 @@
 {
  "city": "Seattle",
  "source": "https://data.seattle.gov/resource/76t5-zqzr.json",
- "fetched_at": "2026-08-30",
+ "fetched_at": "2026-08-31",
  "permits": [
   {
    "permitnum": "3017526-EX",

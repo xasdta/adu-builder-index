@@ -63,7 +63,7 @@
    "2025": 1065,
    "2026": 348
   },
-  "generated": "2026-08-30"
+  "generated": "2026-08-31"
  },
  "builders": [
   {
@@ -5576,7 +5576,7 @@
    "median_cost": 81929.0,
    "license": {
     "number": "HAASDDC842QA",
-    "status": "ACTIVE",
+    "status": "SUSPENDED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2016-11-01",
     "expires": "2026-12-10",
@@ -18285,7 +18285,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2022-06-21",
-    "expires": "2026-09-05",
+    "expires": "2028-09-05",
     "city": "BELLEVUE",
     "ubi": "604806179"
    },
