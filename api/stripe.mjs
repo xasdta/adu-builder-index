@@ -17,28 +17,38 @@ const field = (session, key) =>
   (session.custom_fields || [])
     .find(f => (f.key || "").toLowerCase().includes(key))?.text?.value?.trim() || "";
 
-export default async function handler(request) {
-  if (request.method !== "POST") {
-    return new Response("method not allowed", { status: 405 });
+/** Raw body is required for HMAC verification, so body parsing stays off. */
+export const config = { api: { bodyParser: false } };
+
+async function rawBody(req) {
+  const chunks = [];
+  for await (const chunk of req) chunks.push(chunk);
+  return Buffer.concat(chunks);
+}
+
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).send("method not allowed");
   }
 
-  const raw = await request.text();                 // must precede any parsing
+  const raw = await rawBody(req);
   let event;
   try {
     event = verifyStripeSignature(
-      raw, request.headers.get("stripe-signature"),
+      raw, req.headers["stripe-signature"],
       process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
     console.error("signature rejected:", err.message);
-    return new Response("invalid signature", { status: 400 });
+    return res.status(400).send("invalid signature");
   }
 
   if (event.type !== "checkout.session.completed") {
-    return new Response(JSON.stringify({ ignored: event.type }), { status: 200 });
+    return res.status(200).json({ ignored: event.type });
   }
   const s = event.data.object;
   if (s.mode !== "subscription" || s.payment_status === "unpaid") {
-    return new Response(JSON.stringify({ ignored: "not a paid subscription" }), { status: 200 });
+    return res.status(200).json({ ignored: "not a paid subscription" });
   }
 
   const email = s.customer_details?.email || "";
@@ -80,7 +90,7 @@ export default async function handler(request) {
         "Stripe → Payments → find the charge → Refund, then cancel the subscription.",
         "Reply template 3 in outreach/reply-templates.md.",
       ]);
-      return new Response(JSON.stringify({ ok: true, action: "flagged" }), { status: 200 });
+      return res.status(200).json({ ok: true, action: "flagged" });
     }
     const rec = lni.active[0];
 
@@ -97,7 +107,7 @@ export default async function handler(request) {
         "",
         "Tell Claude: \"featured verified: <company>, city <X>, blurb <Y>, website <Z>\"",
       ]);
-      return new Response(JSON.stringify({ ok: true, action: "needs-match" }), { status: 200 });
+      return res.status(200).json({ ok: true, action: "needs-match" });
     }
 
     // 3. Publish.
@@ -131,10 +141,10 @@ export default async function handler(request) {
         "",
         "Either raise FEATURED_SLOTS, offer another city, or refund.",
       ]);
-      return new Response(JSON.stringify({ ok: true, action: "city-full" }), { status: 200 });
+      return res.status(200).json({ ok: true, action: "city-full" });
     }
     if (result.skipped) {
-      return new Response(JSON.stringify({ ok: true, action: "duplicate" }), { status: 200 });
+      return res.status(200).json({ ok: true, action: "duplicate" });
     }
 
     await send(`✅ New featured builder: ${b.name}`, [
@@ -146,10 +156,10 @@ export default async function handler(request) {
       DIVIDER,
       "Nothing further needed. To edit their card, change data/featured.json.",
     ]);
-    return new Response(JSON.stringify({ ok: true, action: "published" }), { status: 200 });
+    return res.status(200).json({ ok: true, action: "published" });
   } catch (err) {
     // 500 → Stripe retries for up to 3 days; the commit step is idempotent.
     console.error("onboarding failed:", err);
-    return new Response(`error: ${err.message}`, { status: 500 });
+    return res.status(500).send(`error: ${err.message}`);
   }
 }

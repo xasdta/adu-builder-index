@@ -13,21 +13,28 @@ import {
   updateJsonFile, notify, DIVIDER,
 } from "../lib/onboarding.mjs";
 
-const seeOther = (path) =>
-  new Response(null, { status: 303, headers: { Location: path } });
+export const config = { api: { bodyParser: false } };
 
-export default async function handler(request) {
-  if (request.method !== "POST") {
-    return new Response("method not allowed", { status: 405 });
+async function rawBody(req) {
+  const chunks = [];
+  for await (const chunk of req) chunks.push(chunk);
+  return Buffer.concat(chunks).toString("utf8");
+}
+
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).send("method not allowed");
   }
+  const seeOther = (path) => { res.writeHead(303, { Location: path }); res.end(); };
 
   // Accept a plain form post (no JS) or JSON.
   let f = {};
-  const ct = request.headers.get("content-type") || "";
-  if (ct.includes("application/json")) {
-    f = await request.json().catch(() => ({}));
+  const body = await rawBody(req);
+  if ((req.headers["content-type"] || "").includes("application/json")) {
+    try { f = JSON.parse(body); } catch { f = {}; }
   } else {
-    f = Object.fromEntries(new URLSearchParams(await request.text()));
+    f = Object.fromEntries(new URLSearchParams(body));
   }
 
   const company = String(f.company || "").trim();
