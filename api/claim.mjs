@@ -10,10 +10,14 @@
  */
 import {
   lniByLicense, lniByName, loadBuilders, matchBuilder, ownershipProof,
-  updateJsonFile, notify, DIVIDER,
+  licenceMatchesCompany, safeUrl, notify, DIVIDER,
 } from "../lib/onboarding.mjs";
 
 export const config = { api: { bodyParser: false } };
+
+const CLAIMS_NOTE =
+  "(Claims are never auto-published: the ownership signals are derived from " +
+  "public data, so a human approves each one.)";
 
 async function rawBody(req) {
   const chunks = [];
@@ -40,7 +44,7 @@ export default async function handler(req, res) {
   const company = String(f.company || "").trim();
   const license = String(f.license_number || "").trim();
   const email = String(f.email || "").trim();
-  const website = String(f.website || "").trim();
+  const website = safeUrl(f.website);
   const phone = String(f.phone || "").trim();
   const message = String(f.message || "").trim();
   const wants = String(f.request_type || "").trim();
@@ -79,68 +83,55 @@ export default async function handler(req, res) {
         `License ${rec.contractorlicensenumber} ACTIVE ✅`,
         m.ambiguous
           ? `⚠ ${m.ambiguous.length} profiles match: ${m.ambiguous.map(b => b.slug).join(", ")}`
-          : "⚠ No builder profile matches that business name (they may not be in our permit data).",
+          : "⚠ No builder profile matches that business name.",
       ]);
       return seeOther("/thanks.html");
     }
     const b = m.builder;
 
+    // The licence must belong to the company being claimed. Without this, any
+    // active licence number — all public, and printed on our own pages — could
+    // be paired with a competitor's name to take over their profile.
+    const bind = licenceMatchesCompany(rec, company, b);
+    if (!bind.ok) {
+      await send(`✗ Claim rejected — licence/company mismatch: ${company}`, [
+        ...head,
+        `✗ ${bind.reason}`,
+        "",
+        "Nothing was published. This is the shape of a profile-hijack attempt,",
+        "though it can also be an honest typo.",
+      ]);
+      return seeOther("/claim-error.html");
+    }
+
     const proof = ownershipProof({ email, website, phone, lniRecord: rec });
-    if (!proof) {
-      await send(`⚠ Claim needs your check: ${company}`, [
+
+    // Deliberately NOT auto-published. Neither factor is a possession proof:
+    // the email/website pair is two strings from the same request, and the L&I
+    // phone is a public field of the same open dataset. Publishing on that
+    // basis would let a stranger put their own contact details on a
+    // competitor's page. A human confirms; the email below has everything.
+    const claimed = CLAIMS_NOTE;
+    await send(
+      proof ? `✅ Claim verified — approve to publish: ${b.name}`
+            : `⚠ Claim needs your check: ${b.name}`,
+      [
         ...head,
-        `License ${rec.contractorlicensenumber} ACTIVE ✅`,
-        `Profile: ${b.slug} ✅`,
-        "✗ No automatic ownership proof — the email domain doesn't match the website,",
-        "  and the phone doesn't match the L&I record. Could be legitimate (a personal",
-        "  address) or could be someone claiming a company they don't own.",
+        `Licence ${rec.contractorlicensenumber} ACTIVE ✅`,
+        `Licence name matches the company ✅`,
+        `Profile: ${b.slug} (${b.permits_total} permits)`,
+        proof ? `Supporting signal: ${proof} ✅` : "No supporting signal ✗",
         "",
-        `L&I phone on file: ${rec.phonenumber || "(none)"}`,
-        "",
-        "If it checks out, tell Claude:",
+        `L&I on file — phone ${rec.phonenumber || "(none)"}, ${rec.city || "?"}`,
+        DIVIDER,
+        proof
+          ? "Everything checks out. To publish, reply to Claude with:"
+          : "Confirm they really represent this company (a quick call to the L&I",
+        proof ? "" : "number above is the reliable test), then reply to Claude with:",
         `  claim verified: ${company}, website ${website || "?"}, phone ${phone || "?"}`,
-      ]);
-      return seeOther("/thanks.html");
-    }
-
-    let already = false;
-    const result = await updateJsonFile({
-      path: "data/claims.json",
-      token: process.env.GITHUB_TOKEN,
-      message: `Claim: ${b.name} (verified via ${proof})`,
-      mutate: (data) => {
-        if (data.builders.some(c => c.slug === b.slug)) { already = true; return null; }
-        data.builders.push({
-          slug: b.slug,
-          website,
-          phone,
-          service_area: String(f.service_area || "").trim() || undefined,
-          claimed_date: new Date().toISOString().slice(0, 10),
-          _verified_by: proof,
-          _license: rec.contractorlicensenumber,
-        });
-        return data;
-      },
-    });
-
-    if (already) {
-      await send(`⚠ Claim on an already-claimed profile: ${company}`, [
-        ...head,
-        `Profile ${b.slug} is already claimed. Possible correction request — or a hijack attempt.`,
-      ]);
-      return seeOther("/thanks.html");
-    }
-
-    await send(`✅ Verified claim published: ${b.name}`, [
-      ...head,
-      `License ${rec.contractorlicensenumber} ACTIVE ✅`,
-      `Ownership proven via ${proof} ✅`,
-      `Published — live in ~1 minute:`,
-      `https://adubuilderindex.com/builders/${b.slug}.html`,
-      DIVIDER,
-      "Nothing further needed.",
-      result.commit ? `commit ${result.commit.slice(0, 7)}` : "",
-    ]);
+        "",
+        claimed,
+      ].filter(Boolean));
     return seeOther("/thanks.html");
   } catch (err) {
     console.error("claim failed:", err);

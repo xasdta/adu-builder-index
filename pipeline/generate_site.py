@@ -137,7 +137,14 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
     if canonical is None and path is not None:
         canonical = f"{SITE_BASE}/{path}".rstrip("/") if path else SITE_BASE + "/"
     pre = "../" * depth
-    ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
+    ld = ""
+    if jsonld:
+        # json.dumps does not escape "<" or "/", so a value containing
+        # "</script>" would close the block. Escape to \u00XX per the
+        # standard JSON-LD-in-HTML rule.
+        blob = (json.dumps(jsonld).replace("<", "\\u003c")
+                .replace(">", "\\u003e").replace("&", "\\u0026"))
+        ld = f'<script type="application/ld+json">{blob}</script>' 
     return f"""<!doctype html>
 <html lang="en">
 <head>

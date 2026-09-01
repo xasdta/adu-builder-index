@@ -32,6 +32,18 @@ done
   if [[ -n "$(git status --porcelain data docs)" ]]; then
     git add data docs
     git commit -m "Weekly data refresh $(date '+%Y-%m-%d')"
+    # The API endpoints commit data/*.json straight to origin, so this checkout
+    # is routinely behind. Rebase before pushing or the push is rejected and
+    # the refresh silently stops publishing.
+    if ! git pull --rebase --autostash origin master; then
+      echo "FATAL: rebase onto origin/master failed — resolve by hand"
+      exit 1
+    fi
+    "$PY" pipeline/generate_site.py   # regenerate against the merged data
+    if [[ -n "$(git status --porcelain data docs)" ]]; then
+      git add data docs
+      git commit --amend --no-edit
+    fi
     git push
     echo "pushed refresh"
   else

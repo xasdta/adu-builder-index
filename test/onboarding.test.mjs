@@ -7,6 +7,7 @@ import assert from "node:assert/strict";
 import crypto from "node:crypto";
 import {
   canon, matchBuilder, ownershipProof, verifyStripeSignature, updateJsonFile,
+  licenceMatchesCompany, safeUrl,
 } from "../lib/onboarding.mjs";
 
 const SECRET = "whsec_testsecret";
@@ -162,4 +163,32 @@ test("updateJsonFile skips the write when mutate returns null", async () => {
   } finally {
     globalThis.fetch = realFetch;
   }
+});
+
+test("licenceMatchesCompany blocks pairing a valid licence with another company", () => {
+  const rec = { businessname: "WALTIER HOMES LLC", contractorlicensenumber: "WALTIHL824RS" };
+  const victim = { name: "Mykabin LLC", slug: "mykabin", license: { number: "MYKABL*819BU" } };
+  // the attack: real active licence + a competitor's name
+  const bad = licenceMatchesCompany(rec, "Mykabin LLC", victim);
+  assert.equal(bad.ok, false);
+  assert.match(bad.reason, /belongs to/);
+  // honest case
+  const self = { name: "Waltier Homes LLC", slug: "waltier-homes-llc" };
+  assert.equal(licenceMatchesCompany(rec, "Waltier Homes LLC", self).ok, true);
+});
+
+test("licenceMatchesCompany rejects a licence that disagrees with our own record", () => {
+  const rec = { businessname: "WALTIER HOMES LLC", contractorlicensenumber: "OTHER123XX" };
+  const b = { name: "Waltier Homes LLC", license: { number: "WALTIHL824RS" } };
+  const r = licenceMatchesCompany(rec, "Waltier Homes LLC", b);
+  assert.equal(r.ok, false);
+  assert.match(r.reason, /!= licence/);
+});
+
+test("safeUrl strips dangerous schemes and keeps http(s)", () => {
+  assert.equal(safeUrl("javascript:alert(1)"), "");
+  assert.equal(safeUrl("data:text/html,<script>alert(1)</script>"), "");
+  assert.equal(safeUrl("  "), "");
+  assert.equal(safeUrl("waltierhomesinc.com"), "https://waltierhomesinc.com/");
+  assert.equal(safeUrl("https://waltierhomesinc.com/x"), "https://waltierhomesinc.com/x");
 });

@@ -10,8 +10,11 @@
  */
 import {
   verifyStripeSignature, lniByLicense, lniByName, loadBuilders, matchBuilder,
-  updateJsonFile, notify, FEATURED_SLOTS, DIVIDER,
+  updateJsonFile, notify, licenceMatchesCompany, safeUrl, FEATURED_SLOTS, DIVIDER,
 } from "../lib/onboarding.mjs";
+
+/** Cents that must actually have been paid before anything is published. */
+const MIN_PAID_CENTS = 9900;
 
 const field = (session, key) =>
   (session.custom_fields || [])
@@ -47,8 +50,12 @@ export default async function handler(req, res) {
     return res.status(200).json({ ignored: event.type });
   }
   const s = event.data.object;
-  if (s.mode !== "subscription" || s.payment_status === "unpaid") {
-    return res.status(200).json({ ignored: "not a paid subscription" });
+  if (s.mode !== "subscription" || s.payment_status !== "paid") {
+    return res.status(200).json({ ignored: `payment_status=${s.payment_status}` });
+  }
+  if ((s.amount_total ?? 0) < MIN_PAID_CENTS) {
+    // A 100%-off coupon or trial must not buy a slot.
+    return res.status(200).json({ ignored: `amount_total=${s.amount_total}` });
   }
 
   const email = s.customer_details?.email || "";
@@ -58,7 +65,7 @@ export default async function handler(req, res) {
     s.customer_details?.business_name ||
     s.customer_details?.name || "";
   const license = field(s, "licen");
-  const website = field(s, "web") || field(s, "site");
+  const website = safeUrl(field(s, "web") || field(s, "site"));
   const blurb = field(s, "blurb") || field(s, "descri");
 
   const money = ((s.amount_total ?? 0) / 100).toFixed(2);
@@ -94,7 +101,8 @@ export default async function handler(req, res) {
     }
     const rec = lni.active[0];
 
-    // 2. They must correspond to a builder profile on the site.
+    // 2. The licence must belong to the company being published — otherwise
+    //    $99 plus any public licence number buys a card on a competitor's page.
     const builders = await loadBuilders();
     const m = matchBuilder(builders, business);
     if (m.none || m.ambiguous) {
@@ -108,6 +116,19 @@ export default async function handler(req, res) {
         "Tell Claude: \"featured verified: <company>, city <X>, blurb <Y>, website <Z>\"",
       ]);
       return res.status(200).json({ ok: true, action: "needs-match" });
+    }
+
+    const bind = licenceMatchesCompany(rec, business, m.builder);
+    if (!bind.ok) {
+      await send(`✗ Paid but licence does not match the company — ${business}`, [
+        ...head,
+        `✗ ${bind.reason}`,
+        "",
+        "Nothing was published. This is what an attempt to buy a card on someone",
+        "else's profile looks like — or an honest typo in the licence field.",
+        "Verify, then refund or fix by hand.",
+      ]);
+      return res.status(200).json({ ok: true, action: "licence-mismatch" });
     }
 
     // 3. Publish.
