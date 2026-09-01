@@ -14,7 +14,7 @@ SITE = ROOT / "docs"
 STATS = DATA["stats"]
 BUILDERS = DATA["builders"]
 TODAY = time.strftime("%B %d, %Y")
-CONTACT_EMAIL = "xasdta@gmail.com"
+CONTACT_EMAIL = "sabrsystemssoftware@gmail.com"
 CLAIM_URL = (f"mailto:{CONTACT_EMAIL}?subject=Claim%20my%20builder%20profile"
              "&body=Company%20name%3A%0AWA%20license%20number%3A%0AWebsite%3A%0A"
              "What%20should%20we%20add%20or%20correct%3F%0A")
@@ -32,13 +32,12 @@ STRIPE_LINK = "https://buy.stripe.com/28E28qcMCgKp8yg4L80Ny01"
 STRIPE_LINK_ACTIVE = True
 if not STRIPE_LINK_ACTIVE:
     STRIPE_LINK = None
-# Web3Forms access key (web3forms.com) — when set, contact buttons use the
-# on-site form at get-featured.html instead of mailto links.
-WEB3FORMS_KEY = "d253e17f-0e35-4f0a-a5c4-cfa9df78a199"
+# The claim form posts to our own /api/claim endpoint, which verifies the
+# licence and publishes automatically. The mailto URLs above remain only as a
+# fallback if the form is ever disabled.
 FORM_URL = "get-featured.html"
-FEATURE_URL = STRIPE_LINK or (FORM_URL if WEB3FORMS_KEY else RESERVE_URL)
-if WEB3FORMS_KEY:
-    CLAIM_URL = FORM_URL
+FEATURE_URL = STRIPE_LINK or FORM_URL
+CLAIM_URL = FORM_URL
 FEATURED_SLOTS = 3
 _featured_path = ROOT / "data" / "featured.json"
 FEATURED = (json.load(open(_featured_path))["builders"]
@@ -168,7 +167,7 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
 </main>
 <footer>
   <p><strong>ADU Builder Index</strong> — permit-verified accessory dwelling unit builders. Currently covering Seattle and Bellevue, WA; more Washington cities coming.</p>
-  <p class="fine">Data sources: City of Seattle SDCI Building Permits, City of Bellevue Open Data (both open data), and the Washington State L&amp;I Contractor License registry, as published on {esc(STATS['generated'])}. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections: <a href="{rel(CLAIM_URL, pre)}">contact us</a>.</p>
+  <p class="fine">Data sources: City of Seattle SDCI Building Permits, City of Bellevue Open Data (both open data), and the Washington State L&amp;I Contractor License registry, as published on {esc(STATS['generated'])}. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections and support: <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> · <a href="{rel(CLAIM_URL, pre)}">claim your profile</a>.</p>
 </footer>
 </body>
 </html>"""
@@ -595,8 +594,6 @@ def build_cost_report():
 
 
 def build_form_pages():
-    if not WEB3FORMS_KEY:
-        return
     body = f"""
 <section class="hero small"><h1>Claim your profile or get featured</h1>
 <p class="dek">Claiming your profile is free — we verify it against city permit records and add your details. Want top placement instead? Featured slots are <strong>$99/mo, locked for life</strong> for founding builders — pick that option below.</p></section>
