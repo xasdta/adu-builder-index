@@ -287,13 +287,19 @@ def build_builder_pages():
 <p class="fine">As reported by WA L&amp;I on {esc(STATS['generated'])}. Always re-verify at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>.</p>"""
         else:
             lic_html = '<p class="fine">No exact business-name match in the WA L&amp;I registry — this builder may hold a license under a different legal name. <a href="https://secure.lni.wa.gov/verify/">Check the registry directly</a>.</p>'
-        permit_rows = "".join(
-            f'<tr><td class="mono">{f"<a href=\"{esc(p["link"])}\">{esc(p["permitnum"])}</a>" if p.get("link") else esc(p["permitnum"])}</td>'
-            f'<td>{esc(p["issued"] or "—")}</td><td>{esc(p["status"])}</td>'
-            f'<td class="num">{money(p["cost"])}</td>'
-            f'<td>{esc(p["address"])}</td>'
-            f'<td class="desc">{esc(p["description"])}</td></tr>'
-            for p in b["permits"])
+        permit_cells = []
+        for p in b["permits"]:
+            num = esc(p["permitnum"])
+            if p.get("link"):
+                num = '<a href="{}">{}</a>'.format(esc(p["link"]), num)
+            permit_cells.append(
+                f'<tr><td class="mono">{num}</td>'
+                f'<td>{esc(p.get("city", ""))}</td>'
+                f'<td>{esc(p["issued"] or "—")}</td><td>{esc(p["status"])}</td>'
+                f'<td class="num">{money(p["cost"])}</td>'
+                f'<td>{esc(p["address"])}</td>'
+                f'<td class="desc">{esc(p["description"])}</td></tr>')
+        permit_rows = "".join(permit_cells)
         claim = CLAIMS.get(b["slug"])
         jsonld = {"@context": "https://schema.org", "@type": "GeneralContractor",
                   "name": b["name"],
