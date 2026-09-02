@@ -46,6 +46,45 @@ export default async function handler(req, res) {
     return res.status(400).send("invalid signature");
   }
 
+  // A cancelled or lapsed subscription must not keep a paid slot. Stripe sends
+  // subscription.deleted at the end of the paid period, and after final failed
+  // payment retries, so this covers both quitting and non-payment.
+  if (event.type === "customer.subscription.deleted") {
+    const sub = event.data.object;
+    let removed = null;
+    const result = await updateJsonFile({
+      path: "data/featured.json",
+      token: process.env.GITHUB_TOKEN,
+      message: `Unfeatured: subscription ${sub.id} ended`,
+      mutate: (data) => {
+        const i = data.builders.findIndex(f => f._subscription === sub.id);
+        if (i === -1) return null;                       // not ours, or already gone
+        removed = data.builders[i];
+        data.builders.splice(i, 1);
+        return data;
+      },
+    }).catch(err => ({ error: err.message }));
+
+    if (result?.error) {
+      await send(`✗ Could not unfeature a cancelled subscription`, [
+        `Subscription ${sub.id} ended but the card could not be removed.`,
+        `Error: ${result.error}`,
+        "",
+        "Remove it by hand: edit data/featured.json and redeploy.",
+      ]);
+      return res.status(500).send("unfeature failed");
+    }
+    if (removed) {
+      await send(`Featured card removed — subscription ended`, [
+        `${removed.slug} (${removed.city}) is no longer featured.`,
+        `Subscription ${sub.id} ended, so the paid slot was freed.`,
+        DIVIDER,
+        `A ${removed.city} founding slot is open again.`,
+      ]);
+    }
+    return res.status(200).json({ ok: true, removed: removed?.slug ?? null });
+  }
+
   if (event.type !== "checkout.session.completed") {
     return res.status(200).json({ ignored: event.type });
   }
@@ -148,6 +187,7 @@ export default async function handler(req, res) {
           slug: b.slug, city,
           blurb: blurb || `${b.permits_total} ADU permits on record in ${city}.`,
           website, _stripe_session: s.id,
+          _subscription: s.subscription || null,
           _license: rec.contractorlicensenumber,
         });
         return data;

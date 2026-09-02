@@ -192,3 +192,59 @@ test("safeUrl strips dangerous schemes and keeps http(s)", () => {
   assert.equal(safeUrl("waltierhomesinc.com"), "https://waltierhomesinc.com/");
   assert.equal(safeUrl("https://waltierhomesinc.com/x"), "https://waltierhomesinc.com/x");
 });
+
+test("cancellation removes only the matching subscription's card", async () => {
+  const state = { builders: [
+    { slug: "a", city: "Seattle", _subscription: "sub_keep" },
+    { slug: "b", city: "Bellevue", _subscription: "sub_gone" },
+  ] };
+  const realFetch = globalThis.fetch;
+  let written = null;
+  globalThis.fetch = async (url, init = {}) => {
+    if ((init.method || "GET") === "GET") {
+      return new Response(JSON.stringify({
+        sha: "s", content: Buffer.from(JSON.stringify(state)).toString("base64"),
+      }), { status: 200 });
+    }
+    written = JSON.parse(Buffer.from(JSON.parse(init.body).content, "base64").toString());
+    return new Response(JSON.stringify({ commit: { sha: "x" } }), { status: 200 });
+  };
+  try {
+    await updateJsonFile({
+      path: "data/featured.json", token: "t", message: "m",
+      mutate: (d) => {
+        const i = d.builders.findIndex(f => f._subscription === "sub_gone");
+        if (i === -1) return null;
+        d.builders.splice(i, 1);
+        return d;
+      },
+    });
+    assert.deepEqual(written.builders.map(f => f.slug), ["a"], "only the cancelled card goes");
+  } finally { globalThis.fetch = realFetch; }
+});
+
+test("cancellation for an unknown subscription writes nothing", async () => {
+  const realFetch = globalThis.fetch;
+  let puts = 0;
+  globalThis.fetch = async (url, init = {}) => {
+    if ((init.method || "GET") === "GET") {
+      return new Response(JSON.stringify({
+        sha: "s",
+        content: Buffer.from(JSON.stringify({ builders: [{ slug: "a", _subscription: "sub_x" }] })).toString("base64"),
+      }), { status: 200 });
+    }
+    puts++; return new Response("{}", { status: 200 });
+  };
+  try {
+    const r = await updateJsonFile({
+      path: "p", token: "t", message: "m",
+      mutate: (d) => {
+        const i = d.builders.findIndex(f => f._subscription === "sub_unknown");
+        if (i === -1) return null;
+        d.builders.splice(i, 1); return d;
+      },
+    });
+    assert.equal(r.skipped, true);
+    assert.equal(puts, 0);
+  } finally { globalThis.fetch = realFetch; }
+});
