@@ -1,0 +1,4 @@
+{
+ "_schema": "Permits a builder told us are theirs, verified by us against city records before being added here. Each entry: {name (exact company name, must canon-match a builder), permits: [permit numbers], source (how it was verified), added (YYYY-MM-DD)}. Permit numbers that do not exist in the fetched city data are ignored with a warning \u2014 we never invent attribution.",
+ "builders": []
+}

@@ -390,6 +390,8 @@ def build_methodology():
   <p>Builders are ranked by <strong>completed ADU permits</strong> attributed to them in city records, with total permits as the tiebreaker. We merge obvious name variants of the same company and match businesses to state licenses by exact legal name.</p>
   <h2>What this misses — read this</h2>
   <p>Seattle stopped publishing contractor names on most permit records after 2021, so recent projects are under-attributed: {STATS['attributed_permits']} of {STATS['total_permits']:,} tracked permits name a contractor. A builder's absence here, or a low count, is <strong>not evidence they haven't built ADUs</strong> — it means city open data doesn't attribute those permits. We are enriching recent records and expanding city coverage; builders can <a href="{CLAIM_URL}">claim their profile</a> to submit permit numbers we can verify against city records.</p>
+  <h2>Builder-submitted permits</h2>
+  <p>Because Seattle dropped contractor names from most permits after 2021, builders may send us permit numbers they pulled. We look each number up in the city's own data before adding it — if the number isn't in the public record, it isn't counted. Permits added this way are labelled <span class="chip chip-claimed">builder-verified</span> on the profile. We never take a permit claim on trust, and a builder cannot add a permit that belongs to someone else.</p>
   <h2>License statuses</h2>
   <p>"Active", "expired", and "suspended" chips reproduce the state registry verbatim as of the build date. Licenses change; a mismatch can also mean a company operates under a different legal name. Always re-verify at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a> before hiring.</p>
   <h2>Independence</h2>

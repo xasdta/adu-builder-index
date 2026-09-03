@@ -80,6 +80,31 @@ def main():
             p["city"] = blob["city"]
         permits.extend(blob["permits"])
 
+    # Owner-supplied attributions: Seattle stopped publishing contractor names
+    # after ~2021, so a builder can send us permit numbers they pulled. We only
+    # honour numbers that actually exist in the city data — never their word.
+    attr_path = DATA / "attributions.json"
+    attributions = (json.load(open(attr_path))["builders"]
+                    if attr_path.exists() else [])
+    by_num = {}
+    for p in permits:
+        if p.get("permitnum"):
+            by_num.setdefault(str(p["permitnum"]).strip().upper(), []).append(p)
+    for entry in attributions:
+        claimed_by = entry["name"].strip()
+        hits = misses = 0
+        for num in entry.get("permits", []):
+            found = by_num.get(str(num).strip().upper())
+            if not found:
+                misses += 1
+                continue
+            for p in found:
+                p["contractorcompanyname"] = claimed_by
+                p["attributed"] = entry.get("source", "owner-verified")
+            hits += 1
+        print(f"  attribution: {claimed_by} +{hits} permits"
+              + (f" ({misses} not found in city data, ignored)" if misses else ""))
+
     by_builder = defaultdict(list)
     for p in permits:
         name = (p.get("contractorcompanyname") or "").strip()
@@ -135,6 +160,7 @@ def main():
             "permits": sorted([{
                 "permitnum": p.get("permitnum"),
                 "city": p["city"],
+                "attributed": p.get("attributed"),
                 "adu_sqft": p.get("adu_sqft"),
                 "description": (p.get("description") or "")[:400],
                 "status": p.get("statuscurrent"),

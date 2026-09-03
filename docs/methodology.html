@@ -7,7 +7,7 @@
 <meta name="description" content="How ADU Builder Index ranks builders: Seattle open permit data, WA L&amp;I license verification, and the limits of both.">
 <link rel="canonical" href="https://adubuilderindex.com/methodology.html">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Spline+Sans+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css?v=2026-08-31">
+<link rel="stylesheet" href="style.css?v=2026-09-02">
 <script defer src="/_vercel/insights/script.js"></script>
 
 </head>
@@ -28,11 +28,13 @@
 <p class="dek">What this index measures, where the data comes from, and what it can't see.</p></section>
 <section>
   <h2>Sources</h2>
-  <p>Permit data comes from the <a href="https://data.seattle.gov/Permitting/Building-Permits/76t5-zqzr">City of Seattle SDCI Building Permits</a> open dataset. We include permits whose description references an accessory dwelling unit (ADU, DADU, AADU) or that use Seattle's pre-approved DADU plan program — 12,473 permits as of 2026-08-31. License data comes from the <a href="https://data.wa.gov/Labor/L-I-Contractor-License-Data-General/m8qx-ubtq">Washington L&amp;I Contractor License registry</a>, refreshed with each site build.</p>
+  <p>Permit data comes from the <a href="https://data.seattle.gov/Permitting/Building-Permits/76t5-zqzr">City of Seattle SDCI Building Permits</a> open dataset. We include permits whose description references an accessory dwelling unit (ADU, DADU, AADU) or that use Seattle's pre-approved DADU plan program — 12,473 permits as of 2026-09-02. License data comes from the <a href="https://data.wa.gov/Labor/L-I-Contractor-License-Data-General/m8qx-ubtq">Washington L&amp;I Contractor License registry</a>, refreshed with each site build.</p>
   <h2>How rankings work</h2>
   <p>Builders are ranked by <strong>completed ADU permits</strong> attributed to them in city records, with total permits as the tiebreaker. We merge obvious name variants of the same company and match businesses to state licenses by exact legal name.</p>
   <h2>What this misses — read this</h2>
   <p>Seattle stopped publishing contractor names on most permit records after 2021, so recent projects are under-attributed: 800 of 12,473 tracked permits name a contractor. A builder's absence here, or a low count, is <strong>not evidence they haven't built ADUs</strong> — it means city open data doesn't attribute those permits. We are enriching recent records and expanding city coverage; builders can <a href="get-featured.html">claim their profile</a> to submit permit numbers we can verify against city records.</p>
+  <h2>Builder-submitted permits</h2>
+  <p>Because Seattle dropped contractor names from most permits after 2021, builders may send us permit numbers they pulled. We look each number up in the city's own data before adding it — if the number isn't in the public record, it isn't counted. Permits added this way are labelled <span class="chip chip-claimed">builder-verified</span> on the profile. We never take a permit claim on trust, and a builder cannot add a permit that belongs to someone else.</p>
   <h2>License statuses</h2>
   <p>"Active", "expired", and "suspended" chips reproduce the state registry verbatim as of the build date. Licenses change; a mismatch can also mean a company operates under a different legal name. Always re-verify at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a> before hiring.</p>
   <h2>Independence</h2>
@@ -41,7 +43,7 @@
 </main>
 <footer>
   <p><strong>ADU Builder Index</strong> — permit-verified accessory dwelling unit builders. Currently covering Seattle and Bellevue, WA; more Washington cities coming.</p>
-  <p class="fine">Data sources: City of Seattle SDCI Building Permits, City of Bellevue Open Data (both open data), and the Washington State L&amp;I Contractor License registry, as published on 2026-08-31. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections and support: <a href="mailto:sabrsystemssoftware@gmail.com">sabrsystemssoftware@gmail.com</a> · <a href="get-featured.html">claim your profile</a>.</p>
+  <p class="fine">Data sources: City of Seattle SDCI Building Permits, City of Bellevue Open Data (both open data), and the Washington State L&amp;I Contractor License registry, as published on 2026-09-02. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections and support: <a href="mailto:sabrsystemssoftware@gmail.com">sabrsystemssoftware@gmail.com</a> · <a href="get-featured.html">claim your profile</a>.</p>
 </footer>
 </body>
 </html>
