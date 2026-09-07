@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12280,
-    "completed": 6853,
+    "total": 12288,
+    "completed": 6877,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,11 +25,11 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1035,
-     "2026": 348
+     "2026": 358
     }
    },
    "Bellevue": {
-    "total": 193,
+    "total": 196,
     "completed": 20,
     "permits_by_year": {
      "2021": 1,
@@ -40,9 +40,9 @@
     }
    }
   },
-  "total_permits": 12473,
-  "completed_permits": 6873,
-  "attributed_permits": 800,
+  "total_permits": 12484,
+  "completed_permits": 6897,
+  "attributed_permits": 801,
   "builders_listed": 576,
   "permits_by_year": {
    "2010": 157,
@@ -61,9 +61,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1065,
-   "2026": 348
+   "2026": 358
   },
-  "generated": "2026-09-02"
+  "generated": "2026-09-07"
  },
  "builders": [
   {
@@ -3182,7 +3182,7 @@
    "median_cost": null,
    "license": {
     "number": "GREENDL955NS",
-    "status": "ACTIVE",
+    "status": "SUSPENDED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2005-08-10",
     "expires": "2028-01-13",
@@ -6292,7 +6292,7 @@
     }
    },
    "first_year": "2020",
-   "last_year": "2024",
+   "last_year": "2026",
    "median_cost": 567409.0,
    "license": {
     "number": "DHILLHC816P8",
@@ -6304,6 +6304,20 @@
     "ubi": "604505874"
    },
    "permits": [
+    {
+     "permitnum": "6965188-CN",
+     "city": "Seattle",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Construct two-family dwelling  per plan. (Establish use as single family residence with attached and detached accessory dwelling units per land use code. Construct as one- and two-family dwellings; review process for two records under 6965188-CN.)",
+     "status": "Issued",
+     "issued": "2026-09-01",
+     "completed": "",
+     "cost": "567409.0000",
+     "address": "1119 A 27TH AVE",
+     "zip": "98122",
+     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6965188-CN"
+    },
     {
      "permitnum": "6774932-CN",
      "city": "Seattle",
@@ -6317,20 +6331,6 @@
      "address": "9513 EVANSTON AVE N",
      "zip": "98103",
      "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6774932-CN"
-    },
-    {
-     "permitnum": "6965188-CN",
-     "city": "Seattle",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Construct two-family dwelling  per plan. (Establish use as single family residence with attached and detached accessory dwelling units per land use code. Construct as one- and two-family dwellings; review process for two records under 6965188-CN.)",
-     "status": "Awaiting Information",
-     "issued": "",
-     "completed": "",
-     "cost": "567409.0000",
-     "address": "1119 A 27TH AVE",
-     "zip": "98122",
-     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6965188-CN"
     }
    ]
   },
@@ -18205,11 +18205,11 @@
   {
    "slug": "terrene-clearinghouse-llc",
    "name": "Terrene Clearinghouse LLC",
-   "permits_total": 9,
+   "permits_total": 10,
    "permits_completed": 0,
    "cities": {
     "Bellevue": {
-     "total": 9,
+     "total": 10,
      "completed": 0
     }
    },
@@ -18351,6 +18351,20 @@
      "address": "1071 158th Pl SE",
      "zip": "98008",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20117642%20BS/BELLEVUE"
+    },
+    {
+     "permitnum": "26 120631 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "10507BE \u2014 Demo an existing 2320 sf SFR and construct a new detached XXXX sf single family residence with attached ADU.",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "10507 SE 30th St",
+     "zip": "98004",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120631%20BS/BELLEVUE"
     }
    ]
   },
@@ -20003,8 +20017,8 @@
    ]
   },
   {
-   "slug": "michael-a-arceneaux",
-   "name": "Michael A Arceneaux",
+   "slug": "michael-arceneaux",
+   "name": "Michael Arceneaux",
    "permits_total": 1,
    "permits_completed": 0,
    "cities": {

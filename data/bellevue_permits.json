@@ -1,7 +1,7 @@
 {
  "city": "Bellevue",
  "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit_Data_ADU/FeatureServer/0/query",
- "fetched_at": "2026-08-31",
+ "fetched_at": "2026-09-07",
  "permits": [
   {
    "permitnum": "24 106555 BR",
@@ -3475,6 +3475,60 @@
    "adu_sqft": null,
    "link": {
     "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120510%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 120631 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "10507BE \u2014 Demo an existing 2320 sf SFR and construct a new detached XXXX sf single family residence with attached ADU.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-08-31T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "TERRENE CLEARINGHOUSE LLC",
+   "originaladdress1": "10507 SE 30th St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120631%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 120910 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Unit 1- SFR and ADU \u2014 Construction of a new SFR and ADU, 26 120528 GD",
+   "statuscurrent": "Open",
+   "applieddate": "2026-09-03T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1251 111th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120910%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 120909 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Unit 2- SFR and ADU \u2014 Construction of a new SFR and  ADU, 26 120528 GD",
+   "statuscurrent": "Open",
+   "applieddate": "2026-09-03T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1251 111th Ave NE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120909%20BS/BELLEVUE"
    }
   }
  ]
