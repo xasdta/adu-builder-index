@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12288,
-    "completed": 6877,
+    "total": 12284,
+    "completed": 6898,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,7 +25,7 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1035,
-     "2026": 358
+     "2026": 364
     }
    },
    "Bellevue": {
@@ -40,8 +40,8 @@
     }
    }
   },
-  "total_permits": 12484,
-  "completed_permits": 6897,
+  "total_permits": 12480,
+  "completed_permits": 6918,
   "attributed_permits": 801,
   "builders_listed": 576,
   "permits_by_year": {
@@ -61,9 +61,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1065,
-   "2026": 358
+   "2026": 364
   },
-  "generated": "2026-09-07"
+  "generated": "2026-09-14"
  },
  "builders": [
   {
@@ -3182,7 +3182,7 @@
    "median_cost": null,
    "license": {
     "number": "GREENDL955NS",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2005-08-10",
     "expires": "2028-01-13",
@@ -5842,10 +5842,10 @@
    "median_cost": 81929.0,
    "license": {
     "number": "HAASDDC842QA",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2016-11-01",
-    "expires": "2026-12-10",
+    "expires": "2028-12-10",
     "city": "Seattle",
     "ubi": "604047489"
    },
@@ -15712,7 +15712,7 @@
    "median_cost": 30000.0,
    "license": {
     "number": "HERROHL827P2",
-    "status": "ACTIVE",
+    "status": "EXPIRED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2018-10-22",
     "expires": "2026-09-06",
@@ -17552,7 +17552,7 @@
    "median_cost": null,
    "license": {
     "number": "TOLLBBI898QZ",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2011-11-09",
     "expires": "2027-11-11",
@@ -17784,7 +17784,7 @@
    "median_cost": null,
    "license": {
     "number": "MACCOHS867LZ",
-    "status": "ACTIVE",
+    "status": "EXPIRED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2014-06-09",
     "expires": "2026-09-10",
@@ -18024,7 +18024,7 @@
    "median_cost": null,
    "license": {
     "number": "MNCUSCH890MQ",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2011-07-18",
     "expires": "2027-07-22",
