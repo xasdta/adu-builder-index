@@ -1,7 +1,7 @@
 {
  "city": "Bellevue",
  "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit_Data_ADU/FeatureServer/0/query",
- "fetched_at": "2026-09-14",
+ "fetched_at": "2026-09-28",
  "permits": [
   {
    "permitnum": "24 106555 BR",
@@ -3529,6 +3529,42 @@
    "adu_sqft": null,
    "link": {
     "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120909%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 121348 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Enatai 105th \u2014 SINGLE FAMILY RESIDENCE WITH ATTACHED ADU AND ATTACHED 3 CAR GARAGE.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-09-14T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "EVERTON HOMES LLC",
+   "originaladdress1": "1646 105th Ave SE",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20121348%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 121482 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "PEON SFR BS \u2014 To demolish an existing single family structure, and to build a new SFR and ADU and associated structures on a site with Critical Areas., 26 106330 LJ 26 108371 WD",
+   "statuscurrent": "Open",
+   "applieddate": "2026-09-16T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "LOCHWOOD-LOZIER CUSTM HOMES CO JON D LOZIER",
+   "originaladdress1": "232 W Lake Sammamish Pkwy NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20121482%20BS/BELLEVUE"
    }
   }
  ]

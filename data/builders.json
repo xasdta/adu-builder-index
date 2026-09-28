@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12284,
-    "completed": 6898,
+    "total": 12297,
+    "completed": 6937,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,11 +25,11 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1035,
-     "2026": 364
+     "2026": 372
     }
    },
    "Bellevue": {
-    "total": 196,
+    "total": 198,
     "completed": 20,
     "permits_by_year": {
      "2021": 1,
@@ -40,9 +40,9 @@
     }
    }
   },
-  "total_permits": 12480,
-  "completed_permits": 6918,
-  "attributed_permits": 801,
+  "total_permits": 12495,
+  "completed_permits": 6957,
+  "attributed_permits": 803,
   "builders_listed": 576,
   "permits_by_year": {
    "2010": 157,
@@ -61,9 +61,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1065,
-   "2026": 364
+   "2026": 372
   },
-  "generated": "2026-09-14"
+  "generated": "2026-09-28"
  },
  "builders": [
   {
@@ -4499,7 +4499,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2004-09-22",
-    "expires": "2026-12-05",
+    "expires": "2028-12-05",
     "city": "SEATTLE",
     "ubi": "601932721"
    },
@@ -5964,7 +5964,7 @@
      "attributed": null,
      "adu_sqft": null,
      "description": "Establish use as and construct a single-family residence and ADU with attached garage  per plan.",
-     "status": "Expired",
+     "status": "Issued",
      "issued": "2022-02-16",
      "completed": "",
      "cost": "712105.0000",
@@ -9985,8 +9985,8 @@
    ]
   },
   {
-   "slug": "luke-l-steere",
-   "name": "Luke L Steere",
+   "slug": "luke-steere",
+   "name": "Luke Steere",
    "permits_total": 1,
    "permits_completed": 1,
    "cities": {
@@ -13323,7 +13323,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2012-08-31",
-    "expires": "2026-10-05",
+    "expires": "2028-10-05",
     "city": "SEATTLE",
     "ubi": "603217302"
    },
@@ -17784,10 +17784,10 @@
    "median_cost": null,
    "license": {
     "number": "MACCOHS867LZ",
-    "status": "EXPIRED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2014-06-09",
-    "expires": "2026-09-10",
+    "expires": "2028-09-14",
     "city": "LYNNWOOD",
     "ubi": "603406541"
    },
@@ -18371,11 +18371,11 @@
   {
    "slug": "everton-homes-llc",
    "name": "Everton Homes LLC",
-   "permits_total": 8,
+   "permits_total": 9,
    "permits_completed": 0,
    "cities": {
     "Bellevue": {
-     "total": 8,
+     "total": 9,
      "completed": 0
     }
    },
@@ -18503,6 +18503,20 @@
      "address": "2520 166th Ave SE",
      "zip": "98008",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20111202%20BS/BELLEVUE"
+    },
+    {
+     "permitnum": "26 121348 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Enatai 105th \u2014 SINGLE FAMILY RESIDENCE WITH ATTACHED ADU AND ATTACHED 3 CAR GARAGE.",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "1646 105th Ave SE",
+     "zip": "98004",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20121348%20BS/BELLEVUE"
     }
    ]
   },
@@ -18667,6 +18681,66 @@
      "address": "504 129th Ave SE",
      "zip": "98005",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20110540%20BS/BELLEVUE"
+    }
+   ]
+  },
+  {
+   "slug": "lochwood-lozier-custm-homes-co-jon-d-lozier",
+   "name": "Lochwood-Lozier Custm Homes Co Jon D Lozier",
+   "permits_total": 3,
+   "permits_completed": 0,
+   "cities": {
+    "Bellevue": {
+     "total": 3,
+     "completed": 0
+    }
+   },
+   "first_year": "2025",
+   "last_year": "2026",
+   "median_cost": null,
+   "license": null,
+   "permits": [
+    {
+     "permitnum": "24 125374 BR",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Kaur Addition \u2014 Enclose an existing covered patio into an exercise room, move the laundry room to the lower floor, add ADU to existing storage, turn existing laundry into a spice kitchen, add a mudroom off the garage, add an elevator, replace masonry fireplace with new gas inserts, raise an existing deck to the dining floor level, remodel the kitchen and all bathrooms. Includes clearing & grading ",
+     "status": "Issued",
+     "issued": "2025-05-14",
+     "completed": "",
+     "cost": null,
+     "address": "2009 Killarney Way",
+     "zip": "98004",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20125374%20BR/BELLEVUE"
+    },
+    {
+     "permitnum": "26 110339 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "W Chen SFR \u2014 To demolish an existing single family structure, and to construct a new single family house and associated structures, with an attached ADU.",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "16541 NE 27th Pl",
+     "zip": "98008",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20110339%20BS/BELLEVUE"
+    },
+    {
+     "permitnum": "26 121482 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "PEON SFR BS \u2014 To demolish an existing single family structure, and to build a new SFR and ADU and associated structures on a site with Critical Areas., 26 106330 LJ 26 108371 WD",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "232 W Lake Sammamish Pkwy NE",
+     "zip": "98008",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20121482%20BS/BELLEVUE"
     }
    ]
   },
@@ -19059,52 +19133,6 @@
      "address": "15640 NE 1st Pl",
      "zip": "98008",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/25%20115295%20BS/BELLEVUE"
-    }
-   ]
-  },
-  {
-   "slug": "lochwood-lozier-custm-homes-co-jon-d-lozier",
-   "name": "Lochwood-Lozier Custm Homes Co Jon D Lozier",
-   "permits_total": 2,
-   "permits_completed": 0,
-   "cities": {
-    "Bellevue": {
-     "total": 2,
-     "completed": 0
-    }
-   },
-   "first_year": "2025",
-   "last_year": "2026",
-   "median_cost": null,
-   "license": null,
-   "permits": [
-    {
-     "permitnum": "24 125374 BR",
-     "city": "Bellevue",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Kaur Addition \u2014 Enclose an existing covered patio into an exercise room, move the laundry room to the lower floor, add ADU to existing storage, turn existing laundry into a spice kitchen, add a mudroom off the garage, add an elevator, replace masonry fireplace with new gas inserts, raise an existing deck to the dining floor level, remodel the kitchen and all bathrooms. Includes clearing & grading ",
-     "status": "Issued",
-     "issued": "2025-05-14",
-     "completed": "",
-     "cost": null,
-     "address": "2009 Killarney Way",
-     "zip": "98004",
-     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/24%20125374%20BR/BELLEVUE"
-    },
-    {
-     "permitnum": "26 110339 BS",
-     "city": "Bellevue",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "W Chen SFR \u2014 To demolish an existing single family structure, and to construct a new single family house and associated structures, with an attached ADU.",
-     "status": "Open",
-     "issued": "",
-     "completed": "",
-     "cost": null,
-     "address": "16541 NE 27th Pl",
-     "zip": "98008",
-     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20110339%20BS/BELLEVUE"
     }
    ]
   },
@@ -20067,7 +20095,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2000-09-21",
-    "expires": "2026-10-28",
+    "expires": "2028-10-28",
     "city": "SEATTLE",
     "ubi": "601744570"
    },
@@ -20350,7 +20378,7 @@
      "attributed": null,
      "adu_sqft": null,
      "description": "Establish use as single family residence with attached accessory dwelling unit per land use code.  Construct new two family dwelling  per plan.",
-     "status": "Expired",
+     "status": "Issued",
      "issued": "2024-06-26",
      "completed": "",
      "cost": "405169.0000",
@@ -21254,7 +21282,7 @@
      "attributed": null,
      "adu_sqft": null,
      "description": "Establish use as a single-family residence with (1) attached accessory dwelling unit and construct a single family residence  occupy per plans.",
-     "status": "Issued",
+     "status": "Expired",
      "issued": "2023-09-25",
      "completed": "",
      "cost": "618660.0000",
@@ -21907,7 +21935,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2020-09-30",
-    "expires": "2026-09-30",
+    "expires": "2028-09-30",
     "city": "Renton",
     "ubi": "604650511"
    },
@@ -22064,7 +22092,7 @@
    "median_cost": null,
    "license": {
     "number": "TRIPLZL820B5",
-    "status": "ACTIVE",
+    "status": "EXPIRED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2018-02-01",
     "expires": "2026-09-18",
@@ -23008,7 +23036,7 @@
    "median_cost": null,
    "license": {
     "number": "PENROCL807O3",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2020-09-24",
     "expires": "2026-12-24",
