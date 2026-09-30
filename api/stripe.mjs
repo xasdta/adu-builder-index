@@ -6,11 +6,11 @@
  * site) and the operator is emailed. Anything unverified is emailed only, so
  * the operator can refund per the guarantee printed on the site.
  *
- * Needs env: STRIPE_WEBHOOK_SECRET, GITHUB_TOKEN, RESEND_API_KEY, OPERATOR_EMAIL
+ * Needs env: STRIPE_WEBHOOK_SECRET, GITHUB_TOKEN, RESEND_API_KEY (optional RESEND_FROM)
  */
 import {
   verifyStripeSignature, lniByLicense, lniByName, loadBuilders, matchBuilder,
-  updateJsonFile, notify, licenceMatchesCompany, safeUrl, FEATURED_SLOTS, DIVIDER,
+  updateJsonFile, notify, licenceMatchesCompany, safeUrl, FEATURED_SLOTS, DIVIDER, OPERATOR_EMAIL,
 } from "../lib/onboarding.mjs";
 
 /** Cents that must actually have been paid before anything is published. */
@@ -120,7 +120,7 @@ export default async function handler(req, res) {
 
   const send = (subject, lines) => notify({
     subject, lines, apiKey: process.env.RESEND_API_KEY,
-    to: process.env.OPERATOR_EMAIL,
+    to: OPERATOR_EMAIL,
   });
 
   try {

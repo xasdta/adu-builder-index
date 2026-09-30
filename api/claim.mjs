@@ -6,11 +6,11 @@
  * nothing on its own). Verified claims commit to data/claims.json and publish;
  * everything else emails the operator.
  *
- * Needs env: GITHUB_TOKEN, RESEND_API_KEY, OPERATOR_EMAIL
+ * Needs env: GITHUB_TOKEN, RESEND_API_KEY (optional RESEND_FROM)
  */
 import {
   lniByLicense, lniByName, loadBuilders, matchBuilder, ownershipProof,
-  licenceMatchesCompany, safeUrl, notify, DIVIDER,
+  licenceMatchesCompany, safeUrl, notify, DIVIDER, OPERATOR_EMAIL,
 } from "../lib/onboarding.mjs";
 
 export const config = { api: { bodyParser: false } };
@@ -53,7 +53,7 @@ export default async function handler(req, res) {
 
   const send = (subject, lines) => notify({
     subject, lines, apiKey: process.env.RESEND_API_KEY,
-    to: process.env.OPERATOR_EMAIL,
+    to: OPERATOR_EMAIL,
   }).catch(err => console.error("notify failed:", err.message));
 
   const head = [
@@ -70,7 +70,13 @@ export default async function handler(req, res) {
   try {
     const lni = license ? await lniByLicense(license) : await lniByName(company);
     if (!lni.active.length) {
-      // No email: bogus submissions never reach the inbox, real typos self-correct.
+      // Still emailed: this is often a real person with a typo or a general
+      // enquiry, and dropping it silently hid every such submission.
+      await send(`✗ Claim failed licence check: ${company}`, [
+        ...head,
+        `✗ No active WA L&I licence found for ${license ? `licence ${license}` : "that company name"}.`,
+        "They were shown the claim-error page. Likely junk, but reply if it looks real.",
+      ]);
       return seeOther("/claim-error.html");
     }
     const rec = lni.active[0];
