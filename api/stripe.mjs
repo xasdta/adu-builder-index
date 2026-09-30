@@ -221,6 +221,16 @@ export default async function handler(req, res) {
   } catch (err) {
     // 500 → Stripe retries for up to 3 days; the commit step is idempotent.
     console.error("onboarding failed:", err);
+    // Without this a paid builder can sit unpublished (e.g. an expired
+    // GITHUB_TOKEN) with nothing but a log line. Sent on each Stripe retry.
+    await send(`✗ Paid but publishing failed — ${business || email}`, [
+      ...head,
+      `The endpoint threw: ${err.message}`,
+      "",
+      "Stripe will retry for up to 3 days. If this says 401/403 from GitHub,",
+      "regenerate the GITHUB_TOKEN and update it on Vercel. Otherwise publish",
+      "by hand or refund.",
+    ]).catch(e => console.error("notify failed:", e.message));
     return res.status(500).send(`error: ${err.message}`);
   }
 }
