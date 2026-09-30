@@ -5,6 +5,7 @@ search/AI citation, honest methodology and disclaimers throughout.
 """
 import html
 import json
+import re
 import time
 from pathlib import Path
 
@@ -73,7 +74,7 @@ def featured_section(city=None, depth=0):
         where = "" if city else f' · {esc(f.get("city", ""))}'
         cards.append(f"""<div class="fcard">
 <p class="flabel">Featured · paid placement{where}</p>
-<h3><a href="{pre}builders/{b['slug']}.html">{esc(b['name'])}</a></h3>
+<h3><a href="{pre}builders/{b['slug']}.html">{esc(disp(b['name']))}</a></h3>
 <p class="fstat">{b['permits_completed']} completed ADU permits on record · {license_chip(b)}</p>
 <p>{esc(f.get('blurb', ''))}</p>
 {contact}
@@ -105,6 +106,18 @@ def featured_section(city=None, depth=0):
 </section>"""
 
 
+def disp(name):
+    """Registry names are title-cased mechanically ("Jake'S D Corp", "Backyard Adu LLC",
+    "Tjh Re Properties Lv LLC"). Show them the way a person would write them."""
+    n = str(name or "")
+    n = re.sub(r"'S\b", "'s", n)
+    n = re.sub(r"\bAdu\b", "ADU", n)
+    n = re.sub(r"\bDadu\b", "DADU", n)
+    # 2-3 letter words with no vowel (Tjh, Lv, Dmc, Jks) are initials
+    n = re.sub(r"\b([B-DF-HJ-NP-TV-XZ][b-df-hj-np-tv-xz]{1,2})\b", lambda m: m.group(1).upper(), n)
+    return n
+
+
 def esc(s):
     return html.escape(str(s or ""))
 
@@ -119,10 +132,10 @@ def money(v):
 def license_chip(b):
     lic = b.get("license")
     if not lic:
-        return '<span class="chip chip-na" title="No exact match found in WA L&amp;I contractor registry — the builder may be licensed under a different business name">license unmatched</span>'
+        return '<span class="chip chip-na" title="No exact match found in WA L&amp;I contractor registry — the builder may be licensed under a different business name">Not matched</span>'
     if lic["status"] == "ACTIVE":
-        return f'<span class="chip chip-ok" title="WA L&amp;I license {esc(lic["number"])}, expires {esc(lic["expires"])}">license active</span>'
-    return f'<span class="chip chip-warn" title="WA L&amp;I reports status {esc(lic["status"])} for license {esc(lic["number"])}">license {esc(lic["status"].lower())}</span>'
+        return f'<span class="chip chip-ok" title="WA L&amp;I license {esc(lic["number"])}, expires {esc(lic["expires"])}">Licensed</span>'
+    return f'<span class="chip chip-warn" title="WA L&amp;I reports status {esc(lic["status"])} for license {esc(lic["number"])}">{esc(lic["status"].replace("-", " ").capitalize())}</span>'
 
 
 SITE_BASE = "https://adubuilderindex.com"
@@ -131,6 +144,27 @@ SITE_BASE = "https://adubuilderindex.com"
 def rel(url, pre):
     """Prefix site-relative URLs with the page's depth prefix."""
     return url if url.startswith(("mailto:", "http", "#")) else pre + url
+
+
+# Builder search: matches typed words against name + city in search.json; results are built
+# with textContent only, so no registry name can become markup.
+SEARCH_JS = """(function(){var data=null,root=document.querySelector('.brand').getAttribute('href').replace(/index\\.html$/,'');
+function norm(s){return s.toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\\s+/g,' ').trim();}
+function load(){if(data)return Promise.resolve(data);return fetch(root+'search.json').then(function(r){return r.json();}).then(function(d){data=d.map(function(x){return{s:x[0],n:x[1],c:x[2],p:x[3],k:norm(x[1]+' '+x[2])};});return data;});}
+document.querySelectorAll('.bsearch').forEach(function(box){var q=box.querySelector('input'),out=box.querySelector('.bres'),t;
+function render(list,term){out.textContent='';if(!term){out.hidden=true;return;}
+if(!list.length){var li=document.createElement('li');li.className='none';li.textContent='No builder matches that name';out.appendChild(li);}
+list.slice(0,8).forEach(function(x){var li=document.createElement('li'),a=document.createElement('a'),b=document.createElement('b'),s=document.createElement('span');a.href=root+'builders/'+encodeURIComponent(x.s)+'.html';b.textContent=x.n;s.textContent=x.p+' permit'+(x.p===1?'':'s')+' \u00b7 '+x.c;a.appendChild(b);a.appendChild(s);li.appendChild(a);out.appendChild(li);});out.hidden=false;}
+function run(){var term=q.value.trim(),w=norm(term).split(' ').filter(Boolean);if(!w.length){render([],'');return;}
+load().then(function(d){render(d.filter(function(x){return w.every(function(v){return x.k.indexOf(v)!==-1;});}).sort(function(a,b){return b.p-a.p;}),term);}).catch(function(){});}
+q.addEventListener('input',function(){clearTimeout(t);t=setTimeout(run,120);});
+q.addEventListener('keydown',function(e){if(e.key==='Enter'){var a=out.querySelector('a');if(a){e.preventDefault();location.href=a.href;}}if(e.key==='Escape'){q.value='';render([],'');}});
+document.addEventListener('click',function(e){if(!box.contains(e.target))out.hidden=true;});});})();"""
+
+# Stylesheet URL carries a hash of its contents so a style change reaches every visitor
+# immediately instead of waiting out the browser cache.
+import hashlib
+CSS_VER = hashlib.sha256((SITE / "style.css").read_bytes()).hexdigest()[:10] if (SITE / "style.css").exists() else "1"
 
 
 def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
@@ -154,28 +188,43 @@ def page(title, desc, body, depth=0, canonical=None, jsonld=None, path=None):
 <meta name="description" content="{esc(desc)}">
 {f'<link rel="canonical" href="{esc(canonical)}">' if canonical else ''}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Spline+Sans+Mono:wght@400;600&display=swap">
-<link rel="stylesheet" href="{pre}style.css?v={STATS['generated']}">
+<link rel="stylesheet" href="{pre}style.css?v={CSS_VER}">
 <script defer src="/_vercel/insights/script.js"></script>
 {ld}
 </head>
 <body>
-<header class="top">
-  <a class="brand" href="{pre}index.html">ADU Builder Index</a>
-  <nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="topbar">
+  <a class="brand" href="{pre}index.html"><span class="mark" aria-hidden="true">⌂</span>ADU Builder Index</a>
+  <nav class="primary" aria-label="Main">
     <a href="{pre}index.html#cities">Cities</a>
-    <a href="{pre}index.html#rankings">All builders</a>
+    <a href="{pre}index.html#rankings">Rankings</a>
+    <a href="{pre}builders/index.html">All builders</a>
     <a href="{pre}seattle-adu-costs.html">Cost report</a>
     <a href="{pre}methodology.html">Methodology</a>
-    <a href="{pre}for-builders.html" class="cta">For builders</a>
   </nav>
-</header>
-<main>
+  <div class="bsearch hsearch" role="search"><label class="sr" for="hq">Search builders</label><input id="hq" type="search" placeholder="Search builders" autocomplete="off" maxlength="60"><ul class="bres" hidden></ul></div>
+  <a href="{pre}for-builders.html" class="cta">For builders</a>
+  <details class="mnav"><summary aria-label="Menu"><span></span><span></span><span></span></summary><div class="mpanel">
+    <div class="bsearch" role="search"><label class="sr" for="mq">Search builders</label><input id="mq" type="search" placeholder="Search builders" autocomplete="off" maxlength="60"><ul class="bres" hidden></ul></div>
+    <a href="{pre}index.html#cities">Cities</a><a href="{pre}index.html#rankings">Rankings</a><a href="{pre}builders/index.html">All builders</a>
+    <a href="{pre}seattle-adu-costs.html">Cost report</a><a href="{pre}methodology.html">Methodology</a><a class="button" href="{pre}for-builders.html">For builders</a>
+  </div></details>
+</div></header>
+<main id="main">
 {body}
 </main>
 <footer>
-  <p><strong>ADU Builder Index</strong> — permit-verified accessory dwelling unit builders. Currently covering Seattle and Bellevue, WA; more Washington cities coming.</p>
+  <div class="fcols">
+    <div><a class="brand" href="{pre}index.html"><span class="mark" aria-hidden="true">⌂</span>ADU Builder Index</a>
+      <p>Seattle and Bellevue ADU builders, ranked by permits in official city records — not reviews, not ads.</p></div>
+    <div><h4>Homeowners</h4><a href="{pre}seattle-adu-builders.html">Seattle builders</a><a href="{pre}bellevue-adu-builders.html">Bellevue builders</a><a href="{pre}builders/index.html">All builders A–Z</a><a href="{pre}seattle-adu-costs.html">What an ADU costs</a></div>
+    <div><h4>Builders</h4><a href="{pre}for-builders.html">Claim your profile</a><a href="{rel(FEATURE_URL, pre)}">Get featured</a><a href="mailto:{CONTACT_EMAIL}">Report a correction</a></div>
+    <div><h4>About</h4><a href="{pre}methodology.html">Methodology</a><a href="https://secure.lni.wa.gov/verify/">Verify a license (L&amp;I)</a><a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a></div>
+  </div>
   <p class="fine">Data sources: City of Seattle SDCI Building Permits, City of Bellevue Open Data (both open data), and the Washington State L&amp;I Contractor License registry, as published on {esc(STATS['generated'])}. Rankings reflect only permits with contractor attribution in public records; absence from this index is not a statement about any builder. License statuses are reproduced as reported by WA L&amp;I and may change. This site does not provide recommendations or referrals — verify any contractor directly at <a href="https://secure.lni.wa.gov/verify/">lni.wa.gov/verify</a>. Corrections and support: <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a> · <a href="{rel(CLAIM_URL, pre)}">claim your profile</a>.</p>
 </footer>
+<script>{SEARCH_JS}</script>
 </body>
 </html>"""
 
@@ -191,6 +240,20 @@ def trend_chart(city="Seattle"):
     return f'<div class="chart" role="img" aria-label="ADU permits issued by year, 2014 to 2025">{bars}</div>'
 
 
+def sparkline(city, w=220, h=44):
+    """Tiny permits-per-year bars for a city card: shape, not numbers (the card has those)."""
+    src = STATS["by_city"][city]["permits_by_year"]
+    ys = [(y, n) for y, n in sorted(src.items()) if "2014" <= y <= "2025"]
+    if not ys:
+        return ""
+    mx = max(n for _, n in ys) or 1
+    bw = w / len(ys)
+    rects = "".join(
+        f'<rect x="{i*bw+1:.1f}" y="{h-(n/mx)*(h-2):.1f}" width="{bw-3:.1f}" height="{(n/mx)*(h-2):.1f}" rx="2"><title>{y}: {n} permits</title></rect>'
+        for i, (y, n) in enumerate(ys))
+    return f'<svg class="spark" viewBox="0 0 {w} {h}" preserveAspectRatio="none" role="img" aria-label="{esc(city)} ADU permits by year, {ys[0][0]}–{ys[-1][0]}">{rects}</svg>'
+
+
 def city_cards(depth=0):
     pre = "../" * depth
     cards = ""
@@ -200,6 +263,7 @@ def city_cards(depth=0):
         cards += f"""<a class="citycard" href="{pre}{c['page']}">
 <h3>{esc(c['name'])}</h3>
 <p class="citystats"><b>{cb['total']:,}</b> ADU permits · <b>{n_builders}</b> builders indexed</p>
+{sparkline(c['name'])}
 <p>{esc(c['blurb'])}</p>
 <span class="citylink">View {esc(c['name'])} rankings →</span>
 </a>"""
@@ -214,8 +278,9 @@ def claimed_chip(b):
 
 def builder_row(rank, b):
     yrs = f"{b['first_year']}–{b['last_year']}" if b["first_year"] != b["last_year"] else b["first_year"]
-    return (f'<tr><td class="num">{rank}</td>'
-            f'<td><a href="builders/{b["slug"]}.html">{esc(b["name"])}</a>{claimed_chip(b)}</td>'
+    medal = f'<span class="rank r{rank}">{rank}</span>' if rank <= 3 else str(rank)
+    return (f'<tr><td class="num">{medal}</td>'
+            f'<td><a href="builders/{b["slug"]}.html">{esc(disp(b["name"]))}</a>{claimed_chip(b)}</td>'
             f'<td class="num">{b["permits_completed"]}</td>'
             f'<td class="num">{b["permits_total"]}</td>'
             f'<td class="num">{esc(yrs)}</td>'
@@ -238,10 +303,16 @@ def build_index():
                             "https://data.bellevuewa.gov/",
                             "https://data.wa.gov/resource/m8qx-ubtq"]}
     body = f"""
-<section class="hero">
+<section class="hero home">
+ <div class="hero-grid">
+  <div>
   <p class="eyebrow">{esc(city_list)}, Washington · updated {esc(TODAY)}</p>
   <h1>ADU builders, ranked by permits actually pulled</h1>
   <p class="dek">Every builder here is ranked by <strong>completed accessory-dwelling-unit permits</strong> in official city building records — not reviews, not ads. License status is cross-checked against the Washington L&amp;I contractor registry.</p>
+  <div class="bsearch big" role="search"><label class="sr" for="q">Search builders by name</label><input id="q" type="search" placeholder="Search a builder by name" autocomplete="off" maxlength="60"><ul class="bres" hidden></ul></div>
+  </div>
+  <figure class="herochart"><figcaption>Seattle ADU permits issued per year</figcaption>{trend_chart("Seattle")}</figure>
+ </div>
   <div class="stats">
     <div><b>{STATS['total_permits']:,}</b><span>ADU permits tracked</span></div>
     <div><b>{STATS['completed_permits']:,}</b><span>completed builds</span></div>
@@ -334,13 +405,14 @@ def build_builder_pages():
             callout = (f'<p>Is this your company? <a href="{rel(CLAIM_URL, "../")}">Claim this profile</a> free to add your website, contact details, and corrections.</p>'
                        f'<p>Or <a href="{rel(FEATURE_URL, "../")}">get featured — $99/mo</a>, top placement above the rankings homeowners land on. <a href="../for-builders.html">How it works →</a></p>')
         body = f"""
-<section class="hero small">
-  <p class="eyebrow"><a href="../index.html">← All builders</a></p>
-  <h1>{esc(b['name'])}{claimed_chip(b)}</h1>
+<section class="hero small builder">
+  <p class="crumb"><a href="../index.html">Home</a> › <a href="index.html">All builders</a></p>
+  <h1>{esc(disp(b['name']))}{claimed_chip(b)}</h1>
+  <p class="dek">ADU builder in {esc(" & ".join(sorted(b["cities"])))}, WA · {license_chip(b)}</p>
   <div class="stats">
     <div><b>{b['permits_completed']}</b><span>completed ADU permits</span></div>
     <div><b>{b['permits_total']}</b><span>total ADU permits</span></div>
-    <div><b>{esc(b['first_year'] or '—')}–{esc(b['last_year'] or '—')}</b><span>active years on record</span></div>
+    <div><b>{esc(b['first_year'] or '—') if b['first_year'] == b['last_year'] else f"{esc(b['first_year'] or '—')}–{esc(b['last_year'] or '—')}"}</b><span>{'year' if b['first_year'] == b['last_year'] else 'years'} active on record</span></div>
     <div><b>{money(b['median_cost'])}</b><span>median est. project cost</span></div>
   </div>
 </section>
@@ -366,7 +438,7 @@ def build_builder_pages():
 
     # A–Z list
     items = "".join(
-        f'<li><a href="{b["slug"]}.html">{esc(b["name"])}</a> '
+        f'<li><a href="{b["slug"]}.html">{esc(disp(b["name"]))}</a> '
         f'<span class="fine">{b["permits_total"]} permit{"s" if b["permits_total"] != 1 else ""}</span></li>'
         for b in sorted(BUILDERS, key=lambda x: x["name"].lower()))
     body = f"""<section class="hero small"><p class="eyebrow"><a href="../index.html">← Home</a></p>
@@ -438,7 +510,7 @@ def build_city_page(city, slug_html, blurb):
     for i, b in enumerate(local, 1):
         yrs = f"{b['first_year']}–{b['last_year']}" if b["first_year"] != b["last_year"] else b["first_year"]
         rows += (f'<tr><td class="num">{i}</td>'
-                 f'<td><a href="builders/{b["slug"]}.html">{esc(b["name"])}</a>{claimed_chip(b)}</td>'
+                 f'<td><a href="builders/{b["slug"]}.html">{esc(disp(b["name"]))}</a>{claimed_chip(b)}</td>'
                  f'<td class="num">{b["cities"][city]["completed"]}</td>'
                  f'<td class="num">{b["cities"][city]["total"]}</td>'
                  f'<td class="num">{esc(yrs)}</td>'
@@ -681,6 +753,9 @@ def build_form_pages():
 
 
 def build_assets():
+    (SITE / "search.json").write_text(json.dumps(
+        [[b["slug"], disp(b["name"]), " & ".join(sorted(b["cities"])), b["permits_total"]] for b in BUILDERS],
+        separators=(",", ":")))
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
     paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
