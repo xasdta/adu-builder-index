@@ -476,24 +476,50 @@ def build_methodology():
 
 
 def build_for_builders():
+    slots = f"{FEATURED_SLOTS} slots per city"
+    steps = ([("Subscribe", f'<a href="{STRIPE_LINK}">Check out</a> in a minute — $99/mo. Enter your WA license number, website and a one-line blurb for your card.'),
+              ("Automatic license check", "We match your license against the WA L&amp;I registry and your permit profile, usually within minutes."),
+              ("You're live", "Your card appears above the rankings, clearly labeled as featured. If your license can't be verified, you're refunded in full.")]
+             if STRIPE_LINK else
+             [("Request your slot", f'<a href="{FEATURE_URL}">Send your company name</a>, license number and a one-line blurb.'),
+              ("License check", "We confirm your WA L&amp;I license is active, usually the same or next business day."),
+              ("You're live", "You subscribe at $99/mo and your featured card goes live.")])
+    step_html = "".join(f'<li><span class="stepn">{i}</span><h3>{t}</h3><p>{d}</p></li>' for i, (t, d) in enumerate(steps, 1))
     body = f"""
-<section class="hero small"><h1>For ADU builders</h1>
-<p class="dek">Homeowners planning a $150K–$400K ADU are comparing verified track records here. Make sure yours is right.</p></section>
+<section class="hero small"><p class="eyebrow">For ADU builders</p>
+<h1>Make sure homeowners see your real track record</h1>
+<p class="dek">Homeowners planning a $150K–$400K ADU compare builders here by permits in official city records. Claiming your profile is free; featured placement is optional.</p>
+<p class="herocta"><a class="button" href="{FEATURE_URL}">Get featured — $99/mo</a> <a class="button secondary" href="{CLAIM_URL}">Claim your free profile</a></p></section>
+
+<section class="plans">
+  <div class="plan">
+    <p class="eyebrow">Free, always</p>
+    <h2>Claim your profile</h2>
+    <ul class="ticks">
+      <li>Add permits the city didn't attribute to you — we check each number against city records and mark it builder-verified</li>
+      <li>Add your website, service area and contact details</li>
+      <li>Fix anything wrong on your record</li>
+    </ul>
+    <p class="fine">Claiming never changes your rank; only verified permits do.</p>
+    <a class="button secondary" href="{CLAIM_URL}">Claim your free profile →</a>
+  </div>
+  <div class="plan featured-plan">
+    <p class="eyebrow">Featured · founding rate</p>
+    <h2><span class="price">$99</span><span class="per">/month, locked for life</span></h2>
+    <ul class="ticks">
+      <li>Top of your city's page, <a href="index.html#featured">above the rankings</a>, clearly labeled as featured</li>
+      <li>Your blurb, license badge and a direct link to your website</li>
+      <li>Only {slots} — one signed ADU project pays for roughly a decade</li>
+      <li>Rankings are never for sale: featured cards sit apart from the permit table</li>
+    </ul>
+    <a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a>
+  </div>
+</section>
+
 <section>
-  <h2>Free, always</h2>
-  <p>Claiming your profile is free: correct your permit history (we verify submitted permit numbers against city records), add your service area, website, and contact details.</p>
-  <h2>Featured listing — founding rate</h2>
-  <p>Featured builders appear in the <a href="index.html#featured">Featured builders section at the top of the rankings page</a> — clearly labeled, with your blurb, license verification, and a direct link to your website. Founding-builder rate: <strong>$99/month, locked for life</strong>, first {FEATURED_SLOTS} builders in Seattle. One signed ADU project pays for roughly a decade of listing. Rankings are never for sale — featured placement is clearly separated from the permit-verified table.</p>
-  <h2>How to get featured</h2>
-  <ol>
-{"""    <li><a href="%s">Subscribe</a> — $99/mo, checkout takes a minute. Enter your business name exactly as licensed.</li>
-    <li>Reply to your Stripe receipt with your website and a one-line blurb for your card.</li>
-    <li>We confirm your WA L&amp;I license is active and your card goes live, usually same day.</li>""" % STRIPE_LINK if STRIPE_LINK else """    <li><a href="%s">Request your slot</a> — company name, license number, and a one-line blurb.</li>
-    <li>We confirm your WA L&amp;I license is active and reply the same or next business day.</li>
-    <li>You subscribe at $99/mo and your featured card goes live.</li>""" % FEATURE_URL}
-  </ol>
-  <p class="fine"><strong>Our guarantee:</strong> {"if your license doesn&#39;t verify as active, we cancel the subscription and refund you in full — you are never charged for a listing we can&#39;t stand behind" if STRIPE_LINK else "we confirm your license before you are charged a cent"}. Cancel anytime; the founding rate stays yours as long as you keep the subscription.</p>
-  <p><a class="button" href="{FEATURE_URL}">Get featured — $99/mo →</a> <a class="button secondary" href="{CLAIM_URL}">Claim your free profile →</a></p>
+  <h2>How featuring works</h2>
+  <ol class="steps">{step_html}</ol>
+  <p class="fine guarantee"><strong>Our guarantee:</strong> {"if your license doesn&#39;t verify as active, we cancel the subscription and refund you in full — you are never charged for a listing we can&#39;t stand behind" if STRIPE_LINK else "we confirm your license before you are charged a cent"}. Cancel anytime; the founding rate stays yours as long as you keep the subscription.</p>
 </section>"""
     (SITE / "for-builders.html").write_text(page(
         "For builders | ADU Builder Index",
