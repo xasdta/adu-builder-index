@@ -13,6 +13,9 @@ import {
   updateJsonFile, notify, licenceMatchesCompany, safeUrl, FEATURED_SLOTS, DIVIDER, OPERATOR_EMAIL,
 } from "../lib/onboarding.mjs";
 
+/** The only payment link whose checkouts this endpoint publishes. */
+const ADU_PAYMENT_LINK = "plink_1UAK6CD7IxRBAZhG5BKiuc4V";
+
 /** Cents that must actually have been paid before anything is published. */
 const MIN_PAID_CENTS = 9900;
 
@@ -94,6 +97,11 @@ export default async function handler(req, res) {
     return res.status(200).json({ ignored: event.type });
   }
   const s = event.data.object;
+  // The Stripe account also sells ABA Openings listings, and every endpoint
+  // receives every event — only act on checkouts from our own payment link.
+  if (s.payment_link !== ADU_PAYMENT_LINK) {
+    return res.status(200).json({ ignored: `payment_link=${s.payment_link}` });
+  }
   if (s.mode !== "subscription" || s.payment_status !== "paid") {
     return res.status(200).json({ ignored: `payment_status=${s.payment_status}` });
   }
