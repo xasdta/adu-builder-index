@@ -46,6 +46,11 @@ export default async function handler(req, res) {
     return res.status(400).send("invalid signature");
   }
 
+  const send = (subject, lines) => notify({
+    subject, lines, apiKey: process.env.RESEND_API_KEY,
+    to: OPERATOR_EMAIL,
+  });
+
   // A cancelled or lapsed subscription must not keep a paid slot. Stripe sends
   // subscription.deleted at the end of the paid period, and after final failed
   // payment retries, so this covers both quitting and non-payment.
@@ -117,11 +122,6 @@ export default async function handler(req, res) {
     `Session:  ${s.id}`,
     DIVIDER,
   ];
-
-  const send = (subject, lines) => notify({
-    subject, lines, apiKey: process.env.RESEND_API_KEY,
-    to: OPERATOR_EMAIL,
-  });
 
   try {
     // 1. License must be ACTIVE in the WA registry.
