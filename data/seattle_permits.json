@@ -1,7 +1,7 @@
 {
  "city": "Seattle",
  "source": "https://data.seattle.gov/resource/76t5-zqzr.json",
- "fetched_at": "2026-09-28",
+ "fetched_at": "2026-09-29",
  "permits": [
   {
    "permitnum": "3017526-EX",
@@ -106444,7 +106444,7 @@
    "estprojectcost": "395824.0000",
    "applieddate": "2020-12-31T00:00:00.000",
    "issueddate": "2025-02-20T00:00:00.000",
-   "statuscurrent": "Expired",
+   "statuscurrent": "Issued",
    "originaladdress1": "10510 INTERLAKE AVE N",
    "originalzip": "98133",
    "latitude": "47.70543790",
@@ -119441,7 +119441,7 @@
    "estprojectcost": "1227519.0000",
    "applieddate": "2022-09-02T00:00:00.000",
    "issueddate": "2023-09-27T00:00:00.000",
-   "statuscurrent": "Issued",
+   "statuscurrent": "Expired",
    "originaladdress1": "4565 53RD AVE SW",
    "originalzip": "98116",
    "latitude": "47.56171564",
@@ -186488,7 +186488,7 @@
    "estprojectcost": "594708.0000",
    "applieddate": "2024-04-23T00:00:00.000",
    "issueddate": "2025-03-25T00:00:00.000",
-   "statuscurrent": "Expired",
+   "statuscurrent": "Issued",
    "originaladdress1": "4517 48TH AVE SW",
    "originalzip": "98116",
    "latitude": "47.56242688",
@@ -193469,7 +193469,7 @@
    "estprojectcost": "210063.0000",
    "applieddate": "2024-04-23T00:00:00.000",
    "issueddate": "2025-03-25T00:00:00.000",
-   "statuscurrent": "Expired",
+   "statuscurrent": "Issued",
    "originaladdress1": "4519 48TH AVE SW",
    "latitude": "47.56242286",
    "longitude": "-122.39400435",
@@ -201432,7 +201432,7 @@
    "estprojectcost": "190800.0000",
    "applieddate": "2024-12-10T00:00:00.000",
    "issueddate": "2025-03-26T00:00:00.000",
-   "statuscurrent": "Issued",
+   "statuscurrent": "Expired",
    "originaladdress1": "9016 34TH AVE SW",
    "originalzip": "98126",
    "latitude": "47.52236911",
@@ -202371,24 +202371,6 @@
    "longitude": "-122.40040591",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7038625-CN"
-   }
-  },
-  {
-   "permitnum": "7038627-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "New",
-   "description": "Construct one family dwelling with ADU and (1) two family dwelling  per plan.",
-   "housingcategory": "N/A",
-   "housingunitsadded": "1.0",
-   "estprojectcost": "345829.0000",
-   "statuscurrent": "Scheduled and Submitted",
-   "originaladdress1": "4152 45TH AVE SW",
-   "originalzip": "98116",
-   "latitude": "47.56509711",
-   "longitude": "-122.38897848",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7038627-CN"
    }
   },
   {
@@ -211580,7 +211562,8 @@
    "estprojectcost": "145248.0000",
    "applieddate": "2025-01-09T00:00:00.000",
    "issueddate": "2025-05-07T00:00:00.000",
-   "statuscurrent": "Issued",
+   "completeddate": "2026-09-28T00:00:00.000",
+   "statuscurrent": "Completed",
    "originaladdress1": "6513 11TH AVE NW",
    "originalzip": "98117",
    "latitude": "47.67639751",
@@ -231561,7 +231544,7 @@
    "description": "Adding a 2-story  1 000 square foot DADU with attached garage on the east portion of the property",
    "housingcategory": "N/A",
    "estprojectcost": "190000.0000",
-   "statuscurrent": "Reviews Completed",
+   "statuscurrent": "Completed",
    "originaladdress1": "1519 32ND AVE",
    "originalzip": "98122",
    "latitude": "47.61469257",
@@ -233181,24 +233164,6 @@
    "longitude": "-122.35778378",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7122672-DM"
-   }
-  },
-  {
-   "permitnum": "7122673-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "Addition/Alteration",
-   "description": "Construct a new house and AADU on the foundation of an existing house  relocate garage to be attached to house",
-   "housingcategory": "Single-Family Add/Alt",
-   "housingunitsadded": "1.0",
-   "estprojectcost": "700000.0000",
-   "statuscurrent": "Scheduled and Submitted",
-   "originaladdress1": "6517 39TH AVE NE",
-   "originalzip": "98115",
-   "latitude": "47.67638938",
-   "longitude": "-122.28625088",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7122673-CN"
    }
   },
   {
@@ -235197,7 +235162,7 @@
    "description": "Tear down existing single family residence and constructing new single family residence and attached accessory dwelling unit",
    "housingcategory": "N/A",
    "estprojectcost": "449759.0000",
-   "statuscurrent": "Additional Info Requested",
+   "statuscurrent": "Scheduled and Submitted",
    "originaladdress1": "2822 W ELMORE PL",
    "originalzip": "98199",
    "latitude": "47.65724387",
@@ -235213,7 +235178,7 @@
    "description": "Tear down existing single family residence and constructing new single family residence and attached accessory dwelling unit",
    "housingcategory": "N/A",
    "estprojectcost": "449759.0000",
-   "statuscurrent": "Additional Info Requested",
+   "statuscurrent": "Scheduled and Submitted",
    "originaladdress1": "2822 W ELMORE PL",
    "originalzip": "98199",
    "latitude": "47.65724387",
@@ -237538,8 +237503,8 @@
    "permittypedesc": "Addition/Alteration",
    "description": "Converting existing detached garage to accessory dwelling unit",
    "housingcategory": "Single-Family Add/Alt",
-   "estprojectcost": "75403.5000",
-   "statuscurrent": "Scheduled and Submitted",
+   "estprojectcost": "103577.0000",
+   "statuscurrent": "Ready for Intake",
    "originaladdress1": "1746 NE 106TH ST",
    "originalzip": "98125",
    "latitude": "47.70644911",
@@ -238295,23 +238260,6 @@
    }
   },
   {
-   "permitnum": "7156316-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "Addition/Alteration",
-   "description": "Construct addition to  alter existing single family dwelling to repair fire damage  and establish ADU per plan.",
-   "housingcategory": "Single-Family Add/Alt",
-   "estprojectcost": "150000.0000",
-   "statuscurrent": "Scheduled and Submitted",
-   "originaladdress1": "4426 LETITIA AVE S",
-   "originalzip": "98118",
-   "latitude": "47.56339994",
-   "longitude": "-122.28884954",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7156316-CN"
-   }
-  },
-  {
    "permitnum": "7156368-CN",
    "permitclass": "Single Family/Duplex",
    "permitclassmapped": "Residential",
@@ -238842,7 +238790,7 @@
    "description": "Interior remodel of the existing building incl. existing basement attached ADU elimination  garage conversion  and existing driveway abandonment",
    "housingcategory": "Single-Family Add/Alt",
    "estprojectcost": "80000.0000",
-   "statuscurrent": "Additional Info Requested",
+   "statuscurrent": "Scheduled and Submitted",
    "originaladdress1": "8910 25TH AVE NE",
    "originalzip": "98115",
    "latitude": "47.69341972",
@@ -238916,22 +238864,6 @@
    "longitude": "-122.35610346",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7159370-CN"
-   }
-  },
-  {
-   "permitnum": "7159539-CN",
-   "permitclass": "Single Family/Duplex",
-   "permitclassmapped": "Residential",
-   "permittypedesc": "Addition/Alteration",
-   "description": "New Basement AADU in existing SF home",
-   "housingcategory": "Single-Family Add/Alt",
-   "estprojectcost": "100000.0000",
-   "statuscurrent": "Scheduled and Submitted",
-   "originaladdress1": "10333 40th AVE NE",
-   "latitude": "47.70392906",
-   "longitude": "-122.28583537",
-   "link": {
-    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7159539-CN"
    }
   },
   {
@@ -239987,6 +239919,24 @@
    "longitude": "-122.26324001",
    "link": {
     "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7164121-CN"
+   }
+  },
+  {
+   "permitnum": "7164675-CN",
+   "permitclass": "Single Family/Duplex",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Addition/Alteration",
+   "description": "Conver existing heated basement and existing unheated attached garage to new AADU. Rebuild existing front porch.",
+   "housingcategory": "Single-Family Add/Alt",
+   "housingunitsadded": "1.0",
+   "estprojectcost": "70000.0000",
+   "statuscurrent": "Additional Info Requested",
+   "originaladdress1": "2341 N 55TH ST",
+   "originalzip": "98103",
+   "latitude": "47.66846539",
+   "longitude": "-122.32857647",
+   "link": {
+    "url": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7164675-CN"
    }
   }
  ]

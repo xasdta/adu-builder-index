@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12297,
-    "completed": 6937,
+    "total": 12294,
+    "completed": 6939,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -40,8 +40,8 @@
     }
    }
   },
-  "total_permits": 12495,
-  "completed_permits": 6957,
+  "total_permits": 12492,
+  "completed_permits": 6959,
   "attributed_permits": 803,
   "builders_listed": 576,
   "permits_by_year": {
@@ -63,7 +63,7 @@
    "2025": 1065,
    "2026": 372
   },
-  "generated": "2026-09-28"
+  "generated": "2026-09-29"
  },
  "builders": [
   {
