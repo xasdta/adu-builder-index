@@ -782,6 +782,8 @@ def build_assets():
     (SITE / "search.json").write_text(json.dumps(
         [[b["slug"], disp(b["name"]), " & ".join(sorted(b["cities"])), b["permits_total"]] for b in BUILDERS],
         separators=(",", ":")))
+    # IndexNow ownership key, shared with the directory network (factory/engine/indexnow.mjs).
+    (SITE / "8638c5397484efc819f14077791423ee.txt").write_text("8638c5397484efc819f14077791423ee")
     (SITE / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\n\nSitemap: {SITE_BASE}/sitemap.xml\n")
     paths = ["", "methodology.html", "for-builders.html", "get-featured.html",
