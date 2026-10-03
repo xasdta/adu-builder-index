@@ -188,7 +188,7 @@ export default async function handler(req, res) {
       message: `Featured: ${b.name} (${city}) via Stripe ${s.id}`,
       mutate: (data) => {
         if (data.builders.some(f => f._stripe_session === s.id)) return null; // replay
-        if (data.builders.some(f => f.slug === b.slug)) return null;          // already live
+        if (data.builders.some(f => f.slug === b.slug)) { outcome = "already-live"; return null; }
         const taken = data.builders.filter(f => f.city === city).length;
         if (taken >= FEATURED_SLOTS) { outcome = "city-full"; return null; }
         data.builders.push({
@@ -211,6 +211,16 @@ export default async function handler(req, res) {
         "Either raise FEATURED_SLOTS, offer another city, or refund.",
       ]);
       return res.status(200).json({ ok: true, action: "city-full" });
+    }
+    if (result.skipped && outcome === "already-live") {
+      // A second subscription for a builder who is already featured is a double charge.
+      await send(`⚠ Paid twice — ${b.name} is already featured`, [
+        ...head,
+        `${b.slug} already has a featured card, so nothing changed.`,
+        "",
+        "Refund this payment and cancel this subscription (keep the original one).",
+      ]);
+      return res.status(200).json({ ok: true, action: "already-featured" });
     }
     if (result.skipped) {
       return res.status(200).json({ ok: true, action: "duplicate" });

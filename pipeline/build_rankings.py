@@ -25,7 +25,10 @@ SUFFIX_RE = re.compile(
 
 
 def canon(name):
-    n = re.sub(r"[^A-Z0-9& ]", " ", name.upper())
+    # "Batt + Lear", "Batt & Lear" and "Batt and Lear" are one builder (they split into two
+    # rankings entries sharing one page slug).
+    n = re.sub(r"\bAND\b", "&", name.upper().replace("+", "&"))
+    n = re.sub(r"[^A-Z0-9& ]", " ", n)
     n = re.sub(r"\s+", " ", n).strip()
     prev = None
     while prev != n:
