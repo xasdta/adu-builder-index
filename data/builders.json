@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12294,
-    "completed": 6939,
+    "total": 12303,
+    "completed": 6950,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,7 +25,7 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1035,
-     "2026": 372
+     "2026": 373
     }
    },
    "Bellevue": {
@@ -40,10 +40,10 @@
     }
    }
   },
-  "total_permits": 12492,
-  "completed_permits": 6959,
+  "total_permits": 12501,
+  "completed_permits": 6970,
   "attributed_permits": 803,
-  "builders_listed": 576,
+  "builders_listed": 575,
   "permits_by_year": {
    "2010": 157,
    "2011": 117,
@@ -61,9 +61,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1065,
-   "2026": 372
+   "2026": 373
   },
-  "generated": "2026-09-29"
+  "generated": "2026-10-05"
  },
  "builders": [
   {
@@ -5095,6 +5095,52 @@
    ]
   },
   {
+   "slug": "batt-lear",
+   "name": "Batt + Lear",
+   "permits_total": 2,
+   "permits_completed": 2,
+   "cities": {
+    "Seattle": {
+     "total": 2,
+     "completed": 2
+    }
+   },
+   "first_year": "2020",
+   "last_year": "2020",
+   "median_cost": 72900.0,
+   "license": null,
+   "permits": [
+    {
+     "permitnum": "6750939-CN",
+     "city": "Seattle",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Construct a detached accessory dwelling unit (DADU) for a single family residence  per plan.",
+     "status": "Completed",
+     "issued": "2020-03-11",
+     "completed": "2021-07-01",
+     "cost": "72900.0000",
+     "address": "3844 46TH AVE SW",
+     "zip": "98116",
+     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6750939-CN"
+    },
+    {
+     "permitnum": "6762722-CN",
+     "city": "Seattle",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Construct alterations to create attached accessory dwelling unit at unfinished basement level of existing single family residence  per plan",
+     "status": "Completed",
+     "issued": "2020-01-29",
+     "completed": "2020-08-17",
+     "cost": "42450.0000",
+     "address": "6222 39th AVE NE",
+     "zip": null,
+     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6762722-CN"
+    }
+   ]
+  },
+  {
    "slug": "jimmy-tang",
    "name": "Jimmy Tang",
    "permits_total": 2,
@@ -8878,15 +8924,7 @@
    "first_year": "2011",
    "last_year": "2011",
    "median_cost": 120000.0,
-   "license": {
-    "number": "ARTICHI054J1",
-    "status": "EXPIRED",
-    "type": "CONSTRUCTION CONTRACTOR",
-    "effective": "1995-04-21",
-    "expires": "2019-09-12",
-    "city": "SEATTLE",
-    "ubi": "601604535"
-   },
+   "license": null,
    "permits": [
     {
      "permitnum": "6289115-CN",
@@ -14129,38 +14167,6 @@
    ]
   },
   {
-   "slug": "batt-lear",
-   "name": "Batt + Lear",
-   "permits_total": 1,
-   "permits_completed": 1,
-   "cities": {
-    "Seattle": {
-     "total": 1,
-     "completed": 1
-    }
-   },
-   "first_year": "2020",
-   "last_year": "2020",
-   "median_cost": 72900.0,
-   "license": null,
-   "permits": [
-    {
-     "permitnum": "6750939-CN",
-     "city": "Seattle",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Construct a detached accessory dwelling unit (DADU) for a single family residence  per plan.",
-     "status": "Completed",
-     "issued": "2020-03-11",
-     "completed": "2021-07-01",
-     "cost": "72900.0000",
-     "address": "3844 46TH AVE SW",
-     "zip": "98116",
-     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6750939-CN"
-    }
-   ]
-  },
-  {
    "slug": "ambi-design-build-llc",
    "name": "Ambi Design + Build, LLC",
    "permits_total": 1,
@@ -14629,38 +14635,6 @@
      "address": "5023 40TH AVE SW",
      "zip": "98136",
      "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6762681-CN"
-    }
-   ]
-  },
-  {
-   "slug": "batt-lear",
-   "name": "Batt & Lear",
-   "permits_total": 1,
-   "permits_completed": 1,
-   "cities": {
-    "Seattle": {
-     "total": 1,
-     "completed": 1
-    }
-   },
-   "first_year": "2020",
-   "last_year": "2020",
-   "median_cost": 42450.0,
-   "license": null,
-   "permits": [
-    {
-     "permitnum": "6762722-CN",
-     "city": "Seattle",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Construct alterations to create attached accessory dwelling unit at unfinished basement level of existing single family residence  per plan",
-     "status": "Completed",
-     "issued": "2020-01-29",
-     "completed": "2020-08-17",
-     "cost": "42450.0000",
-     "address": "6222 39th AVE NE",
-     "zip": null,
-     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6762722-CN"
     }
    ]
   },
@@ -18387,7 +18361,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2020-09-30",
-    "expires": "2026-09-30",
+    "expires": "2028-09-30",
     "city": "Bellevue",
     "ubi": "604629985"
    },
