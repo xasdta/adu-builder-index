@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12296,
-    "completed": 6968,
+    "total": 12314,
+    "completed": 6980,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,11 +25,11 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1035,
-     "2026": 374
+     "2026": 377
     }
    },
    "Bellevue": {
-    "total": 203,
+    "total": 207,
     "completed": 48,
     "permits_by_year": {
      "2021": 1,
@@ -41,8 +41,8 @@
     }
    }
   },
-  "total_permits": 12499,
-  "completed_permits": 7016,
+  "total_permits": 12521,
+  "completed_permits": 7028,
   "attributed_permits": 819,
   "builders_listed": 589,
   "permits_by_year": {
@@ -62,9 +62,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1071,
-   "2026": 426
+   "2026": 429
   },
-  "generated": "2026-10-13"
+  "generated": "2026-10-19"
  },
  "builders": [
   {
@@ -17885,7 +17885,7 @@
    "median_cost": null,
    "license": {
     "number": "SEARERI774PR",
-    "status": "ACTIVE",
+    "status": "SUSPENDED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2023-10-19",
     "expires": "2027-10-23",
@@ -18589,7 +18589,7 @@
    "median_cost": null,
    "license": {
     "number": "FIVESSG866RJ",
-    "status": "ACTIVE",
+    "status": "SUSPENDED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2014-12-11",
     "expires": "2027-10-16",
@@ -21897,7 +21897,7 @@
      "attributed": null,
      "adu_sqft": null,
      "description": "Remove existing garage and allow a detached accessory dwelling unit per Land Use Code.  Construct a one-family dwelling  per plans.",
-     "status": "Issued",
+     "status": "Expired",
      "issued": "2025-04-14",
      "completed": "",
      "cost": "201197.0000",
@@ -22168,46 +22168,6 @@
      "address": "11755 DAYTON AVE N",
      "zip": "98133",
      "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7085936-CN"
-    }
-   ]
-  },
-  {
-   "slug": "vivid-development-llc",
-   "name": "Vivid Development LLC",
-   "permits_total": 1,
-   "permits_completed": 0,
-   "cities": {
-    "Seattle": {
-     "total": 1,
-     "completed": 0
-    }
-   },
-   "first_year": "2026",
-   "last_year": "2026",
-   "median_cost": 447600.0,
-   "license": {
-    "number": "VIVIDDL801B4",
-    "status": "ACTIVE",
-    "type": "CONSTRUCTION CONTRACTOR",
-    "effective": "2020-01-24",
-    "expires": "2028-04-17",
-    "city": "Maple Valley",
-    "ubi": "604567017"
-   },
-   "permits": [
-    {
-     "permitnum": "7116062-CN",
-     "city": "Seattle",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Construct new two family dwelling  per plan. (Establish use as single family residences  one with an attached accessory dwelling unit per land use code.  Construct (2) new one and (1) new two family dwellings  per plan. Review and processing for three records under 7116062-CN)",
-     "status": "Issued",
-     "issued": "2026-10-12",
-     "completed": "",
-     "cost": "447600.0000",
-     "address": "1526 M L KING JR WAY",
-     "zip": "98122",
-     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7116062-CN"
     }
    ]
   },
@@ -23912,6 +23872,38 @@
      "address": "2815 127th Ave NE",
      "zip": "98005",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20122852%20BS/BELLEVUE"
+    }
+   ]
+  },
+  {
+   "slug": "baklinski-home-improvement-andrew-thaddeus-baklinski",
+   "name": "Baklinski Home Improvement Andrew Thaddeus Baklinski",
+   "permits_total": 1,
+   "permits_completed": 0,
+   "cities": {
+    "Bellevue": {
+     "total": 1,
+     "completed": 0
+    }
+   },
+   "first_year": "2026",
+   "last_year": "2026",
+   "median_cost": null,
+   "license": null,
+   "permits": [
+    {
+     "permitnum": "26 125022 BR",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Hargrave Remodel \u2014 INTERIOR RENOVATIONS AND EXPANSION OF THE EXISTING ENTRY UNDER A COVERED PORCH",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "17163 NE 5th Pl",
+     "zip": "98008",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125022%20BR/BELLEVUE"
     }
    ]
   }

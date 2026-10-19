@@ -1,7 +1,7 @@
 {
  "city": "Bellevue",
  "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit/FeatureServer/0/query",
- "fetched_at": "2026-10-13",
+ "fetched_at": "2026-10-19",
  "permits": [
   {
    "permitnum": "26 120910 BS",
@@ -3655,6 +3655,78 @@
    "adu_sqft": null,
    "link": {
     "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20123627%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 123937 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "9833 NE 23rd St - Unit 2 \u2014 New construction of a single family residence with attached garage. Second of four units in the proposed development., 26 123268 GD",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-15T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "9833 NE 23rd St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20123937%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 123939 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "9833 NE 23rd St - Unit 3 \u2014 New construction of a single family residence with attached garage. Third of four units in the proposed development.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-15T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "9833 NE 23rd St",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20123939%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125065 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SEVERSON DADU \u2014 NEW 1038 TWO STORY DADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-16T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "631 W Lake Sammamish Pkwy NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125065%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125022 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Hargrave Remodel \u2014 INTERIOR RENOVATIONS AND EXPANSION OF THE EXISTING ENTRY UNDER A COVERED PORCH",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-16T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "BAKLINSKI HOME IMPROVEMENT ANDREW THADDEUS BAKLINSKI",
+   "originaladdress1": "17163 NE 5th Pl",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125022%20BR/BELLEVUE"
    }
   }
  ]
