@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12314,
-    "completed": 6980,
+    "total": 12320,
+    "completed": 6999,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,11 +25,11 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1035,
-     "2026": 377
+     "2026": 387
     }
    },
    "Bellevue": {
-    "total": 207,
+    "total": 209,
     "completed": 48,
     "permits_by_year": {
      "2021": 1,
@@ -41,8 +41,8 @@
     }
    }
   },
-  "total_permits": 12521,
-  "completed_permits": 7028,
+  "total_permits": 12529,
+  "completed_permits": 7047,
   "attributed_permits": 819,
   "builders_listed": 589,
   "permits_by_year": {
@@ -62,9 +62,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1071,
-   "2026": 429
+   "2026": 439
   },
-  "generated": "2026-10-19"
+  "generated": "2026-10-26"
  },
  "builders": [
   {
@@ -15728,7 +15728,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2017-05-05",
-    "expires": "2026-10-21",
+    "expires": "2028-10-21",
     "city": "SEATTLE",
     "ubi": "604111368"
    },
@@ -17370,6 +17370,38 @@
      "address": "13530 3RD AVE NW",
      "zip": "98177",
      "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6985003-CN"
+    }
+   ]
+  },
+  {
+   "slug": "eli-mathieu",
+   "name": "Eli Mathieu",
+   "permits_total": 1,
+   "permits_completed": 1,
+   "cities": {
+    "Seattle": {
+     "total": 1,
+     "completed": 1
+    }
+   },
+   "first_year": "2024",
+   "last_year": "2024",
+   "median_cost": 215812.0,
+   "license": null,
+   "permits": [
+    {
+     "permitnum": "6992871-CN",
+     "city": "Seattle",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Allow attached accessory dwelling unit (AADU) in existing single-family residence  per land use code.  Construct alterations to convert one-family dwelling to two-family dwelling  per plan",
+     "status": "Completed",
+     "issued": "2024-05-17",
+     "completed": "2026-10-19",
+     "cost": "215812.0000",
+     "address": "601 27TH AVE E",
+     "zip": "98112",
+     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6992871-CN"
     }
    ]
   },
@@ -21904,38 +21936,6 @@
      "address": "5506 23RD AVE S",
      "zip": "98108",
      "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6975162-CN"
-    }
-   ]
-  },
-  {
-   "slug": "eli-mathieu",
-   "name": "Eli Mathieu",
-   "permits_total": 1,
-   "permits_completed": 0,
-   "cities": {
-    "Seattle": {
-     "total": 1,
-     "completed": 0
-    }
-   },
-   "first_year": "2024",
-   "last_year": "2024",
-   "median_cost": 215812.0,
-   "license": null,
-   "permits": [
-    {
-     "permitnum": "6992871-CN",
-     "city": "Seattle",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Allow attached accessory dwelling unit (AADU) in existing single-family residence  per land use code.  Construct alterations to convert one-family dwelling to two-family dwelling  per plan",
-     "status": "Issued",
-     "issued": "2024-05-17",
-     "completed": "",
-     "cost": "215812.0000",
-     "address": "601 27TH AVE E",
-     "zip": "98112",
-     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6992871-CN"
     }
    ]
   },

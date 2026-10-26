@@ -1,7 +1,7 @@
 {
  "city": "Bellevue",
  "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit/FeatureServer/0/query",
- "fetched_at": "2026-10-19",
+ "fetched_at": "2026-10-26",
  "permits": [
   {
    "permitnum": "26 120910 BS",
@@ -3727,6 +3727,42 @@
    "adu_sqft": null,
    "link": {
     "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125022%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125103 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "2403 remodel \u2014 interior remodel including converting garage to living space and basement to ADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-19T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "2403 139th Ave SE",
+   "originalzip": "98005",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125103%20BU/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125518 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Yadi Li New Construction \u2014 Demolish existing single-family residence (with attached porch or deck) and detached shed. Construct new two-story single-family residence with attached 1,157 SF accessory dwelling unit, attached garage, porch, and deck (5,721 SF conditioned). Site work includes a permeable paver driveway, approx. 600 CY cut and 500 CY fill, and removal of 4 trees (1 landmark, 3 significant). Stormwater is managed by three 3,000-gallon detention tanks, with flow-controlled discharge pumped to the existing 12inches storm line in the east drainage easement. Includes mechanical, plumbing, and electrical.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-23T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "1718 144th Ave SE",
+   "originalzip": "98007",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125518%20BS/BELLEVUE"
    }
   }
  ]
