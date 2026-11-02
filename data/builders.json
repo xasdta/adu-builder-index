@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12320,
-    "completed": 6999,
+    "total": 12316,
+    "completed": 7018,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -24,12 +24,12 @@
      "2022": 963,
      "2023": 1031,
      "2024": 932,
-     "2025": 1035,
-     "2026": 387
+     "2025": 1034,
+     "2026": 390
     }
    },
    "Bellevue": {
-    "total": 209,
+    "total": 214,
     "completed": 48,
     "permits_by_year": {
      "2021": 1,
@@ -41,9 +41,9 @@
     }
    }
   },
-  "total_permits": 12529,
-  "completed_permits": 7047,
-  "attributed_permits": 819,
+  "total_permits": 12530,
+  "completed_permits": 7066,
+  "attributed_permits": 820,
   "builders_listed": 589,
   "permits_by_year": {
    "2010": 157,
@@ -61,10 +61,10 @@
    "2022": 965,
    "2023": 1040,
    "2024": 955,
-   "2025": 1071,
-   "2026": 439
+   "2025": 1070,
+   "2026": 442
   },
-  "generated": "2026-10-26"
+  "generated": "2026-11-02"
  },
  "builders": [
   {
@@ -1452,7 +1452,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2002-12-13",
-    "expires": "2026-12-17",
+    "expires": "2028-12-17",
     "city": "SEATTLE",
     "ubi": "602250460"
    },
@@ -6651,7 +6651,7 @@
    "median_cost": 567409.0,
    "license": {
     "number": "DHILLHC816P8",
-    "status": "ACTIVE",
+    "status": "SUSPENDED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2019-10-28",
     "expires": "2027-10-30",
@@ -8027,15 +8027,7 @@
    "first_year": "2008",
    "last_year": "2008",
    "median_cost": 72751.0,
-   "license": {
-    "number": "DOMUSV*115O5",
-    "status": "EXPIRED",
-    "type": "CONSTRUCTION CONTRACTOR",
-    "effective": "1989-09-25",
-    "expires": "2019-10-12",
-    "city": "SEATTLE",
-    "ubi": "601187946"
-   },
+   "license": null,
    "permits": [
     {
      "permitnum": "6170175-CN",
@@ -15800,7 +15792,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2004-11-12",
-    "expires": "2026-12-04",
+    "expires": "2028-12-04",
     "city": "SEATTLE",
     "ubi": "602353945"
    },
@@ -19638,6 +19630,52 @@
    ]
   },
   {
+   "slug": "ss-construction-company",
+   "name": "Ss Construction Company",
+   "permits_total": 2,
+   "permits_completed": 0,
+   "cities": {
+    "Bellevue": {
+     "total": 2,
+     "completed": 0
+    }
+   },
+   "first_year": "2026",
+   "last_year": "2026",
+   "median_cost": null,
+   "license": null,
+   "permits": [
+    {
+     "permitnum": "26 101897 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Jasbir Rehal Residence \u2014 Demo of exisitng single family residence and construction of a new 2 STORY SINGLE FAMILY RESIDENCE W ATTACHED 2  CAR GARAGE.  Does not include plumbing, electrical or mechanical.",
+     "status": "Issued",
+     "issued": "2026-07-02",
+     "completed": "",
+     "cost": null,
+     "address": "14238 Eastgate Dr",
+     "zip": "98006",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101897%20BS/BELLEVUE"
+    },
+    {
+     "permitnum": "26 125707 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "14712 Eastgate \u2014 Tear down of existing home and construction of new SFR and AADU",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "14712 SE Eastgate Dr",
+     "zip": "98006",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125707%20BS/BELLEVUE"
+    }
+   ]
+  },
+  {
    "slug": "ramjack-west-kenneth-james-marquardt",
    "name": "Ramjack West Kenneth James Marquardt",
    "permits_total": 2,
@@ -20606,7 +20644,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2006-10-20",
-    "expires": "2026-10-28",
+    "expires": "2028-10-28",
     "city": "WOODINVILLE",
     "ubi": "602641354"
    },
@@ -22259,7 +22297,7 @@
    "median_cost": null,
    "license": {
     "number": "LNLBUBL821PH",
-    "status": "ACTIVE",
+    "status": "EXPIRED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2018-10-08",
     "expires": "2026-10-31",
@@ -22683,7 +22721,7 @@
    "median_cost": null,
    "license": {
     "number": "STCONTC782QQ",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2022-11-29",
     "expires": "2028-05-15",
@@ -22704,38 +22742,6 @@
      "address": "17000 NE 34th Pl",
      "zip": "98008",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20104643%20BR/BELLEVUE"
-    }
-   ]
-  },
-  {
-   "slug": "ss-construction-company",
-   "name": "Ss Construction Company",
-   "permits_total": 1,
-   "permits_completed": 0,
-   "cities": {
-    "Bellevue": {
-     "total": 1,
-     "completed": 0
-    }
-   },
-   "first_year": "2026",
-   "last_year": "2026",
-   "median_cost": null,
-   "license": null,
-   "permits": [
-    {
-     "permitnum": "26 101897 BS",
-     "city": "Bellevue",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Jasbir Rehal Residence \u2014 Demo of exisitng single family residence and construction of a new 2 STORY SINGLE FAMILY RESIDENCE W ATTACHED 2  CAR GARAGE.  Does not include plumbing, electrical or mechanical.",
-     "status": "Issued",
-     "issued": "2026-07-02",
-     "completed": "",
-     "cost": null,
-     "address": "14238 Eastgate Dr",
-     "zip": "98006",
-     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20101897%20BS/BELLEVUE"
     }
    ]
   },
@@ -23707,7 +23713,7 @@
    "median_cost": null,
    "license": {
     "number": "GOLDECC809P1",
-    "status": "ACTIVE",
+    "status": "EXPIRED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2020-10-21",
     "expires": "2026-10-25",

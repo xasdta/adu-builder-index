@@ -1,7 +1,7 @@
 {
  "city": "Bellevue",
  "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit/FeatureServer/0/query",
- "fetched_at": "2026-10-26",
+ "fetched_at": "2026-11-02",
  "permits": [
   {
    "permitnum": "26 120910 BS",
@@ -3763,6 +3763,96 @@
    "adu_sqft": null,
    "link": {
     "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125518%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125730 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "116TH AVE UNIT 2 \u2014 CONSTRUCT (1) NEW 3 STORY SFR WITH AADU AND ATTACHED GARAGE. 1 OF 2 SFRs TO BE PERMITTED ON SITE. PROJECT INCLUDES ASSOCIATED HARDSCAPE.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4760 116th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125730%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125712 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "116TH AVE UNIT 1 \u2014 CONSTRUCT (1) NEW 3 STORY SFR WITH AADU AND ATTACHED GARAGE. 1 OF 2 SFRs TO BE PERMITTED ON SITE. PROJECT INCLUDES ASSOCIATED HARDSCAPE.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4760 116th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125712%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125711 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "Sviridyuk Residence \u2014 New 2-story single-family residence with attached ADU and attached 2-car garage. Demolition of existing single-family residence and detached shed. Includes mechanical, electrical, and plumbing.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "632 164th Pl NE",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125711%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125708 MH",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Middle Housing New",
+   "description": "116TH AVE UNIT 2 \u2014 CONSTRUCT (1) NEW 3 STORY SFR WITH AADU AND ATTACHED GARAGE. 1 OF 2 SFRs TO BE PERMITTED ON SITE. PROJECT INCLUDES ASSOCIATED HARDSCAPE.",
+   "statuscurrent": "Canceled",
+   "applieddate": "2026-10-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "4760 116th Ave SE",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125708%20MH/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 125707 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "14712 Eastgate \u2014 Tear down of existing home and construction of new SFR and AADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-10-28T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": "SS CONSTRUCTION COMPANY",
+   "originaladdress1": "14712 SE Eastgate Dr",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20125707%20BS/BELLEVUE"
    }
   }
  ]
