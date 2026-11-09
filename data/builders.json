@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12316,
-    "completed": 7018,
+    "total": 12317,
+    "completed": 7037,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,11 +25,11 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1034,
-     "2026": 390
+     "2026": 395
     }
    },
    "Bellevue": {
-    "total": 214,
+    "total": 217,
     "completed": 48,
     "permits_by_year": {
      "2021": 1,
@@ -41,9 +41,9 @@
     }
    }
   },
-  "total_permits": 12530,
-  "completed_permits": 7066,
-  "attributed_permits": 820,
+  "total_permits": 12534,
+  "completed_permits": 7085,
+  "attributed_permits": 822,
   "builders_listed": 589,
   "permits_by_year": {
    "2010": 157,
@@ -62,9 +62,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1070,
-   "2026": 442
+   "2026": 447
   },
-  "generated": "2026-11-02"
+  "generated": "2026-11-09"
  },
  "builders": [
   {
@@ -6651,7 +6651,7 @@
    "median_cost": 567409.0,
    "license": {
     "number": "DHILLHC816P8",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2019-10-28",
     "expires": "2027-10-30",
@@ -17862,6 +17862,46 @@
    ]
   },
   {
+   "slug": "modern-homes-llc",
+   "name": "Modern Homes LLC",
+   "permits_total": 1,
+   "permits_completed": 1,
+   "cities": {
+    "Seattle": {
+     "total": 1,
+     "completed": 1
+    }
+   },
+   "first_year": "2025",
+   "last_year": "2025",
+   "median_cost": 230274.0,
+   "license": {
+    "number": "MODERHL878J9",
+    "status": "ACTIVE",
+    "type": "CONSTRUCTION CONTRACTOR",
+    "effective": "2013-04-29",
+    "expires": "2027-07-22",
+    "city": "Edgewood",
+    "ubi": "603185301"
+   },
+   "permits": [
+    {
+     "permitnum": "7081416-CN",
+     "city": "Seattle",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "Construct WEST one-family dwelling  per plan. (Establish use as single-family residence with attached and detached accessory dwelling units  per land use code.  Construct as one- and two-family dwellings  review and process for two records under 7074133-CN).",
+     "status": "Completed",
+     "issued": "2025-07-24",
+     "completed": "2026-11-03",
+     "cost": "230274.0000",
+     "address": "9811 LINDEN AVE N",
+     "zip": "98103",
+     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7081416-CN"
+    }
+   ]
+  },
+  {
    "slug": "jose-francisco-osuna-pineda",
    "name": "Jose Francisco Osuna Pineda",
    "permits_total": 1,
@@ -17909,7 +17949,7 @@
    "median_cost": null,
    "license": {
     "number": "SEARERI774PR",
-    "status": "SUSPENDED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2023-10-19",
     "expires": "2027-10-23",
@@ -19066,11 +19106,11 @@
   {
    "slug": "everton-homes-llc",
    "name": "Everton Homes LLC",
-   "permits_total": 9,
+   "permits_total": 10,
    "permits_completed": 0,
    "cities": {
     "Bellevue": {
-     "total": 9,
+     "total": 10,
      "completed": 0
     }
    },
@@ -19212,6 +19252,20 @@
      "address": "11013 NE 14th St",
      "zip": "98004",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20121590%20BS/BELLEVUE"
+    },
+    {
+     "permitnum": "26 126019 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "NE 102nd \u2014 Construction of a new SFR with Attached ADU",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "1520 102nd Ave NE",
+     "zip": "98004",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20126019%20BS/BELLEVUE"
     }
    ]
   },
@@ -19572,6 +19626,60 @@
      "address": "10434 NE 17th St",
      "zip": "98004",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20120397%20BS/BELLEVUE"
+    }
+   ]
+  },
+  {
+   "slug": "level-up-const-rmdlg-co",
+   "name": "Level Up Const & Rmdlg Co",
+   "permits_total": 2,
+   "permits_completed": 0,
+   "cities": {
+    "Bellevue": {
+     "total": 2,
+     "completed": 0
+    }
+   },
+   "first_year": "2026",
+   "last_year": "2026",
+   "median_cost": null,
+   "license": {
+    "number": "LEVELUC782C4",
+    "status": "ACTIVE",
+    "type": "CONSTRUCTION CONTRACTOR",
+    "effective": "2022-02-28",
+    "expires": "2028-03-01",
+    "city": "Bellevue",
+    "ubi": "604872459"
+   },
+   "permits": [
+    {
+     "permitnum": "26 108933 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "LevelUp Construction- 5 157th Ave SE Bellevue \u2014 DEMOLISH OF AN EXISTING HOUSE & CONSTRUCTION OF A NEW SINGLE-FAMILY RESIDENCE, WITH ATTACHED 2 CAR GARAGE AND AN ADU. Does not include mechanical, electrical, or plumbing.",
+     "status": "Issued",
+     "issued": "2026-08-26",
+     "completed": "",
+     "cost": null,
+     "address": "5 157th Ave SE",
+     "zip": "98008",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20108933%20BS/BELLEVUE"
+    },
+    {
+     "permitnum": "26 126189 BS",
+     "city": "Bellevue",
+     "attributed": null,
+     "adu_sqft": null,
+     "description": "LEVELUP CONSTRUCTION- 16217 NE 2ND ST BELLEVUE \u2014 DEMOLITION OF EXISTING RESIDENCE AND CONSTRUCTION OF A NEW SINGLE-FAMILY RESIDENCE WITH ATTACHED 3-CAR GARAGE AND AADU.",
+     "status": "Open",
+     "issued": "",
+     "completed": "",
+     "cost": null,
+     "address": "16217 NE 2nd St",
+     "zip": "98008",
+     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20126189%20BS/BELLEVUE"
     }
    ]
   },
@@ -21857,7 +21965,7 @@
    "median_cost": 424006.0,
    "license": {
     "number": "TAYLOMC829CW",
-    "status": "SUSPENDED",
+    "status": "EXPIRED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2018-02-16",
     "expires": "2026-11-01",
@@ -22138,46 +22246,6 @@
    ]
   },
   {
-   "slug": "modern-homes-llc",
-   "name": "Modern Homes LLC",
-   "permits_total": 1,
-   "permits_completed": 0,
-   "cities": {
-    "Seattle": {
-     "total": 1,
-     "completed": 0
-    }
-   },
-   "first_year": "2025",
-   "last_year": "2025",
-   "median_cost": 230274.0,
-   "license": {
-    "number": "MODERHL878J9",
-    "status": "ACTIVE",
-    "type": "CONSTRUCTION CONTRACTOR",
-    "effective": "2013-04-29",
-    "expires": "2027-07-22",
-    "city": "Edgewood",
-    "ubi": "603185301"
-   },
-   "permits": [
-    {
-     "permitnum": "7081416-CN",
-     "city": "Seattle",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "Construct WEST one-family dwelling  per plan. (Establish use as single-family residence with attached and detached accessory dwelling units  per land use code.  Construct as one- and two-family dwellings  review and process for two records under 7074133-CN).",
-     "status": "Issued",
-     "issued": "2025-07-24",
-     "completed": "",
-     "cost": "230274.0000",
-     "address": "9811 LINDEN AVE N",
-     "zip": "98103",
-     "link": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7081416-CN"
-    }
-   ]
-  },
-  {
    "slug": "digs-wa-eric-dexter",
    "name": "Digs Wa- Eric Dexter",
    "permits_total": 1,
@@ -22297,10 +22365,10 @@
    "median_cost": null,
    "license": {
     "number": "LNLBUBL821PH",
-    "status": "EXPIRED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2018-10-08",
-    "expires": "2026-10-31",
+    "expires": "2028-11-03",
     "city": "MERCER ISLAND",
     "ubi": "604273567"
    },
@@ -22478,46 +22546,6 @@
      "address": "4730 Lakehurst Ln",
      "zip": "98006",
      "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20108953%20BR/BELLEVUE"
-    }
-   ]
-  },
-  {
-   "slug": "level-up-const-rmdlg-co",
-   "name": "Level Up Const & Rmdlg Co",
-   "permits_total": 1,
-   "permits_completed": 0,
-   "cities": {
-    "Bellevue": {
-     "total": 1,
-     "completed": 0
-    }
-   },
-   "first_year": "2026",
-   "last_year": "2026",
-   "median_cost": null,
-   "license": {
-    "number": "LEVELUC782C4",
-    "status": "ACTIVE",
-    "type": "CONSTRUCTION CONTRACTOR",
-    "effective": "2022-02-28",
-    "expires": "2028-03-01",
-    "city": "Bellevue",
-    "ubi": "604872459"
-   },
-   "permits": [
-    {
-     "permitnum": "26 108933 BS",
-     "city": "Bellevue",
-     "attributed": null,
-     "adu_sqft": null,
-     "description": "LevelUp Construction- 5 157th Ave SE Bellevue \u2014 DEMOLISH OF AN EXISTING HOUSE & CONSTRUCTION OF A NEW SINGLE-FAMILY RESIDENCE, WITH ATTACHED 2 CAR GARAGE AND AN ADU. Does not include mechanical, electrical, or plumbing.",
-     "status": "Issued",
-     "issued": "2026-08-26",
-     "completed": "",
-     "cost": null,
-     "address": "5 157th Ave SE",
-     "zip": "98008",
-     "link": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20108933%20BS/BELLEVUE"
     }
    ]
   },
@@ -23713,10 +23741,10 @@
    "median_cost": null,
    "license": {
     "number": "GOLDECC809P1",
-    "status": "EXPIRED",
+    "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2020-10-21",
-    "expires": "2026-10-25",
+    "expires": "2028-11-04",
     "city": "Roseville",
     "ubi": "604699152"
    },
@@ -23793,7 +23821,7 @@
    "median_cost": null,
    "license": {
     "number": "BUILDES935KH",
-    "status": "SUSPENDED",
+    "status": "EXPIRED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2007-05-08",
     "expires": "2026-11-02",
