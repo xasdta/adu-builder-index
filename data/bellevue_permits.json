@@ -1,7 +1,7 @@
 {
  "city": "Bellevue",
  "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit/FeatureServer/0/query",
- "fetched_at": "2026-11-09",
+ "fetched_at": "2026-11-16",
  "permits": [
   {
    "permitnum": "26 120910 BS",
@@ -3907,6 +3907,60 @@
    "adu_sqft": null,
    "link": {
     "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20126253%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 126569 BR",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Addition",
+   "description": "Bellevue Garage and ADU \u2014 Project consists of converting a portion of the basement and the first floor of a SFR into an ADU and also converting the existing covered carport into an attached garage.",
+   "statuscurrent": "Screening",
+   "applieddate": "2026-11-13T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "10234 NE 20th Pl",
+   "originalzip": "98004",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20126569%20BR/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 126545 BS",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family New ",
+   "description": "SRIDHAR RESIDENCE \u2014 DEMOLITION OF EXISTING ONE STOREY HOUSE WITH BASEMENT AND CONSTRUCTION OF MAIN DWELLING WITH ATTACHED GARAGE, ONE AADU & TWO DADU , BALCONIES, FLAT ROOFS, SITE IMPROVEMENTS, UTILITIES AND OPEN PARKING.",
+   "statuscurrent": "Open",
+   "applieddate": "2026-11-13T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "16005 SE 5th St",
+   "originalzip": "98008",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20126545%20BS/BELLEVUE"
+   }
+  },
+  {
+   "permitnum": "26 126540 BU",
+   "permitclassmapped": "Residential",
+   "permittypedesc": "Single Family Remodel Plan Review",
+   "description": "#488 LEE-HOGARTH MARYANN FINISHED BASEMENT CONVERS \u2014 FINISHED BASEMENT CONVERSION TO ADU",
+   "statuscurrent": "Open",
+   "applieddate": "2026-11-13T00:00:00.000",
+   "issueddate": null,
+   "completeddate": null,
+   "contractorcompanyname": null,
+   "originaladdress1": "15820 SE 43rd St",
+   "originalzip": "98006",
+   "estprojectcost": null,
+   "adu_sqft": null,
+   "link": {
+    "url": "https://permitsearch.mybuildingpermit.com/PermitDetails/26%20126540%20BU/BELLEVUE"
    }
   }
  ]

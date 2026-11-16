@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12317,
-    "completed": 7037,
+    "total": 12315,
+    "completed": 7048,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,11 +25,11 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1034,
-     "2026": 395
+     "2026": 398
     }
    },
    "Bellevue": {
-    "total": 217,
+    "total": 220,
     "completed": 48,
     "permits_by_year": {
      "2021": 1,
@@ -41,8 +41,8 @@
     }
    }
   },
-  "total_permits": 12534,
-  "completed_permits": 7085,
+  "total_permits": 12535,
+  "completed_permits": 7096,
   "attributed_permits": 822,
   "builders_listed": 589,
   "permits_by_year": {
@@ -62,9 +62,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1070,
-   "2026": 447
+   "2026": 450
   },
-  "generated": "2026-11-09"
+  "generated": "2026-11-16"
  },
  "builders": [
   {
@@ -19830,8 +19830,8 @@
    ]
   },
   {
-   "slug": "lou-r-lincoln",
-   "name": "Lou R Lincoln",
+   "slug": "vern-flanery",
+   "name": "Vern Flanery",
    "permits_total": 1,
    "permits_completed": 0,
    "cities": {
