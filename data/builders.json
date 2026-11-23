@@ -6,8 +6,8 @@
   ],
   "by_city": {
    "Seattle": {
-    "total": 12315,
-    "completed": 7048,
+    "total": 12312,
+    "completed": 7063,
     "permits_by_year": {
      "2010": 157,
      "2011": 117,
@@ -25,7 +25,7 @@
      "2023": 1031,
      "2024": 932,
      "2025": 1034,
-     "2026": 398
+     "2026": 397
     }
    },
    "Bellevue": {
@@ -41,8 +41,8 @@
     }
    }
   },
-  "total_permits": 12535,
-  "completed_permits": 7096,
+  "total_permits": 12532,
+  "completed_permits": 7111,
   "attributed_permits": 822,
   "builders_listed": 589,
   "permits_by_year": {
@@ -62,9 +62,9 @@
    "2023": 1040,
    "2024": 955,
    "2025": 1070,
-   "2026": 450
+   "2026": 449
   },
-  "generated": "2026-11-16"
+  "generated": "2026-11-23"
  },
  "builders": [
   {
@@ -18064,7 +18064,7 @@
     "status": "ACTIVE",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2018-07-25",
-    "expires": "2026-12-13",
+    "expires": "2028-12-13",
     "city": "RENTON",
     "ubi": "604276661"
    },
@@ -22325,7 +22325,7 @@
    "median_cost": null,
    "license": {
     "number": "GKINDIC873NK",
-    "status": "ACTIVE",
+    "status": "SUSPENDED",
     "type": "CONSTRUCTION CONTRACTOR",
     "effective": "2013-08-12",
     "expires": "2027-04-22",

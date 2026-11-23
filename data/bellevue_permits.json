@@ -1,7 +1,7 @@
 {
  "city": "Bellevue",
  "source": "https://services1.arcgis.com/EYzEZbDhXZjURPbP/arcgis/rest/services/Bellevue_Permit/FeatureServer/0/query",
- "fetched_at": "2026-11-16",
+ "fetched_at": "2026-11-23",
  "permits": [
   {
    "permitnum": "26 120910 BS",
